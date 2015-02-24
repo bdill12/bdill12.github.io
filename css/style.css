@@ -2,8 +2,6 @@ html {
   padding:0;
   margin:0;
  font-family: 'Raleway', Helvetica, Arial, sans-serif;
- font-size: 18px;
- line-height: 25px;
  color: #E4F1FE;
  background-color: #6C7A89;
 }
@@ -26,6 +24,7 @@ body {
 list-style: none;
 display: inline-block;
  }
+
 .clearfix {
   overflow: auto;
 }
@@ -120,8 +119,9 @@ a {
 
 .gray {
   background-color: rgb(51,51,51);
-  padding-bottom: 10px;
+
   clear:both;
+  display: block;
 }
 
 .lynch-gray {

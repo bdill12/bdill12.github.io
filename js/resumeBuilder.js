@@ -118,6 +118,13 @@ var projects = {
 		"dates": "February 2015",
 		"description": "A résumé with interactive elements, such as the animations and the Google Map below. Built 'by hand' from Javascript, HTML, and CSS.",
 		"url": "#"
+	},
+	{
+		"title": "Commercials for Office Management System",
+		"image": "imagess/commercials.pdf",
+		"dates": "2014 - 2015",
+		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools.",
+		"url": "images/commercials.pdf download"
 	}
 	],
 	"display" : function ()
