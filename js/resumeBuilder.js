@@ -9,7 +9,7 @@ var bio = {
 		"twitter" : "@bdill12",
 		"location" : "Los Angeles, CA"
 	},
-	"url" : "images/profpic100100.jpg",
+	"url" : "images/profile_picture.jpg",
 	"skills" : ["Creative Writing", "Social Media", "HTML", "CSS", "Proofreading", "Editing", "SEO", "Keyword Research" ],
 	"display" : function() {
 		var formattedName = HTMLheaderName.replace( "%data%", this.name );
@@ -107,31 +107,36 @@ var projects = {
 	"projects" : [
 	{
 		"title": "Keyword Researched Blog Posts",
-		"url": "images/blog_project_photo.jpg",
+		"image": "images/blog_project_photo.jpg",
 		"dates": "2014 - 2015",
-		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools."
+		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools.",
+		"url": "http://couponpal.com/blog/author/brent-dill"
 	},
 	{
 		"title": "Interactive Online Résumé",
-		"url": "images/resume_project_photo.jpg",
+		"image": "images/resume_project_photo.jpg",
 		"dates": "February 2015",
-		"description": "A résumé with interactive elements, such as the animations and the Google Map below. Built 'by hand' from Javascript, HTML, and CSS."
+		"description": "A résumé with interactive elements, such as the animations and the Google Map below. Built 'by hand' from Javascript, HTML, and CSS.",
+		"url": "#"
 	}
 	],
 	"display" : function ()
 	{
+		if (this.projects.length <= 3) {
 		for (var project in this.projects) {
-			$("#projects").append(HTMLprojectStart);
-			var formattedProjTitle = HTMLprojectTitle.replace("%data%", this.projects[project].title);
+			$(".row").append(HTMLprojectStart);
+			var formattedProjName = HTMLprojectTitle.replace("%data%", this.projects[project].title);
+			var formattedProjTitle = formattedProjName.replace("%data2%", this.projects[project].url);
 			var formattedProjDates = HTMLprojectDates.replace("%data%", this.projects[project].dates);
 			var formattedProjDescription = HTMLprojectDescription.replace("%data%", this.projects[project].description);
-			var formattedProjURL = HTMLprojectImage.replace("%data%", this.projects[project].url);
+			var formattedProjImage = HTMLprojectImage.replace("%data%", this.projects[project].image);
+			$(".project-entry:last").append(formattedProjImage);
 			$(".project-entry:last").append(formattedProjTitle);
 			$(".project-entry:last").append(formattedProjDates);
 			$(".project-entry:last").append(formattedProjDescription);
-			$(".project-entry:last").append(formattedProjURL);
-		}	
-	}
+			
+		}}	
+}
 };
 
 projects.display();
@@ -165,19 +170,19 @@ var education = {
 		],
 		"onlineCourses": [
 		{
-			"url": "Udacity.com/nanodegree",
+			"url": "Udacity.com",
 			"title": "Intro to HTML and CSS",
 			"school": "Udacity",
 			"dates": "January 2015"
 		},
 		{
-			"url": "Udacity.com/nanodegree",
+			"url": "Udacity.com",
 			"title": "Intro to Javascript",
 			"school": "Udacity",
 			"dates": "February 2015"
 		},
 		{
-			"url": "Udacity.com/nanodegree",
+			"url": "Udacity.com",
 			"title": "Intro to jQuery",
 			"school": "Udacity",
 			"dates": "February 2015"
