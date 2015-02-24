@@ -20,7 +20,6 @@ h1 {
   color: #22313F;
   line-height: 48px;
   display: inline;
-  box-shadow: 20px 0px 50px #6BB9F0;
 }
 
 h2 {
@@ -103,7 +102,6 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #6C7A89;
-  margin: 0;
 }
 
 .flex-box {
@@ -121,7 +119,7 @@ a {
   margin-top: 10px;
 }
 
-.center-content {
+.cer-content {
   padding-top: 2.5%;
   padding-left: 5%;
   padding-right: 5%;
@@ -226,27 +224,6 @@ span {
  * Hover.css Copyright Ian Lunn 2014. Generated with LESS.
  */
 /* 2D TRANSITIONS */
-/* Grow */
-.hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
 /* Float Shadow */
 .hvr-float-shadow {
   display: inline-block;

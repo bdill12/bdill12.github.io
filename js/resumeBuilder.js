@@ -1,7 +1,7 @@
 var bio = {
 	"name" : "Brent Dill",
 	"role" : "Writer, Front End Developer",
-	"welcomeMessage" : "I'm a creative looking for a place to create.",
+	"welcomeMessage" : "I'm a creative person looking for a place to create.",
 	"contacts" : {
 		"email" : "bdill12@gmail.com",
 		"mobile" : "(806) 470-3013",
@@ -10,7 +10,7 @@ var bio = {
 		"location" : "Los Angeles, CA"
 	},
 	"url" : "images/profpic100100.jpg",
-	"skills" : [" Creative Writing", " Social Media", " HTML", " CSS", " Proofreading", " Editing", "SEO Copywriting", "Public Speaking", "Keyword Research", "Storytelling" ],
+	"skills" : ["Creative Writing", "Social Media", "HTML", "CSS", "Proofreading", "Editing", "SEO", "Keyword Research" ],
 	"display" : function() {
 		var formattedName = HTMLheaderName.replace( "%data%", this.name );
 		var formattedRole = HTMLheaderRole.replace( "%data%", this.role );
