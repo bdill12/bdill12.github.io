@@ -177,19 +177,20 @@ var education = {
 		],
 		"onlineCourses": [
 		{
-			"url": "Udacity.com",
+			//Took out the URLs because they are ugly and it already says Udacity.
+			"url": " ",
 			"title": "Intro to HTML and CSS",
 			"school": "Udacity",
 			"dates": "January 2015"
 		},
 		{
-			"url": "Udacity.com",
+			"url": " ",
 			"title": "Intro to Javascript",
 			"school": "Udacity",
 			"dates": "February 2015"
 		},
 		{
-			"url": "Udacity.com",
+			"url": " ",
 			"title": "Intro to jQuery",
 			"school": "Udacity",
 			"dates": "February 2015"
