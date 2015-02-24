@@ -121,7 +121,7 @@ var projects = {
 	},
 	{
 		"title": "Commercials for Office Management System",
-		"image": "imagess/Commercials_pdf_photo.jpg",
+		"image": "images/Commercials_pdf_photo.jpg",
 		"dates": "2014 - 2015",
 		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools.",
 		"url": "images/commercials.pdf download"
