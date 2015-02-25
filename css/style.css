@@ -233,6 +233,7 @@ span {
 #skillsH3 {
   margin: 0 10px;
   padding: 0 10px;
+  display: flex;
 }
 
 #mapDiv {
@@ -243,12 +244,13 @@ span {
 
 @media only screen and (min-width: 750px) {
 .biopic {
-    display: inline-block;
+    display: block;
     border-radius: 20px;
   }
 
 #skillsH3{ margin: 0 10px;
   padding: 0 10px;
+  display: flex;
     }
 }
 
