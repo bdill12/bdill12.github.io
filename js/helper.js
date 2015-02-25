@@ -15,18 +15,18 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<div class="span_2_of_12 flex-item hvr-float-shadow"><span>%contact%<span><span class="white-text">%data%</span></div>';
-var HTMLmobile = '<div class="span_2_of_12 flex-item hvr-float-shadow"><span>mobile</span><span class="white-text">%data%</span></div>';
-var HTMLemail = '<div class="span_2_of_12 flex-item hvr-float-shadow"><span>email</span><span class="white-text">%data%</span></div>';
-var HTMLtwitter = '<div class="span_2_of_12 flex-item hvr-float-shadow"><span>twitter</span><span class="white-text">%data%</span></div>';
-var HTMLgithub = '<div class="span_2_of_12 flex-item hvr-float-shadow"><span>github</span><span class="white-text">%data%</span></div>';
-var HTMLlocation = '<div class="span_2_of_12 flex-item hvr-float-shadow"><span>location</span><span class="white-text">%data%</span></div>';
+var HTMLcontactGeneric = '<div class="span_3_of_12 flex-item"><span>%contact%<span><span class="white-text">%data%</span></div>';
+var HTMLmobile = '<div class="span_3_of_12 flex-item"><span>mobile</span><span class="white-text">%data%</span></div>';
+var HTMLemail = '<div class="span_3_of_12 flex-item"><span>email</span><span class="white-text">%data%</span></div>';
+var HTMLtwitter = '<div class="span_3_of_12 flex-item"><span>twitter</span><span class="white-text">%data%</span></div>';
+var HTMLgithub = '<div class="span_3_of_12 flex-item"><span>github</span><span class="white-text">%data%</span></div>';
+var HTMLlocation = '<div class="span_3_of_12 flex-item"><span>location</span><span class="white-text">%data%</span></div>';
 
-var HTMLbioPic = '<img class="span_6_of_12" src="%data%" class="biopic hvr-float-shadow img-responsive">';
-var HTMLWelcomeMsg = '<span class="welcomeMessage"><p>%data%</p></span>';
+var HTMLbioPic = '<img src="%data%" class="flex-item biopic img-responsive">';
+var HTMLWelcomeMsg = '<span class="welcomeMessage">%data%</span>';
 
 var HTMLskillsStart = '<h3>Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item hvr-float-shadow"><span class="white-text">%data%</span></li>';
+var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';

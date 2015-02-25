@@ -9,7 +9,7 @@ var bio = {
 		"twitter" : " @bdill12",
 		"location" : " Los Angeles, CA"
 	},
-	"url" : "images/BWsnl.PNG",
+	"url" : "images/BWsnl2.PNG",
 	"skills" : ["Creative Writing", "HTML/CSS", "Proofreading", "SEO/Keyword Research" ],
 	"display" : function() {
 		var formattedName = HTMLheaderName.replace( "%data%", this.name );
@@ -19,10 +19,12 @@ var bio = {
 		var formattedGithub = HTMLgithub.replace( "%data%", this.contacts.github );
 		var formattedTwitter = HTMLtwitter.replace( "%data%", this.contacts.twitter );
 		var formattedLocation = HTMLlocation.replace( "%data%", this.contacts.location );
-		
+		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage);
 		var formattedBiopic = HTMLbioPic.replace( "%data%", this.url );
 		$("#header").prepend(formattedRole);
 		$("#header").prepend(formattedName);
+		$("#header").append(formattedBiopic);
+		$("#header").append(formattedWelcomeMessage);
 		$("#topContacts").append(formattedMobile);
 		$("#footerContacts").append(formattedMobile);
 		$("#topContacts").append(formattedEmail);
@@ -32,10 +34,7 @@ var bio = {
 		$("#topContacts").append(formattedGithub);
 		$("#footerContacts").append(formattedGithub);
 		$("#topContacts").append(formattedLocation);
-		$("#footerContacts").append(formattedLocation);
-		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage);
-		$("#picMessage").append(formattedWelcomeMessage);
-		$("#picMessage").append(formattedBiopic);
+		$("#footerContacts").append(formattedLocation);		
 		if (this.skills.length > 0) {
 			$("#header").append(HTMLskillsStart);
 				for (var skill in this.skills) {
