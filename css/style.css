@@ -242,11 +242,10 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
-  #skillsH3,
-  .biopic {
-    display: block;
-    border-radius: 20px;
-  }
+.biopic {
+    display: inline-block;
+    border-radius: 20px;}
+}
 }
 
 /*!
