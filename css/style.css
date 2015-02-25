@@ -205,7 +205,7 @@ span {
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
-    border-radius: 800px;
+    border-radius: 20px;
   }
 }
 
@@ -247,8 +247,8 @@ span {
     border-radius: 20px;
   }
 
-#skillsH3{ display: block;
-  width: 300px;
+#skillsH3{ margin-left: 10px;
+  padding-left: 10px;
     }
 }
 
