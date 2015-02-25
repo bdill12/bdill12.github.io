@@ -9,7 +9,7 @@ var bio = {
 		"twitter" : "@bdill12",
 		"location" : "Los Angeles, CA"
 	},
-	"url" : "images/BWsnl.png",
+	"url" : "images/BWsnl.PNG",
 	"skills" : ["Creative Writing", "Social Media", "HTML", "CSS", "Proofreading", "Editing", "SEO", "Keyword Research" ],
 	"display" : function() {
 		var formattedName = HTMLheaderName.replace( "%data%", this.name );
