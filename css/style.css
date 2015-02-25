@@ -247,8 +247,8 @@ span {
     border-radius: 20px;
   }
 
-#skillsH3{ margin-left: 10px;
-  padding-left: 10px;
+#skillsH3{ margin: 0 10px;
+  padding: 0 10px;
     }
 }
 
