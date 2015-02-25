@@ -9,7 +9,7 @@ var bio = {
 		"twitter" : "@bdill12",
 		"location" : "Los Angeles, CA"
 	},
-	"url" : "images/profile_picture.jpg",
+	"url" : "images/BWsnl.png",
 	"skills" : ["Creative Writing", "Social Media", "HTML", "CSS", "Proofreading", "Editing", "SEO", "Keyword Research" ],
 	"display" : function() {
 		var formattedName = HTMLheaderName.replace( "%data%", this.name );
@@ -33,10 +33,10 @@ var bio = {
 		$("#footerContacts").append(formattedGithub);
 		$("#topContacts").append(formattedLocation);
 		$("#footerContacts").append(formattedLocation);
-		$("#header").append(formattedWelcomeMessage);
 		$("#header").append(formattedBiopic);
+		$("#header").append(formattedWelcomeMessage);
 		if (this.skills.length > 0) {
-				$("#header").append(HTMLskillsStart);
+			$("#header").append(HTMLskillsStart);
 				for (var skill in this.skills) {
 					var formattedSkills = HTMLskills.replace("%data%", this.skills[skill]);
 					$("#skills").append(formattedSkills);

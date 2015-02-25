@@ -2,22 +2,22 @@ html {
   padding:0;
   margin:0;
  font-family: 'Raleway', Helvetica, Arial, sans-serif;
- color: #E4F1FE;
- background-color: #6C7A89;
+ color: #22313F;
+ background-color: #FFF;
 }
 
 body {
   padding:0;
   margin:0;
  font-family: 'Raleway', Helvetica, Arial, sans-serif;
- background-color: #6C7A89;
+ background-color: #FFF;
  font-size: 18px;
  line-height: 35px;
- color: #E4F1FE;
+ color: #22313F;
 }
 
 .aLight{
-  color: #E4F1FE;
+  color: #22313F;
 }
  
  .online {
@@ -40,19 +40,14 @@ h1 {
     line-height: 70px;
     display: inline;
     font-weight: normal;
-    color: #EAF1FE;
+    color: #22313F;
     margin-left: 20px;
-}
-
-moveIt {
-  padding: 10px;
-  margin-left: 10px;
 }
 
 h2 {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-size: 42px;
-  color: #E4F1FE;
+  color: #22313F;
   line-height: 29px;
   padding: 10px;
   padding-left: 5%;
@@ -60,18 +55,17 @@ h2 {
 }
 
 h3 {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  color: #E4F1FE;
   line-height: 22px;
-   padding:10px;
-  padding-left: 150px;
-  padding-right: 5%;
+  margin-left: 475px;
 }
 
 h4 {
-  padding:10px;
-  padding-left: 5%;
+ font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #22313F;
+  line-height: 22px;
+   padding:10px;
+  padding-left: 150px;
   padding-right: 5%;
 }
 
@@ -81,7 +75,7 @@ h5 {
 
 .date-text {
   font-size: 16px;
-  color: #E4F1FE;
+  color: #22313F;
   line-height: 16px;
   float: left;
 }
@@ -89,7 +83,7 @@ h5 {
 .location-text {
 
   font-size: 16px;
-  color: #E4F1FE;
+  color: #22313F;
   line-height: 16px;
   float: right;
 
@@ -97,7 +91,7 @@ h5 {
 
 p {
   font-size: 16px;
-  color: #E4F1FE;
+  color: #22313F;
   line-height: 21px;
 }
 
@@ -110,12 +104,9 @@ a {
 }
 
 .welcome-message {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 28px;
-}
-
-.malibu-text {
-  color: #E4F1FE;
+  padding-left: 25px;
 }
 
 .white-text {
@@ -124,19 +115,14 @@ a {
 }
 
 .gray {
-  background-color: rgb(51,51,51);
+  background-color: rgb(108,122,137);
   padding-bottom: 10px;
   clear:both;
   display: block;
 }
 
 .lynch-gray {
-  background-color: #6C7A89;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #6C7A89;
+  background-color: #E4F1FE;
 }
 
 .flex-box {
@@ -149,10 +135,10 @@ a {
 }
 
 .flex-item {
-  border: 2px solid #ECECEC;
+  border: 2px solid #22313F;
   padding: 5px;
   margin: 5px;
-  background-color: rgb(51, 51, 51);
+  background-color: rgb(108,122,137);
 }
 
 .cer-content {
@@ -164,11 +150,14 @@ ul {
 }
 
 .biopic {
-  float: right;
+  float: left;
   display: none;
-  border: 2px solid #ECECEC;
+  width: 450px;
+  height:auto;
+  border: 2px solid #22313F;
   border-radius: 50px;
   margin: 50px;
+  margin-top: 5px;
 } 
 
 .project-entry img{
@@ -179,7 +168,7 @@ ul {
 /* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;
-  background-color: #4A4A4A;
+  background-color: #E4F1FE;
   text-align: right;
   padding: 3px;
   margin: 1px;
@@ -204,8 +193,7 @@ span {
 
 @media only screen and (max-width:900px) {
   .biopic {
-    width: 175px;
-    border-radius: 20px;
+    margin: 0;
   }
 }
 
@@ -215,9 +203,9 @@ span {
   }
 
   .biopic {
-    width: 150px;
-    border-radius: 20px;
+    margin: 0;
   }
+
   .welcome-message {
     display: none;
   }
@@ -244,8 +232,7 @@ span {
 
 @media only screen and (min-width: 750px) {
 .biopic {
-    display: block;
-    border-radius: 20px;
+    margin: 0;
   }
 
 #skillsH3{ margin: 0 10px;

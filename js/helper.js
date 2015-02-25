@@ -15,15 +15,15 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item hvr-float-shadow"><span class="malibu-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item hvr-float-shadow"><span class="malibu-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item hvr-float-shadow"><span class="malibu-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item hvr-float-shadow"><span class="malibu-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item hvr-float-shadow"><span class="malibu-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item hvr-float-shadow"><span class="malibu-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item hvr-float-shadow"><span class="malibu-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item hvr-float-shadow"><span>%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item hvr-float-shadow"><span>mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item hvr-float-shadow"><span>email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item hvr-float-shadow"><span>twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item hvr-float-shadow"><span>github</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item hvr-float-shadow"><span>blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item hvr-float-shadow"><span>location</span><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic hvr-float-shadow">';
+var HTMLbioPic = '<img src="%data%" class="biopic hvr-float-shadow img-responsive">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 class="glance">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
