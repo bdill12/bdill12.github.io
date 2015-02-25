@@ -3,11 +3,11 @@ var bio = {
 	"role" : "Writer, Front End Developer",
 	"welcomeMessage" : "ENFP. Idealistic. Quixotic. Creative. Looking to help someone create something.",
 	"contacts" : {
-		"email" : "<br>bdill12@gmail.com",
-		"mobile" : "<br>(806)470-3013",
-		"github" : "<br>bdill12",
-		"twitter" : "<br>@bdill12",
-		"location" : "<br>Los Angeles, CA"
+		"email" : " bdill12@gmail.com",
+		"mobile" : "(806)470-3013",
+		"github" : " bdill12",
+		"twitter" : " @bdill12",
+		"location" : " Los Angeles, CA"
 	},
 	"url" : "images/BWsnl.PNG",
 	"skills" : ["Creative Writing", "HTML/CSS", "Proofreading", "SEO/Keyword Research" ],
@@ -33,11 +33,11 @@ var bio = {
 		$("#footerContacts").append(formattedGithub);
 		$("#topContacts").append(formattedLocation);
 		$("#footerContacts").append(formattedLocation);
-		$("#picMessage").append(formattedBiopic);
 		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage);
 		$("#picMessage").append(formattedWelcomeMessage);
+		$("#picMessage").append(formattedBiopic);
 		if (this.skills.length > 0) {
-			$("#header2").append(HTMLskillsStart);
+			$("#header").append(HTMLskillsStart);
 				for (var skill in this.skills) {
 					var formattedSkills = HTMLskills.replace("%data%", this.skills[skill]);
 					$("#skills").append(formattedSkills);
@@ -125,14 +125,18 @@ var projects = {
 		"image": "images/Commercials_pdf_photo.jpg",
 		"dates": "2014 - 2015",
 		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools.",
-		"url": "images/commercials.pdf download"
+		"url": "images/commercials.pdf"
+	},
+	{
+		"title": "Excerpt from a Short Story",
+		"image": "images/Commercials_pdf_photo.jpg",
+		"dates": "September 2014",
+		"description": "An excerpt from a short story about a young man who may deal wtih addiction and mental illness."
 	}
 	],
-	"display" : function ()
-	{
-		if (this.projects.length <= 3) {
+	"display" : function (){
 		for (var project in this.projects) {
-			$(".row").append(HTMLprojectStart);
+			$("#projects").append(HTMLprojectStart);
 			var formattedProjName = HTMLprojectTitle.replace("%data%", this.projects[project].title);
 			var formattedProjTitle = formattedProjName.replace("%data2%", this.projects[project].url);
 			var formattedProjDates = HTMLprojectDates.replace("%data%", this.projects[project].dates);
@@ -141,10 +145,8 @@ var projects = {
 			$(".project-entry:last").append(formattedProjImage);
 			$(".project-entry:last").append(formattedProjTitle);
 			$(".project-entry:last").append(formattedProjDates);
-			$(".project-entry:last").append(formattedProjDescription);
-			
-		}}	
-}
+			$(".project-entry:last").append(formattedProjDescription);}
+	}
 };
 
 projects.display();
