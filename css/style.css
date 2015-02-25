@@ -56,7 +56,7 @@ h2 {
 
 h3 {
   line-height: 22px;
-  margin-left: 475px;
+  text-align: center
 }
 
 h4 {
@@ -104,8 +104,8 @@ a {
 }
 
 .welcome-message {
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 9;
   padding-left: 25px;
 }
 
@@ -130,15 +130,13 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: 20px;
+  justify-content: space-around;
 }
 
 .flex-item {
   border: 2px solid #22313F;
-  padding: 5px;
-  margin: 5px;
   background-color: rgb(108,122,137);
+  border-radius: 20px;
 }
 
 .cer-content {
@@ -150,13 +148,11 @@ ul {
 }
 
 .biopic {
-  float: left;
   display: none;
   width: 450px;
   height:auto;
   border: 2px solid #22313F;
   border-radius: 50px;
-  margin: 50px;
   margin-top: 5px;
 } 
 
@@ -192,18 +188,14 @@ span {
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    margin: 0;
+  .welcome-message {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 750px) {
   #letsConnect {
     margin-top: 10%;
-  }
-
-  .biopic {
-    margin: 0;
   }
 
   .welcome-message {
@@ -231,10 +223,6 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
-.biopic {
-    margin: 0;
-  }
-
 #skillsH3{ margin: 0 10px;
   padding: 0 10px;
   display: flex;

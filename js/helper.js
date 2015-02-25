@@ -20,13 +20,12 @@ var HTMLmobile = '<li class="flex-item hvr-float-shadow"><span>mobile</span><spa
 var HTMLemail = '<li class="flex-item hvr-float-shadow"><span>email</span><span class="white-text">%data%</span></li>';
 var HTMLtwitter = '<li class="flex-item hvr-float-shadow"><span>twitter</span><span class="white-text">%data%</span></li>';
 var HTMLgithub = '<li class="flex-item hvr-float-shadow"><span>github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item hvr-float-shadow"><span>blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item hvr-float-shadow"><span>location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic hvr-float-shadow img-responsive">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 class="glance">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+var HTMLskillsStart = '<h3>Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item hvr-float-shadow"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
@@ -49,7 +48,7 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<h4>Online Classes</h4>';
 var HTMLonlineTitle = '<li>%data%';
 var HTMLonlineSchool = ' - %data%';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';

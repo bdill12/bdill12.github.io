@@ -10,7 +10,7 @@ var bio = {
 		"location" : "Los Angeles, CA"
 	},
 	"url" : "images/BWsnl.PNG",
-	"skills" : ["Creative Writing", "Social Media", "HTML", "CSS", "Proofreading", "Editing", "SEO", "Keyword Research" ],
+	"skills" : ["Creative Writing", "HTML/CSS", "Proofreading", "SEO/Keyword Research" ],
 	"display" : function() {
 		var formattedName = HTMLheaderName.replace( "%data%", this.name );
 		var formattedRole = HTMLheaderRole.replace( "%data%", this.role );
@@ -36,7 +36,7 @@ var bio = {
 		$("#header").append(formattedBiopic);
 		$("#header").append(formattedWelcomeMessage);
 		if (this.skills.length > 0) {
-			$("#header").append(HTMLskillsStart);
+			$("#header2").append(HTMLskillsStart);
 				for (var skill in this.skills) {
 					var formattedSkills = HTMLskills.replace("%data%", this.skills[skill]);
 					$("#skills").append(formattedSkills);
