@@ -246,7 +246,8 @@ span {
     display: inline-block;
     border-radius: 20px;}
 
-#skillsH3{ display: inline;
+#skillsH3{ display: block;
+  width: 100%;
     }
 }
 }
