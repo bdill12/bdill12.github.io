@@ -1,7 +1,7 @@
 html {
   padding:0;
   margin:0;
- font-family: 'Raleway', Helvetica, Arial, sans-serif;
+ font-family: 'Raleway', sans-serif;
  color: #22313F;
  background-color: #FFF;
 }
@@ -9,8 +9,8 @@ html {
 body {
   padding:0;
   margin:0;
- font-family: 'Raleway', Helvetica, Arial, sans-serif;
  background-color: #FFF;
+ font-family: 'Raleway', sans-serif;
  font-size: 18px;
  line-height: 35px;
  color: #22313F;
@@ -35,7 +35,7 @@ display: inline-block;
 }
 
 h1 {
-   font-family: 'Raleway', Helvetica, Arial, sans-serif;
+   font-family: 'Merriweather', serif;
     font-size: 75px;
     line-height: 70px;
     display: inline;
@@ -45,7 +45,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', serif;
   font-size: 42px;
   color: #22313F;
   line-height: 29px;
@@ -55,12 +55,13 @@ h2 {
 }
 
 h3 {
+  font-family: 'Merriweather', serif;
   line-height: 22px;
   text-align: center
 }
 
 h4 {
- font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', serif;
   font-size: 20px;
   color: #22313F;
   line-height: 22px;
@@ -96,6 +97,7 @@ p {
 }
 
 a {
+  font-family: 'Merriweather', serif;
   color: #3A539B;
   text-decoration: none;
   margin: 10px 0;
@@ -104,9 +106,10 @@ a {
 }
 
 .welcome-message {
-  font-size: 16px;
-  line-height: 9;
+  font-size: 20px;
   padding-left: 25px;
+  line-height: normal;
+  margin-top: 50px;
 }
 
 .white-text {
@@ -130,13 +133,14 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .flex-item {
   border: 2px solid #22313F;
   background-color: rgb(108,122,137);
   border-radius: 20px;
+  line-height: normal;
 }
 
 .cer-content {

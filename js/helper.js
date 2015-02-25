@@ -15,15 +15,15 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item hvr-float-shadow"><span>%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item hvr-float-shadow"><span>mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item hvr-float-shadow"><span>email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item hvr-float-shadow"><span>twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item hvr-float-shadow"><span>github</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item hvr-float-shadow"><span>location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<div class="col-md-2 flex-item hvr-float-shadow"><span>%contact%<span><span class="white-text">%data%</span></div>';
+var HTMLmobile = '<div class="col-md-2 flex-item hvr-float-shadow"><span>mobile</span><span class="white-text">%data%</span></div>';
+var HTMLemail = '<div class="col-md-2 flex-item hvr-float-shadow"><span>email</span><span class="white-text">%data%</span></div>';
+var HTMLtwitter = '<div class="col-md-2 flex-item hvr-float-shadow"><span>twitter</span><span class="white-text">%data%</span></div>';
+var HTMLgithub = '<div class="col-md-2 flex-item hvr-float-shadow"><span>github</span><span class="white-text">%data%</span></div>';
+var HTMLlocation = '<div class="col-md-2 flex-item hvr-float-shadow"><span>location</span><span class="white-text">%data%</span></div>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic hvr-float-shadow img-responsive">';
-var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<div class="col-md-4"><img src="%data%" class="biopic hvr-float-shadow img-responsive"></div>';
+var HTMLWelcomeMsg = '<div class="col-md-8" id="message"><p class="welcome-message">%data%</p></div>';
 
 var HTMLskillsStart = '<h3>Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item hvr-float-shadow"><span class="white-text">%data%</span></li>';
@@ -33,12 +33,12 @@ var HTMLworkEmployer = '<a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkDescription = '<p>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry col-md-4"></div>';
 var HTMLprojectTitle = '<a class="aLight" href="%data2%">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p></div>';
+var HTMLprojectDescription = '<p>%data%</p></div>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';

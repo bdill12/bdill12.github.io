@@ -1,13 +1,13 @@
 var bio = {
 	"name" : "Brent Dill",
 	"role" : "Writer, Front End Developer",
-	"welcomeMessage" : "I'm a creative person looking for a place to create.",
+	"welcomeMessage" : "ENFP. Idealistic. Quixotic. Creative. Looking to help someone create something.",
 	"contacts" : {
-		"email" : "bdill12@gmail.com",
-		"mobile" : "(806) 470-3013",
-		"github" : "bdill12",
-		"twitter" : "@bdill12",
-		"location" : "Los Angeles, CA"
+		"email" : "<br>bdill12@gmail.com",
+		"mobile" : "<br>(806)470-3013",
+		"github" : "<br>bdill12",
+		"twitter" : "<br>@bdill12",
+		"location" : "<br>Los Angeles, CA"
 	},
 	"url" : "images/BWsnl.PNG",
 	"skills" : ["Creative Writing", "HTML/CSS", "Proofreading", "SEO/Keyword Research" ],
@@ -19,7 +19,7 @@ var bio = {
 		var formattedGithub = HTMLgithub.replace( "%data%", this.contacts.github );
 		var formattedTwitter = HTMLtwitter.replace( "%data%", this.contacts.twitter );
 		var formattedLocation = HTMLlocation.replace( "%data%", this.contacts.location );
-		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage );
+		
 		var formattedBiopic = HTMLbioPic.replace( "%data%", this.url );
 		$("#header").prepend(formattedRole);
 		$("#header").prepend(formattedName);
@@ -33,8 +33,9 @@ var bio = {
 		$("#footerContacts").append(formattedGithub);
 		$("#topContacts").append(formattedLocation);
 		$("#footerContacts").append(formattedLocation);
-		$("#header").append(formattedBiopic);
-		$("#header").append(formattedWelcomeMessage);
+		$("#picMessage").append(formattedBiopic);
+		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage);
+		$("#picMessage").append(formattedWelcomeMessage);
 		if (this.skills.length > 0) {
 			$("#header2").append(HTMLskillsStart);
 				for (var skill in this.skills) {
