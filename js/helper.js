@@ -22,8 +22,8 @@ var HTMLtwitter = '<div class="col-md-2 flex-item hvr-float-shadow"><span>twitte
 var HTMLgithub = '<div class="col-md-2 flex-item hvr-float-shadow"><span>github</span><span class="white-text">%data%</span></div>';
 var HTMLlocation = '<div class="col-md-2 flex-item hvr-float-shadow"><span>location</span><span class="white-text">%data%</span></div>';
 
-var HTMLbioPic = '<div class="col-md-4"><img src="%data%" class="biopic hvr-float-shadow img-responsive"></div>';
-var HTMLWelcomeMsg = '<div class="col-md-8" id="message"><p class="welcome-message">%data%</p></div>';
+var HTMLbioPic = '<div class="col-md-6"><img src="%data%" class="biopic hvr-float-shadow img-responsive"></div>';
+var HTMLWelcomeMsg = '<div class="col-md-6" id="message"><p class="welcome-message">%data%</p></div>';
 
 var HTMLskillsStart = '<h3>Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item hvr-float-shadow"><span class="white-text">%data%</span></li>';
