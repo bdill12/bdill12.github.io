@@ -43,7 +43,7 @@ h1 {
     display: inline;
     font-weight: normal;
     color: #1F0C1F;
-    margin-left: 50px;
+    margin-left: 35px;
 }
 
 h2 {
@@ -129,6 +129,7 @@ a {
   margin: 5px;
   text-align: center;
   width: 20%;
+  overflow: visible;
 }
 
 .cer-content {
