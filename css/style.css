@@ -20,7 +20,13 @@ header {
   font-size: 20px
 }
 
-.education-entry, .work-entry {
+.education-entry {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: inline-block;
+} 
+
+.work-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -48,6 +54,7 @@ h2 {
   padding: 10px;
   padding-left: 5%;
   padding-right: 5%;
+  text-align: center;
 }
 
 h3 {
@@ -70,13 +77,15 @@ h4 {
   font-size: 16px;
   line-height: 16px;
   float: left;
+  clear: both;
 }
 
 .location-text {
 
   font-size: 16px;
   line-height: 16px;
-  float: right;
+  margin-left: auto;
+  clear: both;
 
 }
 
@@ -84,6 +93,7 @@ p {
   font-size: 16px;
   line-height: 21px;
   float: right;
+  clear: both;
 }
 
 a {
@@ -92,7 +102,8 @@ a {
   text-decoration: none;
   margin: 10px 0;
   display: block;
-  font-size: 28px;
+  font-size: 25px;
+  clear: both;
 }
 
 .gray {
@@ -170,9 +181,6 @@ span {
   #letsConnect {
     margin-top: 10%;
   }
-  #map {
-    display: none;
-  }
 }
 
 #map {
@@ -188,128 +196,43 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (max-width: 415px) {
-body {
-  font-size: 1em;
-}
 
-h3, #skills, .welcomeMessage, .mapdiv {
-  display: none;
-}
+/*  GRID OF TWELVE ==== */
 
-}
-
-/*  GRID OF TWELVE   ============================================================================= */
-
-.span_12_of_12 {
-  width: 100%;
-}
-
-.span_11_of_12 {
-  width: 91.53%;
-}
-
-.span_10_of_12 {
-  width: 83.06%;
-}
-
-.span_9_of_12 {
-  width: 74.6%;
-}
-
-.span_8_of_12 {
-  width: 66.13%;
-}
-
-.span_7_of_12 {
-  width: 57.66%; 
-}
-
-.span_6_of_12 {
-  width: 49.2%; 
-}
-
-.span_5_of_12 {
-  width: 40.73%; 
-}
 
 .span_4_of_12 {
   width: 32.26%; 
 }
 
-.span_3_of_12 {
-  width: 23.8%;
-}
-
-.span_2_of_12 {
-  width: 15.33%; 
-}
-
-.span_1_of_12 {
-  width: 6.86%; 
-}
-
-
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-  .span_12_of_12 {
-    width: 100%; 
-  }
-  .span_11_of_12 {
-    width: 100%; 
-  }
-  .span_10_of_12 {
-    width: 100%; 
-  }
-  .span_9_of_12 {
-    width: 100%; 
-  }
-  .span_8_of_12 {
-    width: 100%; 
-  }
-  .span_7_of_12 {
-    width: 100%; 
-  }
-  .span_6_of_12 {
-    width: 100%; 
-  }
-  .span_5_of_12 {
-    width: 100%; 
-  }
-  .span_4_of_12 {
-    width: 100%; 
-  }
   .span_3_of_12 {
     width: 100%; 
-  }
-  .span_2_of_12 {
-    width: 100%; 
-  }
-  .span_1_of_12 {
-    width: 100%; 
-  }
-}
-@media only screen and (max-width: 450px) {
-  body {
-    font-size: 12px;
-  }
-  .biopic{
-    width: 100%
   }
 
   .flex-item {
     width: 100%
   }
-
+  
   h1 {
     font-size: 28px
   }
 
-   #map {
+  #map {
     display: none;
   }
+
   h2 > span {
     display: none;
   }
+
+  body {
+    font-size: 1em;
+  }
+
+  h3, #skills, .welcomeMessage, .mapdiv {
+    display: none;
+  }
+
 }
