@@ -21,10 +21,10 @@ var bio = {
 		var formattedLocation = HTMLlocation.replace( "%data%", this.contacts.location );
 		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage);
 		var formattedBiopic = HTMLbioPic.replace( "%data%", this.url );
+		$("#header").prepend(formattedWelcomeMessage);
 		$("#header").prepend(formattedBiopic);
 		$("#header").prepend(formattedRole);
 		$("#header").prepend(formattedName);
-		$("#header").append(formattedWelcomeMessage);
 		$("#topContacts").append(formattedMobile);
 		$("#footerContacts").append(formattedMobile);
 		$("#topContacts").append(formattedEmail);
