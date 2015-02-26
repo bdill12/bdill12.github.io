@@ -207,16 +207,19 @@ span {
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-  .span_3_of_12 {
-    width: 100%; 
-  }
 
   .flex-item {
-    width: 100%
+    width: 100%;
+    display: block;
   }
   
+header > span {
+  font-size: 14px;
+}
+
   h1 {
-    font-size: 28px
+    font-size: 20px;
+    margin-left: 5px;
   }
 
   #map {
