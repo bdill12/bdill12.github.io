@@ -1,7 +1,7 @@
 var bio = {
 	"name" : "Brent Dill",
 	"role" : "Writer, Front End Developer",
-	"welcomeMessage" : "ENFP. Idealistic. Quixotic. Creative. Looking to help someone create something.",
+	"welcomeMessage" : "ENFP. Idealistic. Creative. Looking to help someone create something.",
 	"contacts" : {
 		"email" : " bdill12@gmail.com",
 		"mobile" : "(806)470-3013",
