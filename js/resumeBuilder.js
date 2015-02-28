@@ -1,5 +1,5 @@
 var bio = {
-	"name" : "Brent Dill",
+	"name" : "Brent C Dill",
 	"role" : "Writer, Front End Developer",
 	"welcomeMessage" : "ENFP. Idealistic. Creative. Looking to help someone create something.",
 	"contacts" : {
@@ -244,7 +244,6 @@ var education = {
 					$(".education-entry:last").append(formattedDate);
 					$(".education-entry:last").append(formattedURL);
 				}
-				$("#education").append("</ul>");
 			}
 		}
 	};
