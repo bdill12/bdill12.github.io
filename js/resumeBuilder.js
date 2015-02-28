@@ -5,24 +5,19 @@ var bio = {
 	"contacts" : {
 		"email" : " bdill12@gmail.com",
 		"mobile" : "(806)470-3013",
-		"github" : " bdill12",
 		"twitter" : " @bdill12",
 		"location" : " Los Angeles, CA"
 	},
-	"url" : "images/BWsnl.PNG",
+	"url" : ["images/prof_1.jpg", "images/prof_2.jpg", "images/prof_3.jpg", "images/prof_4.jpg"],
 	"skills" : ["Creative Writing", "HTML/CSS", "Proofreading", "SEO/Keyword Research" ],
 	"display" : function() {
 		var formattedName = HTMLheaderName.replace( "%data%", this.name );
 		var formattedRole = HTMLheaderRole.replace( "%data%", this.role );
 		var formattedMobile = HTMLmobile.replace( "%data%", this.contacts.mobile );
 		var formattedEmail = HTMLemail.replace( "%data%", this.contacts.email );
-		var formattedGithub = HTMLgithub.replace( "%data%", this.contacts.github );
 		var formattedTwitter = HTMLtwitter.replace( "%data%", this.contacts.twitter );
 		var formattedLocation = HTMLlocation.replace( "%data%", this.contacts.location );
 		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage);
-		var formattedBiopic = HTMLbioPic.replace( "%data%", this.url );
-		$("#header").prepend(formattedWelcomeMessage);
-		$("#header").prepend(formattedBiopic);
 		$("#header").prepend(formattedRole);
 		$("#header").prepend(formattedName);
 		$("#topContacts").append(formattedMobile);
@@ -31,10 +26,11 @@ var bio = {
 		$("#footerContacts").append(formattedEmail);
 		$("#topContacts").append(formattedTwitter);
 		$("#footerContacts").append(formattedTwitter);
-		$("#topContacts").append(formattedGithub);
-		$("#footerContacts").append(formattedGithub);
 		$("#topContacts").append(formattedLocation);
-		$("#footerContacts").append(formattedLocation);		
+		$("#footerContacts").append(formattedLocation);
+		for (var pic in this.url){
+			var formattedBiopic = HTMLbioPic.replace( "%data%", this.url[pic]);
+			$("#header").append(formattedBiopic);}
 		if (this.skills.length > 0) {
 			$("#header").append(HTMLskillsStart);
 				for (var skill in this.skills) {
@@ -42,7 +38,7 @@ var bio = {
 					$("#skills").append(formattedSkills);
 			}
 		}
-	}
+	$("#header").append(formattedWelcomeMessage);}
 };
 bio.display();
 

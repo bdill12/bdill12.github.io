@@ -15,17 +15,17 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span>';
 
-var HTMLcontactGeneric = '<div class="span_3_of_12 flex-item"><span>%contact%<span><span class="white-text">%data%</span></div>';
-var HTMLmobile = '<div class="span_3_of_12 flex-item"><span>mobile</span><span class="white-text">%data%</span></div>';
-var HTMLemail = '<div class="span_3_of_12 flex-item"><span>email</span><span class="white-text">%data%</span></div>';
-var HTMLtwitter = '<div class="span_3_of_12 flex-item"><span>twitter</span><span class="white-text">%data%</span></div>';
-var HTMLgithub = '<div class="span_3_of_12 flex-item"><span>github</span><span class="white-text">%data%</span></div>';
-var HTMLlocation = '<div class="span_3_of_12 flex-item"><span>location</span><span class="white-text">%data%</span></div>';
+var HTMLcontactGeneric = '<div class="span_2_of_12 flex-item"><span>%contact%<span><span class="white-text">%data%</span></div>';
+var HTMLmobile = '<div class="span_2_of_12 flex-item"><span>mobile</span><span class="white-text">%data%</span></div>';
+var HTMLemail = '<div class="span_2_of_12 flex-item"><span>email</span><span class="white-text">%data%</span></div>';
+var HTMLtwitter = '<div class="span_2_of_12 flex-item"><span>twitter</span><span class="white-text">%data%</span></div>';
+var HTMLgithub = '<div class="span_2_of_12 flex-item"><span>github</span><span class="white-text">%data%</span></div>';
+var HTMLlocation = '<div class="span_2_of_12 flex-item"><span>location</span><span class="white-text">%data%</span></div>';
 
-var HTMLbioPic = '<img src="%data%" class="flex-item biopic img-responsive">';
+var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcomeMessage">%data%</span>';
 
-var HTMLskillsStart = '<h3>Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+var HTMLskillsStart = '<h3>Skills at a Glance:</h3><ul id="skills" class="flex-box skills"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
@@ -55,7 +55,7 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '%data%</li>';
 
 var internationalizeButton = '<button>Internationalize</button>';
-var googleMap = '<div id="map"></div>';
+var googleMap = '<div class="map" id="map"></div>';
 
 
 
