@@ -18,7 +18,7 @@ var bio = {
 		var formattedTwitter = HTMLtwitter.replace( "%data%", this.contacts.twitter );
 		var formattedLocation = HTMLlocation.replace( "%data%", this.contacts.location );
 		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage);
-		$("#header").append(formattedWelcomeMessage);
+		
 		$("#header").prepend(formattedRole);
 		$("#header").prepend(formattedName);
 		$("#topContacts").append(formattedMobile);
@@ -32,6 +32,7 @@ var bio = {
 		for (var pic in this.url){
 			var formattedBiopic = HTMLbioPic.replace( "%data%", this.url[pic]);
 			$("#header").append(formattedBiopic);}
+		$("#header").append(formattedWelcomeMessage);
 		if (this.skills.length > 0) {
 			$("#header").append(HTMLskillsStart);
 				for (var skill in this.skills) {
