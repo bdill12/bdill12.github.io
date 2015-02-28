@@ -8,7 +8,7 @@ var bio = {
 		"twitter" : " @bdill12",
 		"location" : " Los Angeles, CA"
 	},
-	"url" : ["images/prof_1.jpg", "images/prof_2.jpg", "images/prof_3.jpg", "images/prof_4.jpg"],
+	"url" : ["images/prof_1.JPG", "images/prof_2.JPG", "images/prof_3.JPG", "images/prof_4.JPG"],
 	"skills" : ["Creative Writing", "HTML/CSS", "Proofreading", "SEO/Keyword Research" ],
 	"display" : function() {
 		var formattedName = HTMLheaderName.replace( "%data%", this.name );
@@ -18,6 +18,7 @@ var bio = {
 		var formattedTwitter = HTMLtwitter.replace( "%data%", this.contacts.twitter );
 		var formattedLocation = HTMLlocation.replace( "%data%", this.contacts.location );
 		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage);
+		$("#header").append(formattedWelcomeMessage);
 		$("#header").prepend(formattedRole);
 		$("#header").prepend(formattedName);
 		$("#topContacts").append(formattedMobile);
@@ -38,7 +39,7 @@ var bio = {
 					$("#skills").append(formattedSkills);
 			}
 		}
-	$("#header").append(formattedWelcomeMessage);}
+	}
 };
 bio.display();
 
