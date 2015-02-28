@@ -115,8 +115,8 @@ var projects = {
 		"title": "Keyword Researched Blog Posts",
 		"image": "images/blog_project_photo.jpg",
 		"dates": "2014 - 2015",
-		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools.",
-		"url": "http://couponpal.com/blog/author/brent-dill"
+		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools. Posted at CouponPal.",
+		"url": "http://couponpal.com/blog/author/brent-dill rel='nofollow'"
 	},
 	{
 		"title": "Interactive Online Résumé",
