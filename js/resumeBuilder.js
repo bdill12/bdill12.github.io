@@ -122,7 +122,7 @@ var projects = {
 		"title": "Interactive Online Résumé",
 		"image": "images/resume_project_photo.jpg",
 		"dates": "February 2015",
-		"description": "A résumé with interactive elements, such as the map below. Built 'by hand' from Javascript, HTML, and CSS.",
+		"description": "A résumé with interactive elements, such as the map below. Built 'by hand' from Javascript, HTML, and CSS. You're already looking at it. (See? I'm interacting right now.)",
 		"url": "#"
 	},
 	{
