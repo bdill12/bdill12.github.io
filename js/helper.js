@@ -12,7 +12,7 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
+var HTMLheaderName = '<h1 class="name" id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span>';
 
 var HTMLcontactGeneric = '<div class="span_2_of_12 flex-item"><span>%contact%<span><span class="white-text">%data%</span></div>';
@@ -25,7 +25,7 @@ var HTMLlocation = '<div class="span_2_of_12 flex-item"><span>location</span><sp
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcomeMessage">%data%</span>';
 
-var HTMLskillsStart = '<h3>Skills at a Glance:</h3><ul id="skills" class="flex-box skills"></ul>';
+var HTMLskillsStart = '<h3 class="skills">Skills at a Glance:</h3><ul id="skills" class="flex-box skills"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
@@ -39,20 +39,20 @@ var HTMLprojectStart = '<div class="project-entry span_3_of_12"></div>';
 var HTMLprojectTitle = '<a href="%data2%">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p>%data%</p></div>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img class="pr" src="%data%">';
 
-var HTMLschoolStart = '<div class="education-entry"></div>';
+var HTMLschoolStart = '<div class="education-entry span_4_of_12"></div>';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolDegree = '<h3>%data%</h3></a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolMajor = '<h4><br>Major: %data%</h4>';
 
-var HTMLonlineClasses = '<h4>Online Classes</h4>';
-var HTMLonlineTitle = '<li>%data%';
-var HTMLonlineSchool = ' - %data%';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '%data%</li>';
+var HTMLonlineClasses = '<h2>Online Classes</h2>';
+var HTMLonlineTitle = '<a href="#">%data%;';
+var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineDates = '<div class="date-text">%data%';
+var HTMLonlineURL = '%data%</div>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div class="map" id="map"></div>';

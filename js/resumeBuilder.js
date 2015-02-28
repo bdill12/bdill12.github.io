@@ -104,6 +104,14 @@ work.display();
 var projects = { 
 	"projects" : [
 	{
+		"title": "Full Writing Portfolio",
+		"image": "images/Brent_C_Dill_Writing_Portfolio_pdf.jpg",
+		"dates": "2010 - 2015",
+		"description": "Writing Samples: Commercials, Creative Writing, SEO and Keyword-Researched Blogs, Content for Online retailers, and Academic writing.",
+		"url": "images/Brent_C_Dill_Writing_Portfolio.pdf'"
+
+	},
+	{
 		"title": "Keyword Researched Blog Posts",
 		"image": "images/blog_project_photo.jpg",
 		"dates": "2014 - 2015",
@@ -114,21 +122,22 @@ var projects = {
 		"title": "Interactive Online Résumé",
 		"image": "images/resume_project_photo.jpg",
 		"dates": "February 2015",
-		"description": "A résumé with interactive elements, such as the animations and the Google Map below. Built 'by hand' from Javascript, HTML, and CSS.",
+		"description": "A résumé with interactive elements, such as the map below. Built 'by hand' from Javascript, HTML, and CSS.",
 		"url": "#"
 	},
 	{
 		"title": "Commercials for Office Management System",
 		"image": "images/Commercials_pdf_photo.jpg",
 		"dates": "2014 - 2015",
-		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools.",
-		"url": "images/commercials.pdf"
+		"description": "A series of three commercials featuring a very likable copy machine named Mark",
+		"url": "images/Commercials.pdf'"
 	},
 	{
 		"title": "Excerpt from a Short Story",
-		"image": "images/Commercials_pdf_photo.jpg",
-		"dates": "September 2014",
-		"description": "An excerpt from a short story about a young man who may deal wtih addiction and mental illness."
+		"image": "images/arthur.JPG",
+		"dates": "2015",
+		"description": "The opening to a short story which will be published this year.",
+		"url": "image/What_happened_with_Jacob_snippet.pdf"
 	}
 	],
 	"display" : function (){
@@ -168,8 +177,8 @@ var education = {
 		},
 		{
 			"name": "The Groundlings School",
-			"degree": "I can't think of anything funny.",
-			"majors": [ "Spacework", " Waiting for Others to Speak", " 'Yes, and.'"],
+			"degree": "Certificate of Lol",
+			"majors": [ " Waiting for Others to Speak", " 'Yes, and.'"],
 			"location": "Hollywood, California",
 			"dates": "2013 - 2014",
 			"url": "http://www.groundlings.com/"
@@ -185,7 +194,7 @@ var education = {
 		},
 		{
 			"url": " ",
-			"title": "Intro to Javascript",
+			"title": "Javascript Basics",
 			"school": "Udacity",
 			"dates": "February 2015"
 		},
@@ -194,6 +203,18 @@ var education = {
 			"title": "Intro to jQuery",
 			"school": "Udacity",
 			"dates": "February 2015"
+		},
+		{
+			"url": " ",
+			"title": "Object Oriented Javascript",
+			"school": "Udacity",
+			"dates": "March 2015"
+		},
+		{
+			"url": " ",
+			"title": "Responsive Web Design",
+			"school": "Udacity",
+			"dates": "March 2015"
 		}
 		],
 	"display" : function() {
@@ -207,8 +228,9 @@ var education = {
 			$(".education-entry:last").append(formattedName);
 			$(".education-entry:last").append(formattedDegree);
 			$(".education-entry:last").append(formattedMajors);
+			$(".education-entry:last").append(formattedLocation);
 			$(".education-entry:last").append(formattedDates);
-			$(".education-entry:last").append(formattedLocation);}
+		}
 			if (education.onlineCourses.length > 0){
 				$("#education").append(HTMLonlineClasses);
 				for (var course in this.onlineCourses) {
@@ -222,6 +244,7 @@ var education = {
 					$(".education-entry:last").append(formattedDate);
 					$(".education-entry:last").append(formattedURL);
 				}
+				$("#education").append("</ul>");
 			}
 		}
 	};
