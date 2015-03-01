@@ -150,6 +150,14 @@ body {
     display: block;
   }
 
+  .biopic {
+    width: 20%;
+    position: relative;
+    z-index: 0;
+    margin: 3px;
+    overflow: visible;
+  }
+
   header > span {
     font-size: 14px;
   }
