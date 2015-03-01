@@ -15,12 +15,12 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 class="name" id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span>';
 
-var HTMLcontactGeneric = '<div class="span_2_of_12 flex-item"><span>%contact%<span><span class="white-text">%data%</span></div>';
-var HTMLmobile = '<div class="span_2_of_12 flex-item"><span>mobile</span><span class="white-text">%data%</span></div>';
-var HTMLemail = '<div class="span_2_of_12 flex-item"><span>email</span><span class="white-text">%data%</span></div>';
-var HTMLtwitter = '<div class="span_2_of_12 flex-item"><span>twitter</span><span class="white-text">%data%</span></div>';
-var HTMLgithub = '<div class="span_2_of_12 flex-item"><span>github</span><span class="white-text">%data%</span></div>';
-var HTMLlocation = '<div class="span_2_of_12 flex-item"><span>location</span><span class="white-text">%data%</span></div>';
+var HTMLcontactGeneric = '<li class="flex-item"><span>%contact%<span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span>mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span>email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span>twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span>github</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span>location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcomeMessage">%data%</span>';
@@ -39,7 +39,7 @@ var HTMLprojectStart = '<div class="project-entry span_3_of_12"></div>';
 var HTMLprojectTitle = '<a href="%data2%">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p>%data%</p></div>';
-var HTMLprojectImage = '<img class="pr" src="%data%">';
+var HTMLprojectImage = '<img class="projImg" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry span_4_of_12"></div>';
 var HTMLschoolName = '<a href="#">%data%';
