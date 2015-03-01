@@ -15,18 +15,18 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 class="name" id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span>%contact%<span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span>mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span>email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span>twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span>github</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span>location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item">%contact%: %data%</li>';
+var HTMLmobile = '<li class="flex-item">mobile : %data%</li>';
+var HTMLemail = '<li class="flex-item">email : %data%</li>';
+var HTMLtwitter = '<li class="flex-item">twitter : %data%</li>';
+var HTMLgithub = '<li class="flex-item">github : %data%</li>';
+var HTMLlocation = '<li class="flex-item">location : %data%</li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcomeMessage">%data%</span>';
 
 var HTMLskillsStart = '<h3 class="skills">Skills at a Glance:</h3><ul id="skills" class="flex-box skills"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskills = '<li class="flex-item">%data%</li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -46,7 +46,7 @@ var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = '<h3>%data%</h3></a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<h4><br>Major: %data%</h4>';
+var HTMLschoolMajor = '<h4>Major: %data%</h4>';
 
 var HTMLonlineClasses = '<h2>Online Classes</h2>';
 var HTMLonlineTitle = '<a href="#">%data%;';

@@ -8,7 +8,6 @@ body {
   }
 
   .welcomeMessage{
-    z-index: 100;
     font-size: 20px;
     margin-left: 5%;
   }
@@ -19,8 +18,7 @@ body {
   } 
 
   .work-entry {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 0 5%;
     margin-bottom: 6%;
   }
 
@@ -190,8 +188,11 @@ body {
   body {
     font-size: 1em;
   }
-
-  .skills, .welcomeMessage, .mapdiv {
+.mapDiv {
+  height: 0;
+  display: none;
+}
+  .skills, .welcomeMessage {
     display: none;
   }
 }
