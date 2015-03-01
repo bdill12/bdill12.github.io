@@ -246,9 +246,8 @@ body {
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
-  .col {  margin: 1% 1%; }
     
-    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+  .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
       width: 100%; 
       }
 
@@ -256,8 +255,71 @@ body {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: center;
+  }
+
+  a {
+    margin: 0;
   }
     
     }
+
+    @media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {.span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+      width: 100%; 
+      }
+     .flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  a {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) {.span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+      width: 100%; 
+      }
+     .flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  a {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) { .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+      width: 100%; 
+      }
+     .flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  a {
+    margin: 0;
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+      width: 100%; 
+      }
+     .flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  a {
+    margin: 0;
+  }}
