@@ -42,6 +42,7 @@ var bio = {
 		}
 	}
 };
+
 bio.display();
 
 var work = {
