@@ -105,39 +105,47 @@ work.display();
 var projects = { 
 	"projects" : [
 	{
+		"title": "Make Your Own Meme App",
+		"image": "images/memeProj.JPG",
+		"dates": "March 2015",
+		"description": "Upload your own photo and add a meme message to it. Save it to your local files and share it with friends.",
+		"url": "mememaker/MemeMaker.html"
+
+	},
+	{
 		"title": "Full Writing Portfolio",
-		"image": "images/Brent_C_Dill_Writing_Portfolio_pdf.jpg",
+		"image": "images/writing.PNG",
 		"dates": "2010 - 2015",
-		"description": "Writing Samples: Commercials, Creative Writing, SEO and Keyword-Researched Blogs, Content for Online retailers, and Academic writing.",
+		"description": "Writing Samples: All types of writing compiled into one document for your consideration.",
 		"url": "images/Brent_C_Dill_Writing_Portfolio.pdf"
 
 	},
 	{
-		"title": "Keyword Researched Blog Posts",
-		"image": "images/blog_project_photo.jpg",
+		"title": "Keyword Researched Blogs",
+		"image": "images/blogs.JPG",
 		"dates": "2014 - 2015",
-		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools. Posted at CouponPal.",
+		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords.",
 		"url": "http://couponpal.com/blog/author/brent-dill"
 	},
 	{
 		"title": "Interactive Online Résumé",
-		"image": "images/resume_project_photo.jpg",
+		"image": "images/resume.JPG",
 		"dates": "February 2015",
-		"description": "A résumé with interactive elements, such as the map below. Built 'by hand' from Javascript, HTML, and CSS. You're already looking at it. (See? I'm interacting right now.)",
+		"description": "Résumé built with Javascript, HTML, and CSS. You're looking at it right now.",
 		"url": "#"
 	},
 	{
-		"title": "Commercials for Office Management System",
-		"image": "images/Commercials_pdf_photo.jpg",
+		"title": "Commercials",
+		"image": "images/commercials.JPG",
 		"dates": "2014 - 2015",
-		"description": "A series of three commercials featuring a very likable copy machine named Mark",
+		"description": "Series of three commercials featuring a very likable copy machine named Mark",
 		"url": "images/Commercials.pdf"
 	},
 	{
 		"title": "Excerpt from a Short Story",
-		"image": "images/arthur.JPG",
+		"image": "images/story.PNG",
 		"dates": "2015",
-		"description": "The opening to a short story which will be published this year.",
+		"description": "The opening to a short story which is to be published later in 2015. Click to Download.",
 		"url": "images/What_happened_with_Jacob_snippet.pdf"
 	}
 	],
