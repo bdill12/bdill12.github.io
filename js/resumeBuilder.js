@@ -109,7 +109,7 @@ var projects = {
 		"image": "images/Brent_C_Dill_Writing_Portfolio_pdf.jpg",
 		"dates": "2010 - 2015",
 		"description": "Writing Samples: Commercials, Creative Writing, SEO and Keyword-Researched Blogs, Content for Online retailers, and Academic writing.",
-		"url": "images/Brent_C_Dill_Writing_Portfolio.pdf'"
+		"url": "images/Brent_C_Dill_Writing_Portfolio.pdf"
 
 	},
 	{
@@ -117,7 +117,7 @@ var projects = {
 		"image": "images/blog_project_photo.jpg",
 		"dates": "2014 - 2015",
 		"description": "Blog posts to promote online retailers. Researched with Moz and Google Adwords, among other tools. Posted at CouponPal.",
-		"url": "http://couponpal.com/blog/author/brent-dill rel='nofollow'"
+		"url": "http://couponpal.com/blog/author/brent-dill"
 	},
 	{
 		"title": "Interactive Online Résumé",
@@ -131,14 +131,14 @@ var projects = {
 		"image": "images/Commercials_pdf_photo.jpg",
 		"dates": "2014 - 2015",
 		"description": "A series of three commercials featuring a very likable copy machine named Mark",
-		"url": "images/Commercials.pdf'"
+		"url": "images/Commercials.pdf"
 	},
 	{
 		"title": "Excerpt from a Short Story",
 		"image": "images/arthur.JPG",
 		"dates": "2015",
 		"description": "The opening to a short story which will be published this year.",
-		"url": "image/What_happened_with_Jacob_snippet.pdf"
+		"url": "images/What_happened_with_Jacob_snippet.pdf"
 	}
 	],
 	"display" : function (){
