@@ -1,35 +1,25 @@
 /*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
+JavaScript functions replace the %data% placeholder.
+Theoretically, this could be turned into an online form for others to use.
 */
 var HTMLheaderName = '<h1 class="name" id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span>';
+var HTMLheaderRole = '<h5>%data%</h5>';
 
 var HTMLcontactGeneric = '<li class="flex-item">%contact%: %data%</li>';
 var HTMLmobile = '<li class="flex-item">mobile : %data%</li>';
 var HTMLemail = '<li class="flex-item">email : %data%</li>';
-var HTMLtwitter = '<li class="flex-item">twitter : %data%</li>';
-var HTMLgithub = '<li class="flex-item">github : %data%</li>';
-var HTMLlocation = '<li class="flex-item">location : %data%</li>';
+var HTMLtwitter = '<li class="flex-item narrow">twitter : %data%</li>';
+var HTMLgithub = '<li class="flex-item narrow">github : %data%</li>';
+var HTMLlocation = '<li class="flex-item narrow">location : %data%</li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcomeMessage">%data%</span>';
 
-var HTMLskillsStart = '<h3 class="skills">Skills at a Glance:</h3><ul id="skills" class="flex-box skills"></ul>';
-var HTMLskills = '<li class="flex-item">%data%</li>';
+var HTMLskillsStart = '<h3 class="skills narrow">Skills at a Glance:</h3><ul id="skills" class="flex-box skills"></ul>';
+var HTMLskills = '<li class="flex-item narrow">%data%</li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
+var HTMLworkStart = '<div class="work-entry span_12_of_12"></div>';
+var HTMLworkEmployer = '<a rel="nofollow" href="%data2%">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
@@ -38,24 +28,23 @@ var HTMLworkDescription = '<p>%data%</p>';
 var HTMLprojectStart = '<div class="project-entry span_3_of_12"></div>';
 var HTMLprojectTitle = '<a href="%data2%">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p>%data%</p></div>';
-var HTMLprojectImage = '<img class="projImg" src="%data%">';
+var HTMLprojectDescription = '<p>%data%</p>';
+var HTMLprojectImage = '<img class="projImg narrow" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry span_4_of_12"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = '<h3>%data%</h3></a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolName = '<a href="%data2%" class="school">%data%</a>';
+var HTMLschoolDegree = '<h3>%data%</h3>';
+var HTMLschoolDates = '<div>%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<h4>Major: %data%</h4>';
 
-var HTMLonlineClasses = '<h2>Online Classes</h2>';
-var HTMLonlineTitle = '<a href="#">%data%;';
-var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%';
-var HTMLonlineURL = '%data%</div>';
+var HTMLonlineEduStart = '<div class="online-entry"></div>';
+var HTMLonlineTitle = '<a href="%data2%" class="onlineTitle">%data%</a>';
+var HTMLonlineSchool = '%data%  |';
+var HTMLonlineDates = '|  %data%';
 
 var internationalizeButton = '<button>Internationalize</button>';
-var googleMap = '<div class="map" id="map"></div>';
+var googleMap = '<div class="map narrow" id="map"></div>';
 
 
 
@@ -108,7 +97,8 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+    disableDefaultUI: true,
+    scrollwheel: false,
   };
 
   // This next line makes `map` a new Google Map JavaScript Object and attaches it to
@@ -169,8 +159,6 @@ function initializeMap() {
     var infoWindow = new google.maps.InfoWindow({
       content: name
     });
-
-    // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
     infoWindow.open(map, marker);});
 

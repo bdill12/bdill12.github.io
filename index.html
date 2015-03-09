@@ -13,6 +13,8 @@
   <!--Javascripts-->
   <script src="js/jQuery.js"></script>
   <script src="js/helper.js"></script>
+  <!--D3 Data Visualization-->
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
  
   <!--Google Maps -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
@@ -21,26 +23,33 @@
   </head>
   <body unresolved>
     <div id="main">
-      <div id="header" class="center-content clearfix">
+      <div id="header" class="clearfix">
         <ul class="flex-box" id="topContacts"></ul>
       </div>
-      
-      <div style='clear: both;'></div>
-      <div id="workExperience" class='gray'>
-        <h2>Experience</h2>
+      <div class="clear"></div>
+      <div id="workExperience">
+        <h2 class="flushLeft">Experience</h2>
       </div>
-        <div id="projects" class="lightBlue">
-          <h2>Projects</h2>
-      </div>
-      <div id="education" class='gray'>
+      <div class="clear"></div>
+      <div id="education">
         <h2>Education</h2>
       </div>
-      <div class="mapDiv" id="mapDiv">
-        <h2><span>Where I've Lived and Worked</span></h2>
+      <div class="clear"></div>
+      <div id="online">
+        <h2 class="flushLeft">Online Courses</h2>
       </div>
-      <div id="letsConnect" class='letsConnect gray'>
-       <h2 class='header center-text'>Let's Connect</h2>
-        <a href="mailto:bdill12@gmail.com">
+      <div class="clear"></div>
+        <div id="projects">
+          <h2>Projects</h2>
+      </div>
+      <div class="clear"></div>
+      <div class="mapDiv" id="mapDiv">
+        <h2 class="narrow flushLeft">Where I've Lived and Worked</h2>
+      </div>
+      <div class="clear"></div>
+      <div id="letsConnect" class='letsConnect center-content'>
+       <h2 class='header'>Let's Connect</h2>
+        <a href="mailto:bdill12@gmail.com" class="header">
           <img src="images/logo.jpg">
           <br>
           Email Me for References</a>

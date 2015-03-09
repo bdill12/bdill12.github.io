@@ -6,7 +6,8 @@ var bio = {
 		"email" : " bdill12@gmail.com",
 		"mobile" : "(806)470-3013",
 		"twitter" : " @bdill12",
-		"location" : " Los Angeles, CA"
+		"location" : " Los Angeles, CA",
+		"github" : " bdill12"
 	},
 	"url" : ["images/prof_1.JPG", "images/prof_2.JPG", "images/prof_3.JPG", "images/prof_4.JPG"],
 	"skills" : ["Creative Writing", "HTML/CSS", "Proofreading", "SEO/Keyword Research" ],
@@ -16,6 +17,7 @@ var bio = {
 		var formattedMobile = HTMLmobile.replace( "%data%", this.contacts.mobile );
 		var formattedEmail = HTMLemail.replace( "%data%", this.contacts.email );
 		var formattedTwitter = HTMLtwitter.replace( "%data%", this.contacts.twitter );
+		var formattedGitHub = HTMLgithub.replace("%data%", this.contacts.github );
 		var formattedLocation = HTMLlocation.replace( "%data%", this.contacts.location );
 		var formattedWelcomeMessage = HTMLWelcomeMsg.replace( "%data%", this.welcomeMessage);
 		
@@ -27,6 +29,8 @@ var bio = {
 		$("#footerContacts").append(formattedEmail);
 		$("#topContacts").append(formattedTwitter);
 		$("#footerContacts").append(formattedTwitter);
+		$("#topContacts").append(formattedGitHub);
+		$("#footerContacts").append(formattedGitHub);
 		$("#topContacts").append(formattedLocation);
 		$("#footerContacts").append(formattedLocation);
 		for (var pic in this.url){
@@ -52,35 +56,40 @@ var work = {
 			"title": "Content Specialist",
 			"location": "Santa Monica, CA",
 			"dates": "September 2014 - January 2015",
-			"description": "Wrote FAQ and How-to articles for store pages, Wrote blogs featuring and promoting retailers"
+			"description": "Wrote FAQ and How-to articles for store pages, Wrote blogs featuring and promoting retailers",
+			"url": "http://couponpal.com/blog"
 		},
 		{
 			"employer": "Pasadena Humane Society",
 			"title": "Developement Assistant",
 			"location": "Pasadena, CA",
 			"dates": "September 2013 - June 2014",
-			"description": "Edited development publications, managed office supplies, maintained database of donor information"
+			"description": "Edited development publications, managed office supplies, maintained database of donor information",
+			"url": "http://www.pasadenahumane.org"
 		},
 		{
 			"employer": "Grassroots Campaigns",
 			"title": "Field Manager",
 			"location": "Pasadena, CA",
-			"dates": "August 2013 - October 2013",
-			"description": "Solicited donataions on behalf of the Southern Poverty Law Center, Oversaw a team of canvassers"
+			"dates": "August 2013 - October 2013 (Office closed in 2014.)",
+			"description": "Solicited donataions on behalf of the Southern Poverty Law Center, Oversaw a team of canvassers",
+			"url": "http://grassrootscampaigns.com"
 		},
 		{
 			"employer": "Kaplan Stahler Agency",
 			"title": "Intern",
 			"location": "Beverly Hills, CA",
 			"dates": "August 2012 - December 2012",
-			"description": "Provided coverage on scripts, Researched potential clients, Maintained databases"
+			"description": "Provided coverage on scripts, Researched potential clients, Maintained databases",
+			"url": "http://kaplanstahler.com/"
 		},
 		{
 			"employer": "Abilene Christian University",
 			"title": "Graduate Assistant",
 			"location": "Abilene, TX",
 			"dates": "August 2010 - May 2012",
-			"description": "Taught Freshman-level English courses, Assisted professors with research, Tutored students in University Writing Center, Instructor for University English Language Learners Program"
+			"description": "Taught Freshman-level English courses, Assisted professors with research, Tutored students in University Writing Center, Instructor for University English Language Learners Program",
+			"url": "http://www.acu.edu/"
 		}
 		],
 		"display" : function() {
@@ -89,16 +98,18 @@ var work = {
 				var formattedEmployer = HTMLworkEmployer.replace("%data%", this.jobs[job].employer);
 				var formattedTitle = HTMLworkTitle.replace("%data%", this.jobs[job].title);
 				var formattedEmployerTitle = formattedEmployer + formattedTitle;
+				var formattedEmployerTitleLink = formattedEmployerTitle.replace("%data2%", this.jobs[job].url);
 				var formattedDates = HTMLworkDates.replace("%data%", this.jobs[job].dates);
 				var formattedDescription = HTMLworkDescription.replace("%data%", this.jobs[job].description);
 				var formattedLocation = HTMLworkLocation.replace("%data%", this.jobs[job].location);
-				$(".work-entry:last").append(formattedEmployer);
+				$(".work-entry:last").append(formattedEmployerTitleLink);
 				$(".work-entry:last").append(formattedDates);
 				$(".work-entry:last").append(formattedLocation);
 				$(".work-entry:last").append(formattedDescription);
 			}
 		}
 	};
+
 
 work.display();
 
@@ -142,7 +153,7 @@ var projects = {
 		"url": "images/Commercials.pdf"
 	},
 	{
-		"title": "Excerpt from a Short Story",
+		"title": "Short Story Excerpt",
 		"image": "images/story.PNG",
 		"dates": "2015",
 		"description": "The opening to a short story which is to be published later in 2015. Click to Download.",
@@ -186,43 +197,62 @@ var education = {
 		},
 		{
 			"name": "The Groundlings School",
-			"degree": "Certificate of Lol",
-			"majors": [ " Waiting for Others to Speak", " 'Yes, and.'"],
+			"degree": "Yes, And...",
+			"majors": "Waiting for Others to Speak",
 			"location": "Hollywood, California",
 			"dates": "2013 - 2014",
 			"url": "http://www.groundlings.com/"
+		},
+		{
+			"name": "Udacity",
+			"degree": "Nanodegree",
+			"majors": "Front-End Development",
+			"location": "Pasadena, CA",
+			"dates": "February 2015 - Present",
+			"url" : "http://www.udacity.com"
 		}
 		],
 		"onlineCourses": [
 		{
-			//Took out the URLs because they are ugly and it already says Udacity.
-			"url": " ",
+			"url": "https://www.udacity.com/nanodegree",
 			"title": "Intro to HTML and CSS",
-			"school": "Udacity",
+			"school": "Udacity.com",
 			"dates": "January 2015"
 		},
 		{
-			"url": " ",
+			"url": "https://www.udacity.com/nanodegree",
 			"title": "Javascript Basics",
-			"school": "Udacity",
+			"school": "Udacity.com",
 			"dates": "February 2015"
 		},
 		{
-			"url": " ",
+			"url": "https://www.udacity.com/nanodegree",
 			"title": "Intro to jQuery",
-			"school": "Udacity",
+			"school": "Udacity.com",
 			"dates": "February 2015"
 		},
 		{
-			"url": " ",
-			"title": "Object Oriented Javascript",
-			"school": "Udacity",
+			"url": "https://www.udacity.com/nanodegree",
+			"title": "Object-Oriented JS",
+			"school": "Udacity.com",
 			"dates": "March 2015"
 		},
 		{
-			"url": " ",
+			"url": "https://www.udacity.com/nanodegree",
 			"title": "Responsive Web Design",
-			"school": "Udacity",
+			"school": "Udacity.com",
+			"dates": "March 2015"
+		},
+		{
+			"url": "https://www.udacity.com/nanodegree",
+			"title": "HTML5 Canvas",
+			"school": "Udacity.com",
+			"dates": "March 2015"
+		},
+		{
+			"url": "https://www.udacity.com/nanodegree",
+			"title": "How to Use Git and GitHub",
+			"school": "Udacity.com",
 			"dates": "March 2015"
 		}
 		],
@@ -230,32 +260,29 @@ var education = {
 		for (var school in education.schools) {
 			$("#education").append(HTMLschoolStart);
 			var formattedName = HTMLschoolName.replace("%data%", this.schools[school].name);
+			var formattedNameLink = formattedName.replace("%data2%", this.schools[school].url);
 			var formattedDegree = HTMLschoolDegree.replace("%data%", this.schools[school].degree);
 			var formattedMajors = HTMLschoolMajor.replace("%data%", this.schools[school].majors);
 			var formattedDates = HTMLschoolDates.replace("%data%", this.schools[school].dates);
 			var formattedLocation = HTMLschoolLocation.replace("%data%", this.schools[school].location);
-			$(".education-entry:last").append(formattedName);
+			$(".education-entry:last").append(formattedNameLink);
 			$(".education-entry:last").append(formattedDegree);
 			$(".education-entry:last").append(formattedMajors);
 			$(".education-entry:last").append(formattedLocation);
 			$(".education-entry:last").append(formattedDates);
 		}
-			if (education.onlineCourses.length > 0){
-				$("#education").append(HTMLonlineClasses);
-				for (var course in this.onlineCourses) {
-					$("#education").append(HTMLschoolStart);
-					var formattedURL = HTMLonlineURL.replace("%data%", this.onlineCourses[course].url);
-					var formattedTitle = HTMLonlineTitle.replace("%data%", this.onlineCourses[course].title);
-					var formattedSchool = HTMLonlineSchool.replace("%data%", this.onlineCourses[course].school);
-					var formattedDate = HTMLonlineDates.replace("%data%", this.onlineCourses[course].dates);
-					$(".education-entry:last").append(formattedTitle);
-					$(".education-entry:last").append(formattedSchool);
-					$(".education-entry:last").append(formattedDate);
-					$(".education-entry:last").append(formattedURL);
+			for (var course in this.onlineCourses) {
+				$("#online").append(HTMLonlineEduStart);
+				var formattedTitle = HTMLonlineTitle.replace("%data%", this.onlineCourses[course].title);
+				var formattedSchool = HTMLonlineSchool.replace("%data%", this.onlineCourses[course].school);
+				var formattedTitleLink = formattedTitle.replace("%data2%", this.onlineCourses[course].url);
+				var formattedDate = HTMLonlineDates.replace("%data%", this.onlineCourses[course].dates);
+				$(".online-entry:last").append(formattedTitleLink);
+				$(".online-entry:last").append(formattedSchool);
+				$(".online-entry:last").append(formattedDate);
 				}
 			}
-		}
-	};
+		};
 
 education.display();
 
@@ -278,3 +305,4 @@ var inName = function() {
 
 // Add map 
 $("#mapDiv").append(googleMap);
+console.log(googleMap);
