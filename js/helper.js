@@ -15,8 +15,9 @@ var HTMLlocation = '<li class="flex-item narrow">location : %data%</li>';
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcomeMessage">%data%</span>';
 
-var HTMLskillsStart = '<h3 class="skills narrow">Skills at a Glance:</h3><ul id="skills" class="flex-box skills"></ul>';
+var HTMLskillsStart = '<h3 class="skills narrow">Clifton StrengthsFinder Top 5:</h3><ul id="skills" class="flex-box skills"></ul>';
 var HTMLskills = '<li class="flex-item narrow">%data%</li>';
+var HTMLstrengthsEnd = '<h6 class="skills narrow strengths"><a href="downloadable/strengthsfinder.pdf">Click Here to Download a Report About My Strengths</a></h6>';
 
 var HTMLworkStart = '<div class="work-entry span_12_of_12"></div>';
 var HTMLworkEmployer = '<a rel="nofollow" href="%data2%">%data%';

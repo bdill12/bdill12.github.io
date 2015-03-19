@@ -10,7 +10,7 @@ var bio = {
 		"github" : " bdill12"
 	},
 	"url" : ["images/prof_1.JPG", "images/prof_2.JPG", "images/prof_3.JPG", "images/prof_4.JPG"],
-	"skills" : ["Creative Writing", "HTML/CSS", "Proofreading", "SEO/Keyword Research" ],
+	"skills" : ["Strategic", "Individualization", "Adaptability", "Activator", "Maximizer" ],
 	"display" : function() {
 		var formattedName = HTMLheaderName.replace( "%data%", this.name );
 		var formattedRole = HTMLheaderRole.replace( "%data%", this.role );
@@ -43,6 +43,7 @@ var bio = {
 					var formattedSkills = HTMLskills.replace("%data%", this.skills[skill]);
 					$("#skills").append(formattedSkills);
 			}
+			$("#header").append(HTMLstrengthsEnd);
 		}
 	}
 };
