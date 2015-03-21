@@ -28,7 +28,7 @@ Enemy.prototype.update = function(dt) {
     }
 
     if (this.y === player.y && collision(player.x, this.x)) {
-        alert('The bugs! THEY ARE EVERYWHERE!');
+        sweetAlert("The bugs!", "They're everywhere!", "error");
         player.x = 200;
         player.y = 415;
         score = score - 1;
@@ -75,16 +75,14 @@ Player.prototype.update = function(dt) {
         this.y = 415;
     }
     if (this.y < 0) {
-        alert('Another child is safe in the water.');
+        sweetAlert("Safe!", "I hope these kids can swim.", "success");
         this.x = 200;
         this.y = 415;
         score = score + 1;
         i = i + 1;
         this.sprite = child[i];
         if (i == 8) {
-            alert('Congratulations. You helped all the children to safety.' +
-                'Your final score is ' + score + '. Reload to play again.');
-            i = 0;
+            sweetAlert("Congrats! All the children are safe.", "Your final score is " + score + ".", "success");
         }
 
         document.getElementById('score').innerHTML = 'Score: ' + score;
