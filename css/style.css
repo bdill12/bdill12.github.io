@@ -60,9 +60,13 @@ body {
   padding: 0 0 2% 2%;
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .project-entry {
   padding: 0 0 2% 2%;
-  float: left;
 }
 
 .projImg {

@@ -117,12 +117,18 @@ work.display();
 var projects = { 
 	"projects" : [
 	{
+		"title": "This Bugs Me!",
+		"image": "images/froggorProj.JPG",
+		"dates": "March 2015",
+		"description": "Game similar to Froggor built with Javascript in which you guide children across a path to the water and avoid bugs.",
+		"url": "froggor/game.html"
+	},
+	{
 		"title": "Make Your Own Meme App",
 		"image": "images/memeProj.JPG",
 		"dates": "March 2015",
 		"description": "Upload your own photo and add a meme message to it. Save it to your local files and share it with friends.",
 		"url": "mememaker/MemeMaker.html"
-
 	},
 	{
 		"title": "Full Writing Portfolio",
@@ -130,7 +136,6 @@ var projects = {
 		"dates": "2010 - 2015",
 		"description": "Writing Samples: All types of writing compiled into one document for your consideration.",
 		"url": "images/Brent_C_Dill_Writing_Portfolio.pdf"
-
 	},
 	{
 		"title": "Keyword Researched Blogs",
@@ -290,19 +295,7 @@ education.display();
 //Log clicks to console 
 $(document).click(function(loc){
   logClicks(loc.pageX,loc.pageY);
-});
-
-// Internationalize Name
-$("#main").append(internationalizeButton);
-
-var inName = function() {
-  var oldName = $("#name").text();
-  var finalName = oldName.trim().split(" ");
-  finalName[0] = finalName[0][0].toUpperCase() + finalName[0].slice(1).toLowerCase();
-  finalName[1] = finalName[1].toUpperCase();
-  finalName = finalName.join(" ");
-  return finalName;
-};
+}); 	
 
 // Add map 
 $("#mapDiv").append(googleMap);
