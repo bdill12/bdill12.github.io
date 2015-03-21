@@ -121,7 +121,7 @@ var projects = {
 		"image": "images/froggorProj.JPG",
 		"dates": "March 2015",
 		"description": "Game similar to Froggor built with Javascript in which you guide children across a path to the water and avoid bugs.",
-		"url": "froggor/game.html"
+		"url": "pages/froggor.html"
 	},
 	{
 		"title": "Make Your Own Meme App",
