@@ -12,6 +12,9 @@ html {    overflow-y: scroll; }
     header, footer, .container {max-width: 45em;
                                 margin: 0 auto;
                               }
+img { width: 70px;
+  height: 70px;
+}
 
 a:visited {    color: #61C; }
 
