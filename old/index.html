@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brent C Dill | Résumé and Portfolio</title>
+
+  <!--Google Font Link -->
+  <link href='http://fonts.googleapis.com/css?family=Merriweather|Raleway' rel='stylesheet' type='text/css'>
+
+  <!--CSS-->
+  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
+  
+  <!--Javascripts-->
+  <script src="js/jQuery.js"></script>
+  <script src="js/helper.js"></script>
+  <!--D3 Data Visualization-->
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+ 
+  <!--Google Maps -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+ 
+  
+  </head>
+  <body unresolved>
+    <div id="main">
+      <div id="header" class="clearfix">
+        <ul class="flex-box" id="topContacts"></ul>
+      </div>
+      <div class="clear"></div>
+      <div id="workExperience">
+        <h2 class="flushLeft">Experience</h2>
+      </div>
+      <div class="clear"></div>
+      <div id="education">
+        <h2>Education</h2>
+      </div>
+      <div class="clear"></div>
+      <div id="online">
+        <h2 class="flushLeft">Online Courses</h2>
+      </div>
+      <div class="clear"></div>
+        <div id="projects" class="projects">
+          <h2>Projects</h2>
+      </div>
+      <div class="clear"></div>
+      <div class="mapDiv" id="mapDiv">
+        <h2 class="narrow flushLeft">Where I've Lived and Worked</h2>
+      </div>
+      <div class="clear"></div>
+      <div id="letsConnect" class='letsConnect center-content'>
+       <h2 class='header'>Let's Connect</h2>
+        <a href="mailto:bdill12@gmail.com" class="header">
+          <img src="images/logo.jpg">
+          <br>
+          Email Me for References</a>
+        <ul id="footerContacts" class="flex-box">
+        </ul>
+    </div>
+  </div>
+
+ <script src="js/resumeBuilder.js"></script>
+   <script type="text/javascript">
+  if(document.getElementsByClassName("flex-item").length === 0) {
+    document.getElementById("topContacts").style.backgroundColor = "#000";
+  }
+  if(document.getElementsByTagName("h1").length === 0) {
+    document.getElementById("header").style.backgroundColor = "#000";
+  }
+  if(document.getElementsByClassName("work-entry").length === 0) {
+    document.getElementById("workExperience").style.backgroundColor = "#000";
+  }
+  if(document.getElementsByClassName("project-entry").length === 0) {
+    document.getElementById("projects").style.backgroundColor = "#000";
+  }
+  if(document.getElementsByClassName("education-entry").length === 0) {
+    document.getElementById("education").style.backgroundColor = "#000";
+  }
+  if(document.getElementsByClassName("flex-item").length === 0) {
+    document.getElementById("letsConnect").style.backgroundColor = "#000";
+  }
+  if(document.getElementById("map") === undefined) {
+    document.getElementById("mapDiv").style.backgroundColor = "#000";
+  }
+  </script>
+</body>
+</html>
