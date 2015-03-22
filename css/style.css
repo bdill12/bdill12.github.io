@@ -1,3 +1,20 @@
+html {    overflow-y: scroll; }
+    body {    margin: 0;
+          font-size: 14px;
+          line-height: 1.61;
+          font-weight: 400;
+          font-family: 'Open Sans', sans-serif;
+          color: #333;
+          background: #fff; 
+     }
+     a {color: #12C; }
+     img {border: 0;
+         max-width: 100%;
+       }
+    header, footer, .container {max-width: 45em;
+                                margin: 0 auto;
+                              }
+
 a:visited {    color: #61C; }
 
 a:focus {    outline: thin dotted; }
