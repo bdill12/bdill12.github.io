@@ -1,19 +1,26 @@
 html {    overflow-y: scroll; }
-    body {    margin: 0;
-          font-size: 14px;
-          line-height: 1.61;
-          font-weight: 400;
-          font-family: 'Open Sans', sans-serif;
-          color: #333;
-          background: #fff; 
-     }
-     a {color: #12C; }
 
-    header, footer, .container {max-width: 45em;
-                                margin: 0 auto;
-                              }
-img { width: 70px;
+body {
+  font-size: 14px;
+  line-height: 1.61;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background: #fff; 
+}
+
+header, footer, .container {
+  max-width: 45em;
+  margin: 0 auto;
+  }
+
+img {
+  width: 70px;
   height: 70px;
+}
+
+a {
+  color: #12C;
 }
 
 a:visited {    color: #61C; }
