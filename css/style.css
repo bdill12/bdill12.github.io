@@ -1,7 +1,7 @@
 html{overflow-y:scroll;}
 body{font-size:14px;line-height:1.61;font-weight:400;font-family:'Open Sans', sans-serif;color:#333;background:#fff;}
 header, footer, .container{max-width:45em;margin:0 auto;}
-img{width:70px;height:70px;}
+img{width:100px;height:auto;}
 a{color:#12C;}
 a:visited{color:#61C;}
 a:focus{outline:thin dotted;}
