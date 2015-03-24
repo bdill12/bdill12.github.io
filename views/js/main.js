@@ -289,16 +289,16 @@ var nouns = ["animals", "everyday", "fantasy", "gross", "horror", "jewelry", "pl
 function generator(adj, noun) {
   var adjectives = getAdj(adj);
   var nouns = getNoun(noun);
-  var randomAdjective = parseInt(Math.random() * adjectives.length);
-  var randomNoun = parseInt(Math.random() * nouns.length);
+  var randomAdjective = Math.random() * adjectives.length;
+  var randomNoun = Math.random() * nouns.length;
   var name = "The " + adjectives[randomAdjective].capitalize() + " " + nouns[randomNoun].capitalize();
   return name;
 }
 
 // Chooses random adjective and random noun
 function randomName() {
-  var randomNumberAdj = parseInt(Math.random() * adjectives.length);
-  var randomNumberNoun = parseInt(Math.random() * nouns.length);
+  var randomNumberAdj = Math.random() * adjectives.length;
+  var randomNumberNoun = Math.random() * nouns.length;
   return generator(adjectives[randomNumberAdj], nouns[randomNumberNoun]);
 }
 
