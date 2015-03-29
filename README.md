@@ -1,73 +1,51 @@
 ## Website Performance Optimization portfolio project
+As a part of Project 4 for Udacity's Nanodegree in Front End Development -
+Site can be found at bdill12.github.io.
+Pizzas can be found at Pizza Hut, not at the Pizzaria on the page, sadly.
+I was unsure as to how much we should change the css, etc. to "make it our own". I just changed the text. 
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
-
-To get started, check out the repository, inspect the code,
-
-### Getting started
 
 ####Part 1: Optimize PageSpeed Insights score for index.html
-
-Some useful tips to help you get started:
-
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
-
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
-
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
-
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ngrok 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
-
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
+In order to reach a PageSpeed Insights score of 90 or above for the portfolio:
+	1. Inlined all CSS except print-specfic, removing unused classes.
+	2. Added Media="print" to the print-specific CSS so it would not block rendering.
+	3. Removed the Google Font, as it wasn't particularly special in any way. . .
+	4. Added window.onload to the Google Analytics script
+	5. Added "async" attribute to other .js files
+	6. Compressed and resized other images on the page with Photoshop so the browser would not need to resize them.
 
 ####Part 2: Optimize Frames per Second in pizza.html
+	A. Moved constant calculations outside of for loops.
+		1. var scrollTop = (document.body.scrollTop / 1250);
+  			for (var i = 0; i < items.length; i++) {
+    			var phase = Math.sin(scrollTop + (i % 5));
+    			items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    		}
+    B. Reduced amount of pizzas from the overwhelming 200 to 48.
+    	1. document.addEventListener('DOMContentLoaded', function() {
+  			var cols = 8;
+  			var s = 256;
+  			for (var i = 0; i < 48; i++) {
+   			 var elem = document.createElement('img');
+   			 elem.className = 'mover';
+   			 elem.src = "images/pizza.png";
+   			 elem.basicLeft = (i % cols) * s;
+   			 elem.style.top = (Math.floor(i / cols) * s) + 'px';
+   			 document.querySelector("#movingPizzas1").appendChild(elem);
+   			 }
+   			 updatePositions();
+   			 });
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+####Part 3: Resize Pizzas in under 5ms.
+	A. Moved all constant calculations outside of for loops.
+		1. function changePizzaSizes(size) {
+    		var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[0], size);
+    		var newwidth = (document.getElementsByClassName("randomPizzaContainer")[0].offsetWidth + dx) + 'px';
+    		for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
+    			document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;
+    		}
+    		}
+	B. Changed all querySelectors to getElementsByClassName instead.
 
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
-### Optimization Tips and Tricks
-* [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
-* [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
-* [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
-* [Avoiding Rendering Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css.html "render blocking css")
-* [Optimizing JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript.html "javascript")
-* [Measuring with Navigation Timing](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/measure-crp.html "nav timing api"). We didn't cover the Navigation Timing API in the first two lessons but it's an incredibly useful tool for automated page profiling. I highly recommend reading.
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads.html">The fewer the downloads, the better</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html">Reduce the size of text</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
-
-### Customization with Bootstrap
-The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
-
-* <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
-* <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
-
-### Sample Portfolios
-
-Feeling uninspired by the portfolio? Here's a list of cool portfolios I found after a few minutes of Googling.
-
-* <a href="http://www.reddit.com/r/webdev/comments/280qkr/would_anybody_like_to_post_their_portfolio_site/">A great discussion about portfolios on reddit</a>
-* <a href="http://ianlunn.co.uk/">http://ianlunn.co.uk/</a>
-* <a href="http://www.adhamdannaway.com/portfolio">http://www.adhamdannaway.com/portfolio</a>
-* <a href="http://www.timboelaars.nl/">http://www.timboelaars.nl/</a>
-* <a href="http://futoryan.prosite.com/">http://futoryan.prosite.com/</a>
-* <a href="http://playonpixels.prosite.com/21591/projects">http://playonpixels.prosite.com/21591/projects</a>
-* <a href="http://colintrenter.prosite.com/">http://colintrenter.prosite.com/</a>
-* <a href="http://calebmorris.prosite.com/">http://calebmorris.prosite.com/</a>
-* <a href="http://www.cullywright.com/">http://www.cullywright.com/</a>
-* <a href="http://yourjustlucky.com/">http://yourjustlucky.com/</a>
-* <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
-* <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
-* <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+As a side note... I also capitalized all the nouns and adjectives instead of having the browser do it each time the page was loaded. I don't think it had any real affect on anything, but I did it nonetheless with the code found in views/js/capitalize.js.
