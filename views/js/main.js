@@ -422,10 +422,11 @@ var resizePizzas = function(size) {
   // Moved constant calculations so they only have to be done once.
   // Used "getElementsByClassName" instead of the selector to make the resize < 5 ms.
   function changePizzaSizes(size) {
-    var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[0], size);
-    var newwidth = (document.getElementsByClassName("randomPizzaContainer")[0].offsetWidth + dx) + 'px';
-    for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
-      document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;
+    var randomPizzaNow = document.getElementsByClassName("randomPizzaContainer");
+    var dx = determineDx(randomPizzaNow[0], size);
+    var newwidth = (randomPizzaNow[0].offsetWidth + dx) + 'px';
+    for (var i = 0; i < randomPizzaNow.length; i++) {
+      randomPizzaNow[i].style.width = newwidth;
     }
   }
 
@@ -498,7 +499,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 48; i++) {
+  for (var i = 0; i < 40; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
