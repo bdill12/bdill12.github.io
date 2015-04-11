@@ -88,8 +88,6 @@ a {
 @media screen and (max-width: 480px) {
 .choices {
 	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
 }
 
 .captions {
@@ -106,16 +104,14 @@ hr {
 
 .project-image { 
 	margin: 0;
+	width: auto;
 }
 .tiny {
 	display: inherit;
 	font-size: 2em;
-	margin-left: 0;
-	text-align: left;
+	text-align: center;
 }
-.right {
-	text-align: right;
-}
+
 }
 
 @media screen and (max-width: 768px) and (min-width: 481px) {
