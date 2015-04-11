@@ -1,6 +1,6 @@
 // Experience 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a rel="nofollow" href="%data2%">%data%';
+var HTMLworkEmployer = '<a rel="nofollow" target="_blank" href="%data2%">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div>%data%</div>';
 var HTMLworkLocation = '<div>%data%</div>';
@@ -73,14 +73,14 @@ work.display();
 
 // Education
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="%data2%">%data%</a>';
+var HTMLschoolName = '<a target="_blank" href="%data2%">%data%</a>';
 var HTMLschoolDegree = '<h3>%data%</h3>';
 var HTMLschoolDates = '<div>%data%</div>';
 var HTMLschoolLocation = '<div>%data%</div>';
 var HTMLschoolMajor = '<h4>Major: %data%</h4>';
 // Online Education
 var HTMLonlineEduStart = '<div class="online-entry"></div>';
-var HTMLonlineTitle = '<a href="%data2%">%data%</a>';
+var HTMLonlineTitle = '<a target="_blank" href="%data2%">%data%</a>';
 var HTMLonlineSchool = '<div>%data%';
 var HTMLonlineDates = '%data%</div>';
 // Manipulate the DOM
@@ -195,7 +195,7 @@ education.display();
 
 // Projects
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="%data2%">%data%</a>';
+var HTMLprojectTitle = '<a target="_blank" href="%data2%">%data%</a>';
 var HTMLprojectDates = '<div>%data%</div>';
 var HTMLprojectDescription = '<p>%data%</p>';
 var HTMLprojectImage = '<img class="project-image" src="%data%">';
@@ -241,7 +241,7 @@ var projects = {
 projects.display();
 
 var HTMLwritingStart = '<div class="writing-entry"></div>';
-var HTMLwritingTitle = '<a href="%data2%">%data%</a>';
+var HTMLwritingTitle = '<a target="_blank" href="%data2%">%data%</a>';
 var HTMLwritingDates = '<div>%data%</div>';
 var HTMLwritingDescription = '<p>%data%</p>';
 var HTMLwritingImage = '<img class="project-image" src="%data%">';
