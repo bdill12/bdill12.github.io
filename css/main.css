@@ -85,6 +85,10 @@ a {
 	padding: 0 100%;
 }
 
+.tiny {
+	display: none;
+}
+
 @media screen and (max-width: 480px) {
 .choices {
 	display: flex;
@@ -93,9 +97,7 @@ a {
 }
 
 .captions {
-	font-size: 1em;
-	margin-left: 0;
-	text-align: left;
+	display:none;
 }
 
 img {
@@ -108,6 +110,12 @@ hr {
 
 .project-image { 
 	margin: 0;
+}
+.tiny {
+	display: inherit;
+	font-size: 1em;
+	margin-left: 0;
+	text-align: left;
 }
 }
 
