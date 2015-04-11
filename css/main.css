@@ -95,6 +95,7 @@ a {
 .captions {
 	font-size: 1em;
 	margin-left: 0;
+	text-align: left;
 }
 
 img {
@@ -110,7 +111,7 @@ hr {
 }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 481px) {
 	.captions {
 		font-size: 1em;
 		margin-left: 20%;
@@ -120,7 +121,7 @@ hr {
 	}
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 481px) {
 	.captions {
 		margin-left: 20%;
 		}
