@@ -120,3 +120,12 @@ hr {
 	padding: 0 100%;
 }
 }
+
+@media screen and (max-width: 800px) {
+	.captions {
+		font-size: 2em;
+		}
+	img {
+		width: 49%;
+	}
+}
