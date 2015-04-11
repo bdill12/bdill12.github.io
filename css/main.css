@@ -124,7 +124,7 @@ hr {
 @media screen and (max-width: 768px) {
 	.captions {
 		font-size: 1em;
-		margin-left: 50%;
+		margin-left: 35%;
 		}
 	img {
 		width: 49%;
