@@ -120,6 +120,11 @@ hr {
 .right {
 	text-align: right;
 }
+
+.instructions {
+	display: none;
+}
+
 }
 
 @media screen and (max-width: 768px) and (min-width: 481px) {
