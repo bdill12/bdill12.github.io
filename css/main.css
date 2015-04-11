@@ -130,3 +130,12 @@ hr {
 		width: 49%;
 	}
 }
+
+@media screen and (max-width: 1024px) {
+	.captions {
+		margin-left: 20%;
+		}
+	img {
+		width: 49%;
+	}
+}
