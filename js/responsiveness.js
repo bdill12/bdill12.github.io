@@ -5,7 +5,7 @@ window.onload = function() {
 var resize = function() {
 	var width = $(document).width();
 	if (width <= 480) {
-		oneColumn();
+
 		removeIt();
 	}
 };
@@ -49,9 +49,9 @@ var addIt = function() {
 };
 
 var oneColumn = function(){
-	$('#experience').after($('#experience-caption'));
-	$('#edupic').after($('#education-caption'));
-	$('#writing').after($('#writing-caption'));
-	$('#webdev').after($('#webdev-caption'));
-	$('#name').after($('#instructions'));
+//	$('#experience').after($('#experience-caption'));
+//	$('#edupic').after($('#education-caption'));
+//	$('#writing').after($('#writing-caption'));
+//	$('#webdev').after($('#webdev-caption'));
+//	$('#name').after($('#instructions'));
 };
