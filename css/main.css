@@ -1,0 +1,86 @@
+html, body, div, span, h3, h4, h5, h6, p, a, img, ol, ul, li, form, label, button, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "Raleway", Georgia, Times, "Times New Roman", Serif;
+}
+
+body {
+	width: 100%;
+}
+
+.name {
+	text-align: center;
+	font-size: 3em;
+}
+
+h2 {
+	color: #fff;
+	margin: 2%;
+	font-family: "Merriweather", Georgia, Times, "Times New Roman", Serif;
+}
+
+.choices {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.captions {
+	width: 40%;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+img {
+	width: 35%;
+	height: 100%;
+	margin-top: 0;
+}
+
+hr { 
+    margin-left: 10%;
+    margin-right: 10%;
+    border-style: outset;
+    border-width: 3px;
+}
+
+a {
+	color: #8CB1FF;
+	font-family: "Raleway", Georgia, Times, "Times New Roman", Serif;
+}
+
+.work-entry, .education-entry, .project-entry, .writing-entry {
+	width: 100%;
+	color: #fff;
+	margin-bottom: 10%;
+	font-family: "Merriweather Sans", Georgia, Times, "Times New Roman", Serif;
+}
+
+.online-entry {
+	font-family: "Merriweather Sans", Georgia, Times, "Times New Roman", Serif;
+	width: 49%;
+	color: #fff;
+}
+
+.project-image { 
+	border: 1px solid #8CB1FF;
+	display: block;
+	margin-left: 25%;
+}
+
+.instructions {
+	text-align: center;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.clear {
+	padding: 0 100%;
+}
