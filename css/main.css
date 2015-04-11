@@ -92,11 +92,9 @@ a {
 	justify-content: center;
 }
 
-
 .captions {
-	width: 50%;
-	text-align: center;
-	font-size: 1em;
+	font-size: 1.5em;
+	margin-left: 5%;
 }
 
 img {
@@ -106,37 +104,11 @@ img {
 }
 
 hr { 
-    margin-left: 10%;
-    margin-right: 10%;
-    border-style: outset;
-    border-width: 3px;
-}
-
-a {
-	color: #8CB1FF;
-	font-family: "Raleway", Georgia, Times, "Times New Roman", Serif;
-}
-
-.work-entry, .education-entry, .project-entry, .writing-entry {
-	width: 100%;
-	color: #fff;
-	margin-bottom: 10%;
-	font-family: "Merriweather Sans", Georgia, Times, "Times New Roman", Serif;
-}
-
-.online-entry {
-	font-family: "Merriweather Sans", Georgia, Times, "Times New Roman", Serif;
-	width: 49%;
-	color: #fff;
+	display: none;
 }
 
 .project-image { 
-	border: 1px solid #8CB1FF;
-	display: block;
-}
-
-.instructions {
-	text-align: center;
+	margin: 0;
 }
 
 .flex {
