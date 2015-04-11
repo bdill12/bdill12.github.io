@@ -104,6 +104,18 @@ img {
 	width: 100%;
 }
 
+.right-arrow {
+ cursor: e-resize !important;
+ color: #fff !important;
+ text-decoration: none !important;
+}
+
+.left-arrow {
+	cursor: w-resize !important;
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
 hr { 
 	display: none;
 }
