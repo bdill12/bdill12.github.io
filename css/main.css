@@ -88,8 +88,8 @@ a {
 @media screen and (max-width: 480px) {
 .choices {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 }
 
 .captions {
@@ -99,8 +99,6 @@ a {
 
 img {
 	width: 100%;
-	height: 100%;
-	margin-top: 0;
 }
 
 hr { 
@@ -109,15 +107,6 @@ hr {
 
 .project-image { 
 	margin: 0;
-}
-
-.flex {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.clear {
-	padding: 0 100%;
 }
 }
 
