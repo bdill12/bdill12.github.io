@@ -84,3 +84,67 @@ a {
 .clear {
 	padding: 0 100%;
 }
+
+@media screen and (max-width: 480px) {
+.choices {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.captions {
+	width: 50%;
+	text-align: center;
+	font-size: .6em;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	margin-top: 0;
+}
+
+hr { 
+    margin-left: 10%;
+    margin-right: 10%;
+    border-style: outset;
+    border-width: 3px;
+}
+
+a {
+	color: #8CB1FF;
+	font-family: "Raleway", Georgia, Times, "Times New Roman", Serif;
+}
+
+.work-entry, .education-entry, .project-entry, .writing-entry {
+	width: 100%;
+	color: #fff;
+	margin-bottom: 10%;
+	font-family: "Merriweather Sans", Georgia, Times, "Times New Roman", Serif;
+}
+
+.online-entry {
+	font-family: "Merriweather Sans", Georgia, Times, "Times New Roman", Serif;
+	width: 49%;
+	color: #fff;
+}
+
+.project-image { 
+	border: 1px solid #8CB1FF;
+	display: block;
+	margin-left: 25%;
+}
+
+.instructions {
+	text-align: center;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.clear {
+	padding: 0 100%;
+}
+}
