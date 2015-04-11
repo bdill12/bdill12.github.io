@@ -372,59 +372,59 @@
 		function eventHandler(event, selector) {
 			event.stopPropagation(); // Stop event bubbling.
 			event.preventDefault(); // Prevent default behaviour.
-			if (event.type === 'touchend') selector.off('click'); // If event type was touch, turn off clicks to prevent phantom clicks.
+			if (event.type === 'touchstart') selector.off('click'); // If event type was touch, turn off clicks to prevent phantom clicks.
 		}
 		
 		// Toggle left Slidebar
-		$('.sb-toggle-left').on('touchend click', function(event) {
+		$('.sb-toggle-left').on('touchstart click', function(event) {
 			eventHandler(event, $(this)); // Handle the event.
 			toggle('left'); // Toggle the left Slidebar.
 		});
 		
 		// Toggle right Slidebar
-		$('.sb-toggle-right').on('touchend click', function(event) {
+		$('.sb-toggle-right').on('touchstart click', function(event) {
 			eventHandler(event, $(this)); // Handle the event.
 			toggle('right'); // Toggle the right Slidebar.
 		});
 
 		// Toggle left2 Slidebar
-		$('.sb-toggle-left2').on('touchend click', function(event) {
+		$('.sb-toggle-left2').on('touchstart click', function(event) {
 			eventHandler(event, $(this)); // Handle the event.
 			toggle('left2'); // Toggle the left2 Slidebar.
 		});
 		
 		// Toggle right Slidebar
-		$('.sb-toggle-right2').on('touchend click', function(event) {
+		$('.sb-toggle-right2').on('touchstart click', function(event) {
 			eventHandler(event, $(this)); // Handle the event.
 			toggle('right2'); // Toggle the right Slidebar.
 		});
 		
 		// Open left Slidebar
-		$('.sb-open-left').on('touchend click', function(event) {
+		$('.sb-open-left').on('touchstart click', function(event) {
 			eventHandler(event, $(this)); // Handle the event.
 			open('left'); // Open the left Slidebar.
 		});
 
 		// Open left2 Slidebar
-		$('.sb-open-left2').on('touchend click', function(event) {
+		$('.sb-open-left2').on('touchstart click', function(event) {
 			eventHandler(event, $(this)); // Handle the event.
 			open('left2'); // Open the left2 Slidebar.
 		});
 		
 		// Open right Slidebar
-		$('.sb-open-right').on('touchend click', function(event) {
+		$('.sb-open-right').on('touchstart click', function(event) {
 			eventHandler(event, $(this)); // Handle the event.
 			open('right'); // Open the right Slidebar.
 		});
 		
 		// Open right Slidebar
-		$('.sb-open-right2').on('touchend click', function(event) {
+		$('.sb-open-right2').on('touchstart click', function(event) {
 			eventHandler(event, $(this)); // Handle the event.
 			open('right2'); // Open the right Slidebar.
 		});
 		
 		// Close Slidebar
-		$('.sb-close').on('touchend click', function(event) {
+		$('.sb-close').on('touchstart click', function(event) {
 			if ( $(this).is('a') || $(this).children().is('a') ) { // Is a link or contains a link.
 				if ( event.type === 'click' ) { // Make sure the user wanted to follow the link.
 					event.preventDefault(); // Stop default behaviour.
@@ -440,7 +440,7 @@
 		});
 		
 		// Close Slidebar via site
-		$site.on('touchend click', function(event) {
+		$site.on('touchstart click', function(event) {
 			if (settings.siteClose && (leftActive || rightActive || left2Active || right2Active)) { // If settings permit closing by site and left or right Slidebar is open.
 				eventHandler(event, $(this)); // Handle the event.
 				close(); // Close it.
