@@ -130,16 +130,18 @@ hr {
 
 @media screen and (max-width: 768px) and (min-width: 481px) {
 	.captions {
-		font-size: 1em;
-		margin-left: 20%;
-		}
+		text-align: center;
+	}
 	img {
-		width: 45%;
+		width: 49%;
 	}
 }
 
 @media screen and (max-width: 1024px) and (min-width: 481px) {
+	.captions {
+		text-align: center;
+	}
 	img {
-		width: 45%;
+		width: 49%;
 	}
 }
