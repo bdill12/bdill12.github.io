@@ -23,20 +23,36 @@ h2 {
 	font-family: "Merriweather", Georgia, Times, "Times New Roman", Serif;
 }
 
+.col-md-6 {
+	display: inline;
+	padding: 0;
+}
+
 .choices {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
+	display: inline;
+	padding: 0;
+}
+.row {
+	margin: 0;
+	padding: 0;
+}
+
+.container-fluid {
+	text-align: center;
+	padding: 0;
+	margin: 0;
 }
 
 .captions {
-	width: 40%;
+	width: 100%;
 	text-align: center;
 	font-size: 1.5em;
+	margin: 0;
+	padding: 0 1em 0 3em;
 }
 
 img {
-	width: 40%;
+	width: 100%;
 	height: 100%;
 	margin-top: 0;
 }
@@ -86,9 +102,7 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-.choices {
-	display: flex;
-}
+
 
 .captions {
 	display:none;
@@ -120,15 +134,12 @@ hr {
 		margin-left: 20%;
 		}
 	img {
-		width: 49%;
+		width: 45%;
 	}
 }
 
 @media screen and (max-width: 1024px) and (min-width: 481px) {
-	.captions {
-		margin-left: 20%;
-		}
 	img {
-		width: 49%;
+		width: 45%;
 	}
 }
