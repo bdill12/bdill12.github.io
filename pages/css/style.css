@@ -86,14 +86,14 @@ h1 {
 
   .score {
     font-size: 1em;
-}
+  }
 
   h1{
     font-size: 2em;
   }
 
-  .arrows {
-  font-size: 5em;
-}
+  .fa {
+    font-size: 2em;
+  }
 
 }
