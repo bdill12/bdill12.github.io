@@ -177,6 +177,23 @@ Player.prototype.handleInput = function(key) {
     }
 };
 
+var arrowUp = function() {
+    console.log('up' + ', ');
+    player.y = player.y - 83;
+};
+var arrowDown = function() {
+    console.log('down' + ', ');
+    player.y = player.y + 83;
+};
+var arrowLeft = function() {
+    console.log('left' + ', ');
+    player.x = player.x - 100;
+};
+var arrowRight = function() {
+    console.log('up' + ', ');
+    player.x = player.x + 100;
+};
+
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 var enemy1 = new Enemy();

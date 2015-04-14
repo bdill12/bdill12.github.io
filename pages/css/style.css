@@ -66,3 +66,11 @@ h1 {
 	width: 30%;
 	margin: auto;
 }
+.fa {
+  padding: 0 1%;
+  border: 1px solid #000;
+  margin: 0 1%;
+}
+.arrows {
+  font-size: 3em;
+}

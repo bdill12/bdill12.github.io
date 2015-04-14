@@ -30,7 +30,7 @@
 
 		var settings = $.extend({
 			siteClose: true, // true or false - Enable closing of Slidebars by clicking on #sb-site.
-			scrollLock: false, // true or false - Prevent scrolling of site when a Slidebar is open.
+			scrollLock: true, // true or false - Prevent scrolling of site when a Slidebar is open.
 			disableOver: false, // integer or false - Hide Slidebars over a specific width.
 			hideControlClasses: false // true or false - Hide controls at same width as disableOver.
 		}, options);
