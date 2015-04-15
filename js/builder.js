@@ -210,13 +210,6 @@ var projects = {
 		'url': 'pages/froggor.html'
 	},
 	{
-		'title': 'Lucky Fortune',
-		'image': 'images/story.jpg',
-		'dates': 'April 2015',
-		'description': 'Follow the instructions to your fortune.',
-		'url': 'lucky_fortune/index.html'
-	},
-	{
 		'title': 'Make Your Own Meme App',
 		'image': 'images/memeProj.JPG',
 		'dates': 'March 2015',
