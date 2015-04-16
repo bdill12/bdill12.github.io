@@ -87,6 +87,12 @@ a {
 	margin-left: 25%;
 }
 
+.logo {
+	text-align: center;
+	width:10%;
+	height: auto;
+}
+
 #topContacts {
 	display: flex;
 	flex-direction: row;
@@ -120,7 +126,7 @@ img {
 	width: 100%;
 }
 
-hr { 
+.logo { 
 	display: none;
 }
 
