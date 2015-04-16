@@ -78,7 +78,6 @@ a {
 
 .online-entry {
 	font-family: "Merriweather Sans", Georgia, Times, "Times New Roman", Serif;
-	width: 49%;
 	color: #fff;
 }
 
@@ -88,9 +87,18 @@ a {
 	margin-left: 25%;
 }
 
-.flex {
+#topContacts {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	list-style: none;
+}
+
+.contacts {
+	text-align: center;
+	overflow: visible;
+	width: 23%;
 }
 
 .clear {
