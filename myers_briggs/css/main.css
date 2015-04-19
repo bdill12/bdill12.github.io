@@ -1,0 +1,97 @@
+html {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-family: Georgia, "Times New Roman", Serif;
+}
+
+body {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-family: Georgia, "Times New Roman", Serif;
+	background: rgb(200, 200, 200);
+}
+
+.container-fluid {
+	width: 100%;
+	padding: 0;
+	height: auto;
+	margin: 0;
+	text-align: center;
+}
+
+.col-md-12 {
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+}
+
+.back {
+	background-color: rgb(250, 250, 250);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.col-md-3 {
+	font-size: 1.2em;
+	padding: 0;
+	float: none;
+	display: inline;
+}
+
+.right {
+	text-align: right;
+
+}
+
+.left {
+	text-align: left;
+
+}
+
+.center {
+	padding: 0 1%;
+	font-size: 3em;
+}
+
+ul {
+	list-style: none;
+	font-family: "Helvetica Neue", sans-serif;
+	font-size: 0.5em;
+}
+
+.row {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	float: none;
+}
+.col-md-6 {
+	font-size: 2em;
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+.form {
+	font-size: .5em;
+}
+
+select, input{
+	text-align: center;
+}
+
+.snippet {
+	font-size: 1em;
+	font-style: oblique;
+	background-color: rgb(250, 250, 250);
+	padding-right: 2%;
+}

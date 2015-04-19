@@ -124,6 +124,12 @@ $(function() {
             'description': 'Game similar to Froggor built with Javascript in which you guide children across a path to the water and avoid bugs.',
             'url': 'pages/froggor.html'
         }, {
+            'title': 'The Myers-Briggs Types',
+            'image': 'images/blogs.JPG',
+            'dates': 'April 2015',
+            'description': 'Under Construction: Get to know the 16 personality types.',
+            'url': 'myers_briggs/index.html'
+        }, {
             'title': 'Make Your Own Meme App',
             'image': 'images/memeProj.JPG',
             'dates': 'March 2015',
