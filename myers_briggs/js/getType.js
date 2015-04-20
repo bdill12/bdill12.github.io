@@ -1,94 +1,61 @@
+//Developed by Brent Dill with use of
+//
+//
+//Significant portions of this content are derived from
+//      The Myers & Briggs Foundation. 
+//      (2015). The 16 MBTI Types. Retrieved April 19, 2015, 
+//      from http://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/the-16-mbti-types.htm
+
 var model = {
     "enfp": [{
         letters: "ENFP",
-        pros: ["outgoing",
-            "social",
-            "easily talked into doing silly things",
+        pros: [
             "spontaneous",
-            "wild and crazy",
-            "good at getting people to have fun",
-            "physically affectionate",
-            "adventurous",
-            "loves crowds",
-            "seductive",
-            "open",
             "comfortable in unfamiliar situations",
-            "attracted to strange things",
-            "likes to stand out",
-            "likes to try new things",
-            "fun seeker",
-            "unconventional",
             "energetic",
-            "impulsive",
-            "empathetic",
-            "loving",
-            "strive toward the authentic",
             "keen and penetrating observers",
-            "attention is never passive or casual",
-            "brilliantly perceptive",
-            "optimistic"
+            "brilliantly perceptive"
         ],
         "cons": [
-            "disorganized",
-            "easily talked into doing silly things",
-            "spontaneous",
-            "wild and crazy",
-            "acts without thinking",
-            "irresponsible",
-            "unprepared",
             "attention seeking",
-            "hyperactive",
             "irrational",
             "rule breaker",
-            "prone to losing things",
-            "easily distracted",
-            "non punctual",
-            "dangerous",
-            "attachment prone",
             "prone to fantasy",
             "can make serious mistakes in judgment"
         ],
         "work": [
             "variety",
-            "novelty",
             "challenging",
             "freedom from tight supervision",
-            "idea-oriented",
-            "imaginative",
-            "lively",
             "energetic environment",
-            "salespeople",
-            "politicians",
-            "writers",
-            "actors",
             "high creativity and originality"
         ],
         "snippets": [
             "It might be argued that each type, when first in love, resembles a garden-variety ENFP, because ENFPs normally behave like people in love.",
-            "When they are in love, they may either overcommit and ignore any unpleasant yet true facts; or they may undercommit, believing that there may be a better love 'just around the corner.' Therefore, ENFPs may be seen as fickle in their relationships as they search for the 'right one.'",
             "For ENFPs nothing occurs which does not have some significance, and they have an uncanny sense of the motivations of others. ",
             "ENFPs tend to heap coals of fire on themselves, always berating themselves for being so conscious of self.",
-            "ENFPs are surprised when people or events do not turn out as anticipated. Often their confidence in the innate goodness of fate and human nature is a self-fulling prophecy.",
             "Here is the herald, the spirited bearer of tiding. But underneath this effervescent enthusiasm is a person fiercely dedicated to 'meaning' in life.",
             "The ENFP is into everything, frisky, not unlike a puppy, sniffing around to see what's new."
         ],
         "names": [
-            "Brent",
-            "Meg Ryan",
-            "Dr. Suess"
+            "Dr. Suess",
+            "Mark Twain",
+            "Ellen Degeneres",
+            "Walt Disney",
+            "Sandra Bullock"
         ]
     }],
     "istj": [{
         letters: "ISTJ",
-        pros: ["Other Types Coming Soon"],
-        cons: ["Other Types Coming Soon"],
+        pros: ["Quiet", "Serious", "Dependable", "Practical", "Matter-of-fact"],
+        cons: ["C0ming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
         names: ["Other Types Coming Soon"]
     }],
     "isfj": [{
         letters: "ISFJ",
-        pros: ["Other Types Coming Soon"],
+        pros: ["Quiet", "friendly", "responsible", "conscientious", "committed"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -96,7 +63,7 @@ var model = {
     }],
     "infj": [{
         letters: "INFJ",
-        pros: ["Other Types Coming Soon"],
+        pros: ["Seek meaning", "insightful", "conscientious", "organized", "decisive"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -104,7 +71,7 @@ var model = {
     }],
     "intj": [{
         letters: "INTJ",
-        pros: ["Other Types Coming Soon"],
+        pros: ["Original minds", "great drive", "See patterns in external events", "organized", "independent"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -112,7 +79,7 @@ var model = {
     }],
     "istp": [{
         letters: "ISTP",
-        pros: ["Other Types Coming Soon"],
+        pros: ["Tolerant", "flexible", "quiet observers", "logical", "efficient"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -120,7 +87,7 @@ var model = {
     }],
     "isfp": [{
         letters: "ISFP",
-        pros: ["Other Types Coming Soon"],
+        pros: ["quiet", "friendly", "sensitive", "kind", "loyal"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -128,7 +95,7 @@ var model = {
     }],
     "infp": [{
         letters: "INFP",
-        pros: ["Other Types Coming Soon"],
+        pros: ["Idealistic", "loyal", "curious", "maximize potential of others", "adaptable"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -136,7 +103,7 @@ var model = {
     }],
     "intp": [{
         letters: "INTP",
-        pros: ["Other Types Coming Soon"],
+        pros: ["theoretical", "abstract", "quiet", "flexible", "incredible focus"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -144,7 +111,7 @@ var model = {
     }],
     "estp": [{
         letters: "ESTP",
-        pros: ["Other Types Coming Soon"],
+        pros: ["flexible", "tolerant", "pragmatic", "energetic", "spontaneous"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -152,7 +119,7 @@ var model = {
     }],
     "esfp": [{
         letters: "ESFP",
-        pros: ["Other Types Coming Soon"],
+        pros: ["outgoing", "friendly", "accepting", "exuberant lovers of life", "flexible"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -160,7 +127,7 @@ var model = {
     }],
     "entp": [{
         letters: "ENTP",
-        pros: ["Other Types Coming Soon"],
+        pros: ["quick", "ingenious", "stimulating", "alert", "outspoken"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -168,7 +135,7 @@ var model = {
     }],
     "estj": [{
         letters: "ESTJ",
-        pros: ["Other Types Coming Soon"],
+        pros: ["Practical", "realistic", "matter-of-fact", "decisive", "detail-oriented"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -176,7 +143,7 @@ var model = {
     }],
     "esfj": [{
         letters: "ESFJ",
-        pros: ["Other Types Coming Soon"],
+        pros: ["Warmhearted", "conscientious", "cooperative", "work well with others", "dependable"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -184,7 +151,7 @@ var model = {
     }],
     "enfj": [{
         letters: "ENFJ",
-        pros: ["Other Types Coming Soon"],
+        pros: ["warm", "empathetic", "responsive", "responsible", "see potential in everyone"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -192,7 +159,7 @@ var model = {
     }],
     "entj": [{
         letters: "ENTJ",
-        pros: ["Other Types Coming Soon"],
+        pros: ["frank", "decisive", "assume leadership readily", "problem solvers", "well-informed"],
         cons: ["Other Types Coming Soon"],
         work: ["Other Types Coming Soon"],
         snippets: ["Other Types Coming Soon"],
@@ -231,6 +198,8 @@ var model = {
             return model.esfj;
         } else if (type == "entj") {
             return model.entj;
+        } else if (type == "enfj") {
+            return model.enfj;
         } else {
             console.log('An error has occurred');
         }
@@ -249,7 +218,6 @@ var octopus = {
 var view = {
     init: function() {
         var octograb = octopus.get("enfp")[0];
-        var listOfNames = localStorage.enfpList.split(',');
         $('#type').append("<span class=center>" + octograb.letters + "</span>");
         for (var i = 0; i < octograb.pros.length; i++) {
             $('#pros').append("<li>" + octograb.pros[i] + "</li>");
@@ -260,10 +228,10 @@ var view = {
         for (var job = 0; job < octograb.work.length; job++) {
             $('#jobs').append("<li>" + octograb.work[job] + "</li>");
         }
-        for (var m = 0; m < listOfNames.length; m++) {
-            $('#names').append("<li>" + listOfNames[m] + "</li>");
+        for (var m = 0; m < octograb.names.length; m++) {
+            $('#names').append("<li>" + octograb.names[m] + "</li>");
         }
-        var l = Math.floor(Math.random() * 7);
+        var l = Math.floor(Math.random() * 5);
         $('#snippet').append('<li>"' + octograb.snippets[l] + '"</li>');
     },
     render: function(type) {
@@ -284,17 +252,11 @@ var view = {
         }
         $('#names').empty();
         $('#typeNames').empty().append(octograb.letters);
-        if (type == 'enfp') {
-            var listOfNames = localStorage.enfpList.split(',');
-            for (var m = 0; m < listOfNames.length; m++) {
-                $('#names').append("<li>" + listOfNames[m] + "</li>");
-            }
-        } else {
-            $('#names').append("<li>Other Types Coming Soon</li>");
+        for (var m = 0; m < octograb.names.length; m++) {
+            $('#names').append("<li>" + octograb.names[m] + "</li>");
         }
         $('#snippet').empty();
-        //  var l = Math.floor(Math.random() * 7);
-        var l = 0;
+        var l = Math.floor(Math.random() * 5);
         $('#snippet').append('<li>"' + octograb.snippets[l] + '"</li>');
         $('#typeAdd').empty().append(octograb.letters);
     }
@@ -309,5 +271,45 @@ var addName = function() {
     var theNewNames = theOldNames + "," + theNewName;
     var myStorage = [window.localStorage.setItem('enfpList', [theNewNames])];
     console.log(localStorage.enfpList.split(','));
+};
+var mb_type_arr = [];
+var choose = function(letter) {
+    if (letter == "e" || letter == "i") {
+        mb_type_arr[0] = letter;
+        $('#choice1').empty().append('<span>' + letter.toUpperCase() + '</span>');
+        if (letter == "e") {
+            $('#choice1a').empty().append('<span>Extrovert</span>');
+        } else {
+            $('#choice1a').empty().append('<span>Introvert</span>');
+        }
+    } else if (letter == "n" || letter == "s") {
+        mb_type_arr[1] = letter;
+        $('#choice2').empty().append('<span>' + letter.toUpperCase() + '</span>');
+        if (letter == "n") {
+            $('#choice2a').empty().append('<span>Intuitive</span>');
+        } else {
+            $('#choice2a').empty().append('<span>Sensing</span>');
+        }
+    } else if (letter == "t" || letter == "f") {
+        mb_type_arr[2] = letter;
+        $('#choice3').empty().append('<span>' + letter.toUpperCase() + '</span>');
+        if (letter == "t") {
+            $('#choice3a').empty().append('<span>Thinking</span>');
+        } else {
+            $('#choice3a').empty().append('<span>Feeling</span>');
+        }
+    } else {
+        mb_type_arr[3] = letter;
+        $('#choice4').empty().append('<span>' + letter.toUpperCase() + '</span>');
+        if (letter == "p") {
+            $('#choice4a').empty().append('<span>Perceiving</span>');
+        } else {
+            $('#choice4a').empty().append('<span>Judging</span>');
+        }
+    }
+
+    if (mb_type_arr.length == 4) {
+        view.render(mb_type_arr.join(""));
+    }
 };
 octopus.init();

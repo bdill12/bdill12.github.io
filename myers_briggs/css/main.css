@@ -4,7 +4,6 @@ html {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
-	font-family: Georgia, "Times New Roman", Serif;
 }
 
 body {
@@ -37,6 +36,10 @@ body {
 	background-color: rgb(250, 250, 250);
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
+	margin: 2% 0;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
 }
 
 .col-md-3 {
@@ -44,6 +47,10 @@ body {
 	padding: 0;
 	float: none;
 	display: inline;
+}
+
+.choices{
+	justify-content: space-around;
 }
 
 .right {
@@ -56,15 +63,9 @@ body {
 
 }
 
-.center {
-	padding: 0 1%;
-	font-size: 3em;
-}
-
 ul {
 	list-style: none;
 	font-family: "Helvetica Neue", sans-serif;
-	font-size: 0.5em;
 }
 
 .row {
@@ -75,14 +76,10 @@ ul {
 	float: none;
 }
 .col-md-6 {
-	font-size: 2em;
+	font-size: 1.75em;
 	float: left;
 	width: 50%;
 	text-align: left;
-}
-
-.form {
-	font-size: .5em;
 }
 
 select, input{
@@ -90,8 +87,98 @@ select, input{
 }
 
 .snippet {
-	font-size: 1em;
 	font-style: oblique;
 	background-color: rgb(250, 250, 250);
 	padding-right: 2%;
+}
+
+.selectable .ui-selecting { 
+	background: #fff;
+	color: #000;
+	border-color: #000; 
+}
+
+.s1 .ui-selected { 
+	background: #E01919;
+	color: white;
+	border-color: #fff; 
+}
+
+.s2 .ui-selected { 
+	background: #E07319;
+	color: white;
+	border-color: #fff; 
+}
+
+.s3 .ui-selected { 
+	background: #0F8686;
+	color: white;
+	border-color: #fff; 
+}
+.s4 .ui-selected { 
+	background: #14B314;
+	color: white;
+	border-color: #fff; 
+}
+
+.selectable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	width: 100%; 
+}
+
+.mb_initials {
+	margin: 3px; 
+	border-radius: 4px;
+	background-color: rgb(250, 250, 250);
+	webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.s1 li { 
+	border: 2px solid #E01919;
+}
+
+.s2 li { 
+	border: 2px solid #E07319;
+}
+
+.s3 li { 
+	border: 2px solid #0F8686;
+}
+
+.s4 li {
+	border: 2px solid #14B314;
+}
+
+.flexbox {
+	display: flex;
+	flex-wrap: nowrap;	
+}
+
+.ch {
+	width: 10%;
+	padding: 0;
+	margin: 0;
+	font-size: 2.5em;
+}
+
+.choice1 {
+	color: #E01919;
+}
+
+.choice2 {
+	color: #E07319;
+}
+
+.choice3 {
+	color: #0F8686;
+
+}
+
+.choice4 {
+	color: #14B314;
+
 }
