@@ -75,6 +75,7 @@ ul {
 	text-align: center;
 	float: none;
 }
+
 .col-md-6 {
 	font-size: 1.75em;
 	float: left;
@@ -92,7 +93,8 @@ select, input{
 	padding-right: 2%;
 }
 
-.selectable .ui-selecting { 
+.selectable .ui-selecting {
+	width: 25%;
 	background: #fff;
 	color: #000;
 	border-color: #000; 
@@ -125,15 +127,13 @@ select, input{
 	list-style-type: none; 
 	margin: 0; 
 	padding: 0; 
-	width: 100%; 
+	width: 25%; 
 }
 
 .mb_initials {
 	margin: 3px; 
 	border-radius: 4px;
 	background-color: rgb(250, 250, 250);
-	webkit-box-shadow: 0 8px 6px -6px black;
-	   -moz-box-shadow: 0 8px 6px -6px black;
 	        box-shadow: 0 8px 6px -6px black;
 }
 
@@ -155,7 +155,7 @@ select, input{
 
 .flexbox {
 	display: flex;
-	flex-wrap: nowrap;	
+	flex-wrap: wrap;
 }
 
 .ch {
@@ -180,5 +180,69 @@ select, input{
 
 .choice4 {
 	color: #14B314;
+
+}
+
+.leftHead{
+	order: 1;
+	flex-basis: 50%;
+	padding: 0;
+}
+
+.rightHead{
+	order: 2;
+	flex-basis: 49%;
+	padding: 0;
+}
+
+.leftContent {
+	order: 3;
+	flex-basis: 50%;
+	padding: 0;
+}
+
+.rightContent{
+	order: 4;
+	flex-basis: 49%;
+	padding: 0;
+}
+@media screen and (max-width: 480px) {
+	.flexbox {
+		flex-wrap: wrap;
+	}
+
+	.col-md-6 {
+		width: 100%;
+		padding: 0;
+		font-size: 1.5em;
+	}
+
+	.small {
+		display: none;
+	}
+
+	.leftHead{
+		order: 1;
+		flex-basis: 100%;
+		padding: 0;
+	}
+
+	.rightHead{
+		order: 3;
+		flex-basis: 100%;
+		padding: 0;
+	}
+
+	.leftContent {
+		order: 2;
+		flex-basis: 100%;
+		padding: 0;
+	}
+
+	.rightContent{
+		order: 4;
+		flex-basis: 100%;
+		padding: 0;
+	}
 
 }
