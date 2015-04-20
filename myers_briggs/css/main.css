@@ -126,15 +126,16 @@ select, input{
 .selectable { 
 	list-style-type: none; 
 	margin: 0; 
-	padding: 0; 
-	width: 25%; 
+	padding: 0;
+	width: 100%; 
 }
 
 .mb_initials {
 	margin: 3px; 
 	border-radius: 4px;
 	background-color: rgb(250, 250, 250);
-	        box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+	width: 100%;
 }
 
 .s1 li { 
