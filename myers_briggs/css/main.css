@@ -158,6 +158,11 @@ select, input{
 	flex-wrap: wrap;
 }
 
+.flexbox2 {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
 .ch {
 	width: 10%;
 	padding: 0;
