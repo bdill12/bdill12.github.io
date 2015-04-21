@@ -227,7 +227,7 @@ $(function() {
             octopus.getInfo('bio').forEach(function(contact) {
                 htmlstr += '<li class="contact">' + contact.mobile +
                     '</li><li class="contact"><a class="contact" href="mailto:bdill12@gmail.com">' + contact.email +
-                    '</a></li><a class="contact" href="http://twitter.com/bdill12"><li class="contact">' + contact.twitter +
+                    '</a></li><li class="contact"><a class="contact" href="http://twitter.com/bdill12">' + contact.twitter +
                     '</a></li><li class="contact">' + contact.location + '</li>';
             });
             // Append the html string to the element.
