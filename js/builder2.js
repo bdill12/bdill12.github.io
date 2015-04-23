@@ -162,7 +162,7 @@ $(function() {
             'image': 'images/story.jpg',
             'dates': '2015',
             'description': 'The opening to a short story which is to be published later in 2015. Click to Download.',
-            'url': 'images/What_happened_with_Jacob_snippet.pdf'
+            'url': 'images/What_happened_with_Jacob_sample.pdf'
         }],
         getAllWriting: function() {
             return model.writingProjects;

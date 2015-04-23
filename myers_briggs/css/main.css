@@ -1,41 +1,24 @@
 html {
-	width: 100%;
-	height: auto;
-	margin: 0;
-	padding: 0;
 	overflow-x: hidden;
 }
 
 body {
-	width: 100%;
-	height: auto;
-	margin: 0;
-	padding: 0;
 	overflow-x: hidden;
 	font-family: Georgia, "Times New Roman", Serif;
-	background: rgb(200, 200, 200);
+	background: #fff;
 }
 
 .container-fluid {
-	width: 100%;
-	padding: 0;
-	height: auto;
-	margin: 0;
 	text-align: center;
 }
 
 .col-md-12 {
 	font-size: 2em;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: auto;
 }
 
 .back {
 	background-color: rgb(250, 250, 250);
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
+	border: 1px solid #000;
 	margin: 2% 0;
 	-webkit-box-shadow: 0 8px 6px -6px black;
 	   -moz-box-shadow: 0 8px 6px -6px black;
@@ -44,23 +27,10 @@ body {
 
 .col-md-3 {
 	font-size: 1.2em;
-	padding: 0;
-	float: none;
-	display: inline;
 }
 
 .choices{
 	justify-content: space-around;
-}
-
-.right {
-	text-align: right;
-
-}
-
-.left {
-	text-align: left;
-
 }
 
 ul {
@@ -94,7 +64,6 @@ select, input{
 }
 
 .selectable .ui-selecting {
-	width: 25%;
 	background: #fff;
 	color: #000;
 	border-color: #000; 
@@ -127,7 +96,7 @@ select, input{
 	list-style-type: none; 
 	margin: 0; 
 	padding: 0;
-	width: 100%; 
+	width: 10%; 
 }
 
 .mb_initials {
@@ -135,7 +104,6 @@ select, input{
 	border-radius: 4px;
 	background-color: rgb(250, 250, 250);
 	box-shadow: 0 8px 6px -6px black;
-	width: 100%;
 }
 
 .s1 li { 
@@ -157,11 +125,7 @@ select, input{
 .flexbox {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.flexbox2 {
-	display: flex;
-	flex-wrap: nowrap;
+	justify-content: space-around;
 }
 
 .ch {

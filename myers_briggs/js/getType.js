@@ -10,25 +10,25 @@ var model = {
     "enfp": [{
         letters: "ENFP",
         pros: [
-            "spontaneous",
-            "comfortable in unfamiliar situations",
-            "energetic",
-            "keen and penetrating observers",
-            "brilliantly perceptive"
+            "Spontaneous",
+            "Comfortable in unfamiliar situations",
+            "Energetic",
+            "Keen observers",
+            "Brilliantly perceptive"
         ],
         "cons": [
-            "attention seeking",
-            "irrational",
-            "rule breaker",
-            "prone to fantasy",
-            "can make serious mistakes in judgment"
+            "Seek attention",
+            "Act irrationally",
+            "Break rules",
+            "Prone to fantasy",
+            "Can make serious mistakes in judgment"
         ],
         "work": [
-            "variety",
-            "challenging",
-            "freedom from tight supervision",
-            "energetic environment",
-            "high creativity and originality"
+            "Has variety",
+            "Full of Challenges",
+            "Free from tight supervision",
+            "Energetic",
+            "Creative and original"
         ],
         "snippets": [
             "It might be argued that each type, when first in love, resembles a garden-variety ENFP, because ENFPs normally behave like people in love.",
@@ -48,50 +48,50 @@ var model = {
     "istj": [{
         letters: "ISTJ",
         pros: ["Quiet", "Serious", "Dependable", "Practical", "Matter-of-fact"],
-        cons: ["C0ming Soon"],
-        work: ["Other Types Coming Soon"],
-        snippets: ["Other Types Coming Soon"],
-        names: ["Other Types Coming Soon"]
+        cons: ["Take things too seriously at times", "Judgemental", "Very little abstract thinking", "Uncomfortable expressing emotions", "Hard on themselves"],
+        work: ["Things done by the book", "Highly organized", "Clear expectations", "Teamwork should be rare", "Social justice" ],
+        snippets: ["ISTJs keep their feet on the ground and make clear, rational decisions.",],
+        names: ["Natalie Portman", "Herber Hoover", "Hermione Granger", "George Washington", "George H.W. Bush"]
     }],
     "isfj": [{
         letters: "ISFJ",
-        pros: ["Quiet", "friendly", "responsible", "conscientious", "committed"],
-        cons: ["Other Types Coming Soon"],
-        work: ["Other Types Coming Soon"],
-        snippets: ["Other Types Coming Soon"],
-        names: ["Other Types Coming Soon"]
+        pros: ["Supportive", "Friendly", "Responsible", "Conscientious", "Committed"],
+        cons: ["Shy", "Too sensitive", "Repress emotions", "Resist change", "Will work themselves to death"],
+        work: ["Not highly competive", "Lots of encouragement", "Service-oriented", "No conflict among co-workers", "Personal relationships important"],
+        snippets: ["ISFJs need to be needed."],
+        names: ["Queen Elizabeht II", "Robert E. Lee", "Dr. Watson", "Sam from Lord of the Rings", "Halle Berry"]
     }],
     "infj": [{
         letters: "INFJ",
-        pros: ["Seek meaning", "insightful", "conscientious", "organized", "decisive"],
-        cons: ["Other Types Coming Soon"],
-        work: ["Other Types Coming Soon"],
-        snippets: ["Other Types Coming Soon"],
-        names: ["Other Types Coming Soon"]
+        pros: ["Seek meaning in everythiing", "Insightful", "Persuasive", "Organized", "Decisive"],
+        cons: ["Sensitive", "Closed books to all but a few", "Must always be fighting something", "Tire out easily"],
+        work: ["Meaningful", "Creative", "Lots of independence", "Focus on communication", "Focus on individuals"],
+        snippets: ["When INFJs come to believe that something is important, they pursue that goal with a conviction and energy that can catch even their friends and loved ones off guard."],
+        names: ["Nicole Kidman", "Martin Luther King", "Jimmy Carter", "Nelson Mandela", "Mel Gibson"]
     }],
     "intj": [{
         letters: "INTJ",
-        pros: ["Original minds", "great drive", "See patterns in external events", "organized", "independent"],
-        cons: ["Other Types Coming Soon"],
-        work: ["Other Types Coming Soon"],
-        snippets: ["Other Types Coming Soon"],
-        names: ["Other Types Coming Soon"]
+        pros: ["Original and open-minded", "Great drive", "See patterns in external events", "High confidence", "Independent"],
+        cons: ["Arrogant", "Judgmental", "Stuck in their heads", "Don't deal well with structure", "Hopeless in love"],
+        work: ["Prefer to work alone", "High standards", "Meritocracy", "Loosely defined roles", "Lots of challenges"],
+        snippets: ["A paradox to most observers, INTJs are able to live by glaring contradictions that nonetheless make perfect sense."],
+        names: ["Vladimir Putin", "Thomas Jefferson", "John F. Kennedy", "Hannibal", "Gandalf the Grey"]
     }],
     "istp": [{
         letters: "ISTP",
-        pros: ["Tolerant", "flexible", "quiet observers", "logical", "efficient"],
-        cons: ["Other Types Coming Soon"],
-        work: ["Other Types Coming Soon"],
-        snippets: ["Other Types Coming Soon"],
-        names: ["Other Types Coming Soon"]
+        pros: ["Tolerant", "Great in a crisis", "Relaxed", "Spontaneous, but rational", "Creative, but practical"],
+        cons: ["Stubborn", "Private and reserved", "Insensitive", "Risky behavior", "Easily bored"],
+        work: ["Need to know how things work", "Hands-on experiences", "Independence", "Practical solutions", "Concrete results" ],
+        snippets: ["Rather than some sort of vision quest, ISTPs are merely exploring the viability of a new interest when they make seismic shifts."],
+        names: ["Clint Eastwood", "Tom Cruise", "Indiana Jones", "Jack Bauer", "Angus MacGuyver" ]
     }],
     "isfp": [{
         letters: "ISFP",
-        pros: ["quiet", "friendly", "sensitive", "kind", "loyal"],
-        cons: ["Other Types Coming Soon"],
-        work: ["Other Types Coming Soon"],
-        snippets: ["Other Types Coming Soon"],
-        names: ["Other Types Coming Soon"]
+        pros: ["Charming", "Great imaginations", "Sensitive", "Curious", "Passion"],
+        cons: ["Independent to a fault", "High anxiety", "Very competitive", "Love themselves, hate themselves", "Unpredictable"],
+        work: ["Unpredictability", "Short term commitments", "Dynamic, always changing environments", "Freelancing and consulting","Room to improve things"],
+        snippets: ["ISFPs always know just the compliment to soften a heart that's getting ready to call their risks irresponsible or reckless."],
+        names: ["Bob Dylan", "Marie Antoinette", "Millard Filmore", "John Travolta", "Donald Trump"]
     }],
     "infp": [{
         letters: "INFP",
