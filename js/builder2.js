@@ -225,13 +225,13 @@ $(function() {
             var htmlstr = '';
             // Receive data from octopus and creates html for each item.
             octopus.getInfo('bio').forEach(function(contact) {
-                htmlstr += '<li class="contact">' + contact.mobile +
-                    '</li><li class="contact"><a class="contact" href="mailto:bdill12@gmail.com">' + contact.email +
-                    '</a></li><li class="contact"><a class="contact" href="http://twitter.com/bdill12">' + contact.twitter +
-                    '</a></li><li class="contact">' + contact.location + '</li>';
+                htmlstr += '<div class="col-md-3">' + contact.mobile +
+                    '</div><div class="col-md-3"><a class="darken" href="mailto:bdill12@gmail.com">' + contact.email +
+                    '</a></div><div class="col-md-3"><a class="darken" href="http://twitter.com/bdill12">' + contact.twitter +
+                    '</a></div><div class="col-md-3">' + contact.location + '</div>';
             });
             // Append the html string to the element.
-            $('#topContacts').append(htmlstr);
+            $('#contactInfo').append(htmlstr);
         },
         exp_render: function() {
             var htmlstr = '';

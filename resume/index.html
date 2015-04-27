@@ -2,22 +2,22 @@
 <html>
     <head>
         <meta charset="utc-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Build a r&eacute;sum&eacute;</title>
     <!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<!--jQuery Mobile -->
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Crimson+Text:600,400' rel='stylesheet' type='text/css'>
+	<!--jQuery Mobile-->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-		<!--<script src="js/main.js"></script>-->
         <style>
         	html {
         		overflow-x: hidden;
-        		font-family: serif;
+        		font-family: 'Crimson Text', serif;
         	}
         	body {
         		overflow-x: hidden;
-        		font-family: serif;;
+        		font-family: 'Crimson Text', serif;
         		margin: 2%;
         	}
         	.page {
@@ -25,6 +25,7 @@
         	}
         	.heading {
 				font-size: 1.5em;
+                font-family: 'Crimson Text', serif;
         	}
         	input {
         		width: 98%;
@@ -42,71 +43,87 @@
         	p {
         		font-size: .6em;
         	}
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .contacts {
+                width: 100%;
+                font-size: 1.2em;
+                text-align: center;
+            }
+            .hidden{
+                display: none;
+            }
+            myName{
+                font-size: 3em;
+            }
         </style>
     </head>
     <body>
-    <div class="page">
+        <div class="page">
+            <div id="header"></div>
     <!--Contact Information-->
-    	<form name="contact" action="addContact()" class="section">
-    		<div class="heading">Contact Info</div>
+    	   <div class="section" id="contacted">
+            <div class="heading">Contact Info</div>
 				<label for="name">Full Name</label>
-					<input name="name" autofocus type="text" placeholder="Ex: John Crapper, II">
+					<input type="text" value="" id="name" autofocus autocomplete="true">
 				<label for="address">Address</label>
-					<input name="address" type="text" placeholder="222 Porcelain Parkway, Apt. 2">
-				<label for="address">City, State</label>
-					<input name="location" type="text" placeholder="Hobbs, NM">
-				<label for="address">Zip</label>
-					<input name="zip" type="text" placeholder="22222">
+					<input type="text" value="" id="address" autocomplete="true">
+				<label for="location">City, State ZIP Code</label>
+					<input value="" id="location" type="text" autocomplete="true">
 				<label for="phone">Phone</label>
-					<input name="phone" type="text" placeholder="(222) 222-2222">
+					<input value="" id="phone" type="text" autocomplete="true">
 				<label for="email">Email</label>
-					<input name="email" type="email" placeholder="hereisit@thehead.com">
+					<input value="" id="email" type="email" autocomplete="true">
 				<label for="website">Website</label>
-					<input name="website" type="url" placeholder="www.brokenhearted.com">
-				<input name="conSub" form="contact" type="submit" value="Add it!" onclick="addContact()">
-		</form>
+					<input value="" id="website" type="url" autocomplete="true">
+				<input type="submit" onclick="addContacts()" value="Add it!" >
+		</div>
 		<hr>
 	<!-- Experience -->
-		<form name="exp" action="addExp()">
+		<form id="exp" action="addExp()">
 			<div class="heading exp">Experience</div>
 			<label for="employer">Employer</label>
-				<input type="text" placeholder="Taco Bell">
-			<label for="location">Location</label><input class="location" type="text" placeholder="Hobbs, NM">
+				<input type="text">
+			<label for="location">Location</label><input class="location" type="text">
 			<div class="fromDate">
 				<label for="from" id="from">From</label>
-				<input type="date" class="date" name="from">
+				<input type="date" class="date" id="fromInput">
 				<label for="to" id="to">To</label>
-				<input type="date" class="date" name="to">
+				<input type="date" class="date" id="toInput">
 			</div>
 			<div class="fromDate">
-			<input class="current" name="current" type="checkbox"> <label class="current" for="current">I currently work here.</label></div>
-			<label for="desc">Description</label><input type="textArea" placeholder="Description">
-			<input form="exp" name="addExp" type="submit" onclick="addExp()" value="Add it!">
+			<input class="current" id="current" type="checkbox"> <label class="current" for="current">I currently work here.</label></div>
+			<label for="desc">Description</label><input type="textArea">
+			<input form="exp" id="addExp" type="submit" onclick="addExp()" value="Add it!">
 		</form>
 
 	<!-- Education -->
-		<form name="edu" action="addEdu()">
+		<form id="edu" action="addEdu()">
 			<div class="heading edu">Education</div>
-			<label for="school">School</label><input type="text" placeholder="School">
-			<label for="location">Location</label><input class="location" type="text" placeholder="Location">
+			<label for="school">School</label><input type="text">
+			<label for="location">Location</label><input class="location" type="text">
 			<div class="fromDate">
 				<label for="from">From</label>
-				<input type="date" class="date" name="from">
+				<input type="date" class="date" id="fromInput2">
 				<label for="to">To</label>
-				<input type="date" class="date" name="to">
+				<input type="date" class="date" id="toInput2">
 			</div>
 			<div class="fromDate">
-			<input class="current" name="current" type="checkbox"> <label class="current" for="current">I currently am currently enrolled here.</label></div>
+			<input class="current" id="current2" type="checkbox"> <label class="current" for="current">I currently am currently enrolled here.</label></div>
 			<label for="degree">Degree Earned</label><input type="text">
 			<p>Note: Please write your degree exactly as you would like it to appear on your r&eacute;sum&eacute;, such as "Bachelor of Science in Biology" or "M.A. in History"</p>
-			<input name="addEdu" form="edu" type="submit" onclick="addEdu()" value="Add it!">
+			<input id="addEdu" form="edu" type="submit" onclick="addEdu()" value="Add it!">
 		</form>
 	<!-- Skills -->
-		<form name="skill" action="addSkills()">
+		<form id="skill" action="addSkills()">
 			<div class="heading">Skills</div>
-			<label for="skills">Skill</label><input type="text" placeholder="MS Office, Proofreading, etc.">
-				<input name="addSkill" form="skills" type="submit" onclick="addSkill()" value="Add 	Skill!">
+			<label for="skills">Skill</label><input type="text">
+				<input id="addSkill" form="skills" type="submit" onclick="addSkill()" value="Add 	Skill!">
 		</form>
 		</div>
+        <script src="js/main.js"></script>
     </body>
 </html>
