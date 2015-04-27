@@ -139,3 +139,14 @@ h4 {
 .center {
     text-align: center;
 }
+
+.neon {
+  text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #383838,0 0 0.6em #000, 0 0 0.8em #000, 0 0 1.0em #000, 0 0 1.2em #000;
+  color: #fff;
+  font-size: 2em;
+}
+
+.dots {
+    color: #fff;
+    text-decoration: none !important;
+}
