@@ -92,8 +92,12 @@ h2{
     text-align: center;
 }
 
-.education-entry > a, .work-entry > a, .writing-entry > a, .project-entry > a {
+.education-entry > a, .writing-entry > a, .project-entry > a {
     font-size: 1.7em;
+}
+
+.work-entry > a {
+    font-size: 1.4em;
 }
 
 .education-entry {
