@@ -159,6 +159,7 @@ h4 {
 @media screen and (max-width: 778px) {
 	.flexbox {
 		display: block;
+		width: 20%;
 	}
 	.content {
 	margin: 45% 0 0 0;
