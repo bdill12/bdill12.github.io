@@ -161,7 +161,7 @@ h4 {
 
 	}
 	.flexbox {
-		display: flex;
+		display: block;
 		flex-wrap: wrap;
 		justify-content: space-around;;
 	}
