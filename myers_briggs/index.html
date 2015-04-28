@@ -16,7 +16,7 @@
 		<title>Get to Know the Myers-Briggs Types</title>
 	</head>
 	<body>
-		<div class="fixed">
+		<div id="fixed">
 			<div class="back header title">Get to Know the Myers-Briggs Personality Types</div>
 			<div class="types">
 				<ul class="types flexbox selectable" data-bind="foreach: types"><li data-bind="text: letters,
@@ -57,9 +57,13 @@
 
 		<script src="js/libs/knockout-3.2.0.js"></script>
 		<script src="js/main.js"></script>
-		<script>
-		var html = $('body').html();
-		$('body').prepend(html);
-		</script>
+	</div>
+	<script>
+	var now = function() {
+
+		console.log($('#fixed'));
+	};
+	now();
+	</script>
 	</body>
 	</html>
