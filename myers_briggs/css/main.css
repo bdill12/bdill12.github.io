@@ -135,7 +135,6 @@ h4 {
 	width: 100%;
 }
 .fixed {
-	
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -177,7 +176,6 @@ h4 {
 }
 
 ul {
-	display: flex;
 	margin:0;
 	padding: 0;
 }
