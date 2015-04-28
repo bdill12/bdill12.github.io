@@ -184,10 +184,11 @@ ul {
 }
 
 li {
-	width:10%;
+	margin:0;
 	padding: 5%;
 }
 }
+
 
 @media screen and (max-width: 480px) {
 	.content {
