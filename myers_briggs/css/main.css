@@ -161,21 +161,23 @@ h4 {
 	.content {
 	margin: 45% 0 0 0;
 }
-	.mb_initials {
-		width: 24%;
-}
+
 }
 
 @media screen and (max-width: 660px) {
 	.content {
 	margin: 50% 0 0 0;
 }
+
 }
 
 @media screen and (max-width: 570px) {
 	.content {
 	margin: 55% 0 0 0;
 }
+.mb_initials {
+		width: 24%;
+	}
 }
 
 @media screen and (max-width: 480px) {
