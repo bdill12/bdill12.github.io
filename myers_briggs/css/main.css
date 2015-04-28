@@ -159,11 +159,16 @@ h4 {
 @media screen and (max-width: 778px) {
 	.types {
 		display: inline-block;
-
-
+		width: 100%;
 	}
 	.flexbox {
-		width: 20%;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;;
+	}
+	.mb_initials {
+		width: 24%;
 	}
 	.content {
 	margin: 45% 0 0 0;
