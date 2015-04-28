@@ -185,8 +185,7 @@ ul {
 }
 
 li {
-	display: block;
-	margin:5%;
+	display: inline;
 	padding: 5%;
 }
 }
