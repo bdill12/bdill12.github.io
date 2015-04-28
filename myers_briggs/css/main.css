@@ -157,8 +157,12 @@ h4 {
 }
 
 @media screen and (max-width: 778px) {
+	.types {
+		display: inline-block;
+
+
+	}
 	.flexbox {
-		display: block;
 		width: 20%;
 	}
 	.content {
