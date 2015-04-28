@@ -6,132 +6,54 @@
 
 <!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<!-- jQuery UI -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+<!-- jQuery UI
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> -->
+<!-- jQuery UI CSS
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"> -->
 <!-- My stylesheet -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Merriweather+Sans">
 	<link rel="stylesheet" href="css/main.css">
-<!-- jQuery UI CSS -->
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
 		<title>Get to Know the Myers-Briggs Types</title>
-		<script>
-		$(function() {
-			$( "#selectable1" ).selectable({
-				selected: function( event, ui ) {
-					if (ui.selected.innerText == "E"){
-						choose("e");
-					} else {
-						choose("i");
-					}
-				}
-			});
-			$( "#selectable2" ).selectable({
-				selected: function( event, ui ) {
-					if (ui.selected.innerText == "N"){
-						choose("n");
-					} else {
-						choose("s");
-					}
-				}
-			});
-			$( "#selectable3" ).selectable({
-				selected: function( event, ui ) {
-					if (ui.selected.innerText == "T"){
-						choose("t");
-					} else {
-						choose("f");
-					}
-				}
-			});
-			$( "#selectable4" ).selectable({
-				selected: function( event, ui ) {
-					if (ui.selected.innerText == "J"){
-						choose("j");
-					} else {
-						choose("p");
-					}
-				}
-			});
-		});
-		</script>
 	</head>
 	<body>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12 back">Choose a Myers-Briggs Personality Type</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 flexbox">
-					<ol id="selectable1" class="selectable s1">
-						<li id="e" class="mb_initials">E</li> 
-						<li id="i" class="mb_initials">I</li>
-					</ol>
-					<ol id="selectable2" class="selectable s2">
-						<li id="n" class="mb_initials">N</li> 
-						<li id="s" class="mb_initials">S</li>
-					</ol>
-					<ol id="selectable3" class="selectable s3">
-						<li id="f" class="mb_initials">F</li> 
-						<li id="t" class="mb_initials">T</li>
-					</ol>
-					<ol id="selectable4" class="selectable s4">
-						<li id="p" class="mb_initials">P</li> 
-						<li id="j" class="mb_initials">J</li>
-					</ol> 
-				</div>
-			</div>
-			<div class="row flexbox choices">
-				<div class="col-md-3 ch choice1" id="choice1"></div>
-				<div class="col-md-3 ch choice2" id="choice2"></div>
-				<div class="col-md-3 ch choice3" id="choice3"></div>
-				<div class="col-md-3 ch choice4" id="choice4"></div>
-			</div>
-			<div class="row flexbox choices">
-				<div class="col-md-3 ch choice1 small" id="choice1a"></div>
-				<div class="col-md-3 ch choice2 small" id="choice2a"></div>
-				<div class="col-md-3 ch choice3 small" id="choice3a"></div>
-				<div class="col-md-3 ch choice4 small" id="choice4a"></div>
-			</div>
-			<div class="row flexbox">
-				<div class="col-md-6 leftHead back">Strengths:</div>
-				<div class="col-md-6 leftContent">
-					<ul id="pros" class="lists">
-					</ul>
-				</div>
-				<div class="col-md-6 rightHead back">Weaknesses:</div>
-				<div class="col-md-6 rightContent">
-					<ul id= "cons" class="lists">
-					</ul>
-				</div>
-				</div>
-			<div class="row flexbox">
-				<div class="col-md-6 leftHead back">Best Work Environment:</div>
-				
-				<div class="col-md-6 leftContent">
-					<ul id="jobs" class="lists">
-					</ul>
-				</div>
-				<div class="col-md-6 rightHead back">Famous <span id="typeNames">ENFP</span>s:</div>
-				<div class="col-md-6 rightContent">
-					<ul id="names" class="list">
-					</ul>
-				</div>				
-			</div>
-			<div class="row back">
-				<div class="col-md-12">
-					<ul id="snippet" class="snippet"></ul>
-				</div>
-			</div>
-			<div class="row">
-			<div class="col-md-12"><a href="http://www.brentcdill.com"><img class="back" src="img/logo.jpg"></a></div>
-			</div>
+		<div class="fixed">
+			<div class="back header title">Get to Know the Myers-Briggs Personality Types</div>
+				<ul class="types flexbox selectable" data-bind="foreach: types"><li data-bind="text: letters,
+				css: { selected: $data.letters == $root.chosenType()},
+				click: $root.chooseType" class="mb_initials back"></li>
+				</ul>
+			<div class="back type" data-bind="text: chosenType"></div>
 		</div>
-		<script src="js/getType.js"></script>
+		<div class="content">
+		<h4>
+			<ul class="flexbox" data-bind="foreach: chosenQuote">
+				<li class="quote back" data-bind="text: $data"></li>
+			</ul>
+		</h4>
+		<div class="info hidden">
+			<h3 class="header back">Strengths:</h3>		
+			<ul class="flexbox" data-bind="foreach: chosenStrengths">
+				<li class="strengths back" data-bind="text: $data"></li>
+			</ul>
+		</div>
+		<div class="info hidden"><h3 class="header back">Weaknesses:</h3>
+			<ul class="flexbox" data-bind="foreach: chosenWeaknesses">
+				<li class="weaknesses back" data-bind="text: $data"></li>
+			</ul>
+		</div>
+		<div class="info hidden"><h3 class="header back">Best Work Environment:</h3>
+			<ul class="flexbox" data-bind="foreach: chosenWork">
+				<li class="work back" data-bind="text: $data"></li>
+			</ul>
+		</div>
+		<div class="info hidden"><h3 class="header back">Famous <span data-bind="text: chosenType"></span>s:</h3>
+			<ul class="flexbox" data-bind="foreach: chosenFamous">
+				<li class="famous back" data-bind="text: $data"></li>
+			</ul>
+		</div>
+		</div>
+
+		<script src="js/libs/knockout-3.2.0.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 	</html>

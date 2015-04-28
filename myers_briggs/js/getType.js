@@ -6,6 +6,45 @@
 //      (2015). The 16 MBTI Types. Retrieved April 19, 2015, 
 //      from http://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/the-16-mbti-types.htm
 
+$(function() {
+            $( "#selectable1" ).selectable({
+                selected: function( event, ui ) {
+                    if (ui.selected.innerText == "E"){
+                        choose("e");
+                    } else {
+                        choose("i");
+                    }
+                }
+            });
+            $( "#selectable2" ).selectable({
+                selected: function( event, ui ) {
+                    if (ui.selected.innerText == "N"){
+                        choose("n");
+                    } else {
+                        choose("s");
+                    }
+                }
+            });
+            $( "#selectable3" ).selectable({
+                selected: function( event, ui ) {
+                    if (ui.selected.innerText == "T"){
+                        choose("t");
+                    } else {
+                        choose("f");
+                    }
+                }
+            });
+            $( "#selectable4" ).selectable({
+                selected: function( event, ui ) {
+                    if (ui.selected.innerText == "J"){
+                        choose("j");
+                    } else {
+                        choose("p");
+                    }
+                }
+            });
+        });
+
 var model = {
     "enfp": [{
         letters: "ENFP",
