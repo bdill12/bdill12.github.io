@@ -157,13 +157,12 @@ h4 {
 }
 
 @media screen and (max-width: 778px) {
-	.types {
+	.types {display: flex;
 
 	}
 	.flexbox {
 		display: block;
-		flex-wrap: wrap;
-		justify-content: space-around;;
+		width: 24%;
 	}
 	.mb_initials {
 		width: 24%;
