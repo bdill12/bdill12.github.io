@@ -175,9 +175,14 @@ h4 {
 	.content {
 	margin: 55% 0 0 0;
 }
-.mb_initials {
-		width: 24%;
-	}
+
+ul {
+	width:100%;
+}
+
+li {
+	width:24%;
+}
 }
 
 @media screen and (max-width: 480px) {
