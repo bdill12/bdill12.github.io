@@ -17,12 +17,13 @@
 	</head>
 	<body>
 		<div class="fixed">
-			<div class="back header title">Get to Know the Myers-Briggs Personality Types</div>
-			<div class="types"
-				<ul class="flexbox selectable" data-bind="foreach: types"><li data-bind="text: letters,
-				css: { selected: $data.letters == $root.chosenType()},
-				click: $root.chooseType" class="mb_initials back"></li>
+			<div class="back header title">
+				Get to Know the Myers-Briggs Personality Types</div>
+			<div class="types">
+				<ul class="flexbox selectable" data-bind="foreach: types">
+					<li data-bind="text: letters, css: { selected: $data.letters == $root.chosenType()}, click: $root.chooseType" class="back"></li>
 				</ul>
+			</div>
 			<div class="back type" data-bind="text: chosenType"></div>
 		</div>
 		<div class="content">
