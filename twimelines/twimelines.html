@@ -128,9 +128,12 @@
 			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/tenqueries" data-widget-id="593641223287476224">#tenqueries Tweets</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div>
-	<span class="handed">
-		Are you <span id="left" onclick="left()">left-handed</span><span class="hidden" id="right" onclick="right()">right handed</span>?
+	<span class="handed" id="left" onclick="left()">
+		Are you left-handed</span>?
 	</span>
+	<span class="handed hidden" id="right" onclick="right()">
+		Are you right-handed?
+		</span>
 			<script>
 				$(function() {
 					$('#mswl').removeClass('hidden');
