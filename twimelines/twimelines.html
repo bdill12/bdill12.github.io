@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utc-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Timelines for Writers</title>
+		
+<!-- Google Fonts Raleway and Merriweather Sans -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Merriweather+Sans">
+<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--jQuery Mobile -->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+		<style>
+		     body {
+		     	text-align: center;
+		     	overflow-x: hidden;
+		     	background-color: #fff;
+		     	background-color: rgba(250,250,250,.8);
+		     	padding: 1% 5%;
+		     	font-family: "Raleway", serif;
+		     }
+		     h1, h2, h3, h4, h5, h6 {
+		     	font-family: "Merriweather Sans" sans-serif;
+		     }
+		     ul {
+		     	list-style-type: none;
+		     	display: flex;
+		     	flex-wrap: wrap;
+		     	justify-content: space-around;
+		     }
+		     
+		     li:hover {
+		     	border: 2px solid #000;
+		     	background-color: #fff;
+		     	background-color: rgba(250,250,250,.7);
+		     	color: #000;
+		     	text-decoration: underline;
+		     }
+
+		     li {
+		     	padding: 1%;
+		     	margin: 1% 0;
+		     	border: 2px solid #fff;
+		     	background-color: #000;
+		     	background-color: rgba(0,0,0,.7);
+		     	font-size: 1.5em;
+		     	color: #fff;
+		     	border-radius: 10px;
+		     }
+
+		     .hidden {
+		     	display: none;
+		    }
+
+		    div {
+		    	width: 80%;
+		    }
+
+		    .left {
+		    	float: right;
+		    }
+		    span {
+		    	text-decoration: underline;
+		    }
+		    .handed {
+		    	margin: 2% 0;
+		    }
+		</style>
+    </head>
+    <body>
+    	<h1>Timelines for Writers</h1>
+    	<ul class="nav">
+    		<li onclick="picker(mswl)">
+    			#MSWL
+    		</li>
+    		<li onclick="picker(askAgent)">
+    			#askAgent
+    		</li>
+    		<li onclick="picker(queryTip)">
+    			#queryTip
+    		</li>
+    		<li onclick="picker(tenqueries)">
+    			#tenQueries
+    		</li>
+    	</ul>
+
+<!-- #MSWL -->
+	<div id="mswl" class="hidden">
+		<h2>#MSWL</h2>
+			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/MSWL" data-widget-id="593632262769410049">
+				#MSWL
+			</a>
+			<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+			</script>
+	</div>
+<!-- #askAgent -->
+	<div id="askAgent" class="hidden">
+		<h2>#askAgent</h2>
+			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/askagent" data-widget-id="593640933381394432">#askagent Tweets</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+<!-- #queryTip -->
+	<div id="queryTip" class="hidden">
+		<h2>#queryTip</h2>
+			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/querytip" data-widget-id="593641092559409153">#querytip Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+<!-- #tenqueries -->
+	<div id="tenqueries" class="hidden">
+		<h2>#tenqueries</h2>
+			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/tenqueries" data-widget-id="593641223287476224">#tenqueries Tweets</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+	<div class="handed">
+		Are you <span id="left" onclick="left()">left-handed</span><span class="hidden" id="right" onclick="right()">right handed</span>?
+	</div>
+			<script>
+				$(function() {
+					$('#mswl').removeClass('hidden');
+					});
+				var picker = function(id) {
+					$('div').addClass('hidden').removeClass('visible');
+					$(id).removeClass('hidden').addClass('visible');
+					};
+				var left = function() {
+					$('div').addClass('left');
+					$('#left').addClass('hidden');
+					$('#right').removeClass('hidden');
+				};
+				var right = function() {
+					$('div').removeClass('left');
+					$('#left').removeClass('hidden');
+					$('#right').addClass('hidden');
+				};
+			</script>
+		</div>
+    </body>
+</html>
