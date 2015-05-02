@@ -1,9 +1,9 @@
 $(function(){
-	xmlhttp.open("POST","http://bdill12.github.io/blog/posts",true);
-	xmlhttp.send();
-	function AppViewModel() {
-	this.posts = ko.observableArray([xmlhttp.responseText]);
-}
-
-ko.applyBindings(new AppViewModel());
+	$.get("http://bdill12.github.io/blog/posts.xml", function(response){
+		console.log(response());
+		function AppViewModel() {
+			this.posts = ko.observableArray([response.getElementsByTag('posts')]);
+			ko.applyBindings(new AppViewModel());
+	}
+}, 'xml');
 });
