@@ -30,17 +30,13 @@
 			<h6>a blog by brent c dill</h6>
 		</div>
 	</div>
-	<table>
-		<thead>
-			<tr><th>First</th><th>Last</th></tr> 
-		</thead>
-			<tbody data-bind="foreach: posts">
-				<tr data-bind="css: {post: true, 'col-md-4': true, 'post1': postNum == 1}">
-					<td class="title" data-bind="text: title"></td>
-					<td class= "text" data-bind="text: content"></td>
-				</tr>
-			</tbody>
-	</table>
+	<div data-bind="foreach: posts">
+		<div data-bind="css: {post: true, 'col-md-4': true, 'post1': postNum == 1, 'post2': postNum == 2, 'post3': postNum == 3, 'post4': postNum == 4, 'post5': postNum == 5, 'post6': postNum == 6, 'post7': postNum == 7, 'post8': postNum == 8, 'post9': postNum == 9, 'post10': postNum == 10, 'post11': postNum == 11, 'post12': postNum == 12}">
+		<span class="title" data-bind="text: title"></span>
+		<p class="text" data-bind="text: snippet"></p>
+		<p class="date" data-bind="text: date"></p>
+		</div>
+	</div>
 
 	<!--<div class="search">
 		Search
