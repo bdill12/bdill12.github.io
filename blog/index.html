@@ -36,8 +36,9 @@
 		<button type="submit">go</button>
 	</div>
 	<div class="posts" data-bind="foreach: posts">
-		<div class="col-md-4 post post1" id="post_1">
-			<span data-bind="text: title">Here</span>
+		<div class="col-md-4 post post1">
+			<span class="title" data-bind="text: title"></span>
+			<p class="text" data-bind="text: text"></p>
 		</div>
 		<div class="col-md-4 post post2" id="post_2">
 			Post 2					
