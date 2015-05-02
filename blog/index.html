@@ -32,10 +32,10 @@
 	</div>
 	<table>
 		<thead>
-			<tr><th>First</th><th>Last</th></tr>
+			<tr><th>First</th><th>Last</th></tr> 
 		</thead>
 			<tbody data-bind="foreach: posts">
-				<tr class="post1">
+				<tr data-bind="css: {post: true, 'col-md-4': true, 'post1': postNum == 1}">
 					<td class="title" data-bind="text: title"></td>
 					<td class= "text" data-bind="text: content"></td>
 				</tr>

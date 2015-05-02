@@ -10,8 +10,8 @@ setTimeout(function(){
 		for (var i = 0; i < data.firstElementChild.children.length; i++) {
 			var myTitle = data.firstElementChild.children[i].children[0].textContent;
 			var myContent = data.firstElementChild.children[i].children[1].textContent;
-			var myClass = data.firstElementChild.children[i].children[2].textContent;
-			self.posts.push({title: myTitle, content: myContent, class: myClass});
+			var myNum = data.firstElementChild.children[i].children[2].textContent;
+			self.posts.push({title: myTitle, content: myContent, postNum: myNum});
 		}
 		console.log("1. " + self.posts()[0]);
 	}
