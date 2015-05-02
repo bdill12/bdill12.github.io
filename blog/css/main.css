@@ -50,14 +50,16 @@ input, button {
 	border-radius: 4px;
 	padding: 3%; 
 	float: left;
-	width: 250px;
-	height: 150px;
+	width: 500px;
+	height: 100%;
 	border: 1px solid #efefef;
 	background: #fff;
 	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
 	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; }
-	.post:before, .post:after {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+}
+
+.post:before, .post:after {
 	content: '';
 	z-index: -1;
 	position: absolute;
@@ -85,6 +87,19 @@ input, button {
 	-ms-transform: skew(15deg) rotate(6deg);
 	-o-transform: skew(15deg) rotate(6deg);
 	transform: skew(15deg) rotate(6deg);
+}
+
+.title {
+	font-family: "Raleway", serif;
+	font-size: 1.5em;
+}
+
+.text {
+	text-align: left;	
+}
+
+.date {
+	float: right;
 }
 
 .post1 {
