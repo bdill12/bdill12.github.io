@@ -1,11 +1,14 @@
-var array;
 $(function(){
-	$.get("http://bdill12.github.io/blog/posts.xml", function(response){
-		array = response;
-		console.log(response);
-		function AppViewModel() {
-			this.posts = ko.observableArray([response.getElementsByTag('posts')]);
-			ko.applyBindings(new AppViewModel());
-	}
-}, 'xml');
+	function AppViewModel() {
+			var self = this;
+			self.posts = ko.observableArray();
+		}
+	var viewModel = new AppViewModel();
+
+	$.get("http://bdill12.github.io/blog/posts.xml", function(response, textStatus, jqXHR){
+		viewModel.posts(response);
+	}, 'xml');
+
+	ko.applyBindings(viewModel);
+
 });

@@ -35,11 +35,9 @@
 		<input type="text">
 		<button type="submit">go</button>
 	</div>
-	<div class="posts">
-		<div class="col-md-4 post post1 tweet" id="post_1">
-			<span class="title" data-bind="text: posts().post1"></span>
-			<p class="text" data-bind="text: posts"></p>
-			<span class="date" data-bind="text: posts"></span>					
+	<div class="posts" data-bind="foreach: posts">
+		<div class="col-md-4 post post1" id="post_1">
+			<span data-bind="text: title">Here</span>
 		</div>
 		<div class="col-md-4 post post2" id="post_2">
 			Post 2					
