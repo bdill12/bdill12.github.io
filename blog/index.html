@@ -30,15 +30,27 @@
 			<h6>a blog by brent c dill</h6>
 		</div>
 	</div>
-	<div class="search">
+	<table>
+		<thead>
+			<tr><th>First</th><th>Last</th></tr>
+		</thead>
+			<tbody data-bind="foreach: posts">
+				<tr class="post1">
+					<td class="title" data-bind="text: title"></td>
+					<td class= "text" data-bind="text: content"></td>
+				</tr>
+			</tbody>
+	</table>
+
+	<!--<div class="search">
 		Search
 		<input type="text">
 		<button type="submit">go</button>
 	</div>
-	<div class="posts" data-bind="foreach: posts">
+	<div class="posts">
 		<div class="col-md-4 post post1">
-			<span class="title" data-bind="text: title"></span>
-			<p class="text" data-bind="text: text"></p>
+			<span class="title" data-bind="text: posts.getElementsByTagName('title')[0].childNodes[0].nodeValue"></span>
+			<p class="text" data-bind="text: posts()."></p>
 		</div>
 		<div class="col-md-4 post post2" id="post_2">
 			Post 2					
@@ -73,7 +85,7 @@
 		<div class="col-md-4 post post12 " id="post_12">
 			Post 12					
 		</div>
-	</div>
+	</div> -->
 	<div class="wrapper">
 		<span class="footer corners">
 			<img src="images/logo.jpg">
