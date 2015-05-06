@@ -1,61 +1,68 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<!-- jQuery UI
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- jQuery UI
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> -->
-<!-- jQuery UI CSS
+  <!-- jQuery UI CSS
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"> -->
-<!-- My stylesheet -->
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Merriweather+Sans">
-	<link rel="stylesheet" href="css/main.css">
-		<title>Get to Know the Myers-Briggs Types</title>
-	</head>
-	<body>
-		<div class="fixed">
-			<div class="back header title">
-				Get to Know the Myers-Briggs Personality Types</div>
-			<div class="NOTICEME">
-				<ul class="flexbox selectable" data-bind="foreach: types">
-					<li data-bind="text: letters, css: { selected: $data.letters == $root.chosenType()}, click: $root.chooseType" class="back"></li>
-				</ul>
-			</div>
-			<div class="back type" data-bind="text: chosenType"></div>
-		</div>
-		<div class="content">
-		<h4>
-			<ul class="flexbox" data-bind="foreach: chosenQuote">
-				<li class="quote back" data-bind="text: $data"></li>
-			</ul>
-		</h4>
-		<div class="info hidden">
-			<h3 class="header back">Strengths:</h3>		
-			<ul class="flexbox" data-bind="foreach: chosenStrengths">
-				<li class="strengths back" data-bind="text: $data"></li>
-			</ul>
-		</div>
-		<div class="info hidden"><h3 class="header back">Weaknesses:</h3>
-			<ul class="flexbox" data-bind="foreach: chosenWeaknesses">
-				<li class="weaknesses back" data-bind="text: $data"></li>
-			</ul>
-		</div>
-		<div class="info hidden"><h3 class="header back">Best Work Environment:</h3>
-			<ul class="flexbox" data-bind="foreach: chosenWork">
-				<li class="work back" data-bind="text: $data"></li>
-			</ul>
-		</div>
-		<div class="info hidden"><h3 class="header back">Famous <span data-bind="text: chosenType"></span>s:</h3>
-			<ul class="flexbox" data-bind="foreach: chosenFamous">
-				<li class="famous back" data-bind="text: $data"></li>
-			</ul>
-		</div>
-		</div>
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Merriweather+Sans">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Get to Know the Myers-Briggs Types</title>
+</head>
 
-		<script src="js/libs/knockout-3.2.0.js"></script>
-		<script src="js/main.js"></script>
-	</body>
-	</html>
+<body>
+  <div class="fixed">
+    <div class="back header title">
+      Get to Know the Myers-Briggs Personality Types</div>
+    <div class="NOTICEME">
+      <ul class="flexbox selectable" data-bind="foreach: types">
+        <li data-bind="text: letters, css: { selected: $data.letters == $root.chosenType()}, click: $root.chooseType" class="back"></li>
+      </ul>
+    </div>
+    <div class="back type" data-bind="text: chosenType"></div>
+  </div>
+  <div class="content">
+    <h4>
+      <ul class="flexbox" data-bind="foreach: chosenQuote">
+        <li class="quote back" data-bind="text: $data"></li>
+      </ul>
+    </h4>
+    <div class="info hidden">
+      <h3 class="header back">Strengths:</h3>
+      <ul class="flexbox" data-bind="foreach: chosenStrengths">
+        <li class="strengths back" data-bind="text: $data"></li>
+      </ul>
+    </div>
+    <div class="info hidden">
+      <h3 class="header back">Weaknesses:</h3>
+      <ul class="flexbox" data-bind="foreach: chosenWeaknesses">
+        <li class="weaknesses back" data-bind="text: $data"></li>
+      </ul>
+    </div>
+    <div class="info hidden">
+      <h3 class="header back">Best Work Environment:</h3>
+      <ul class="flexbox" data-bind="foreach: chosenWork">
+        <li class="work back" data-bind="text: $data"></li>
+      </ul>
+    </div>
+    <div class="info hidden">
+      <h3 class="header back">Famous
+        <span data-bind="text: chosenType"></span>s:</h3>
+      <ul class="flexbox" data-bind="foreach: chosenFamous">
+        <li class="famous back" data-bind="text: $data"></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/libs/knockout-3.2.0.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
