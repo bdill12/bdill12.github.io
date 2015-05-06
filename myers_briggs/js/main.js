@@ -130,11 +130,11 @@ var ViewModel = function() {
         $('#header').remove();
         headerAway = true;
         $('#theChosenType').prependTo('#topTypes').addClass('fixed');
-        $('#theTypes').prependTo('#topTypes').addClass('fixed');
+        $('#theTypes').prependTo('#topTypes').addClass('fixed1');
 
       };
       self.chooseType = function() {
-        if (headerAway == false) {
+        if (headerAway === false) {
           self.removeHeader();
         }
         $('.info').removeClass("hidden");

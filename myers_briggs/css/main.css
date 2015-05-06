@@ -98,7 +98,7 @@ ul {
   font-size: 3em;
 }
 .content {
-  margin-top: 0;
+  margin-top: 15%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -129,6 +129,14 @@ h4 {
   width: 100%;
   margin-bottom: 0;
 }
+
+.fixed1 {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  margin-bottom: 0;
+  }
 .container {
   width: 90%;
   margin-left: auto;
@@ -136,7 +144,7 @@ h4 {
 }
 @media screen and (max-width: 950px) {
   .content {
-    margin: 35% 0 0 0;
+    margin: 20% 0 0 0;
   }
 }
 @media screen and (max-width: 778px) {
