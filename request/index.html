@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <meta charset=utf-8 />
+  <title>Request a Document</title>
+
+  <!-- Google Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Merriweather|Raleway" rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div class="header" id="wufoo-m14mizzv1ra9rht">
+      <a href="https://bdill12.wufoo.com/forms/m14mizzv1ra9rht">Form</a>.
+    </div>
+    <div class="header" id="wuf-adv" style="font-size: 6px; position: fixed; top:100%;">Made with <a href="http://www.wufoo.com/gallery/templates/">Wufoo templates</a>.</div>
+  </div>
+  <div class="resume" onclick="mailDoc('http://bdill12.github.io/images/Brent_C_Dill_Writing_Portfolio.pdf')">
+    <h2>R&eacute;sum&eacute;</h2>
+  </div>
+  <div class="references" onclick="mailDoc('http://www.bdill12.github.io/images/Brent_C_Dill_References.pdf')">
+    <h2>References</h2>
+  </div>
+  <div class="sample" onclick="mailDoc('http://www.bdill12.github.io/images/Brent_C_Dill_Writing_Portfolio.pdf')">
+    <h2>Writing Sample</h2>
+  </div>
+  <div class="gotosite">
+    <h2><a href="http://www.brentcdill.com">Go to brentcdill.com</a></h2>
+  </div>
+	<script type="text/javascript">
+		var m14mizzv1ra9rht;
+		(function(d, t) {
+			var s = d.createElement(t),
+				options = {
+					'userName': 'bdill12',
+					'formHash': 'm14mizzv1ra9rht',
+					'autoResize': true,
+					'height': '75',
+					'async': true,
+					'host': 'wufoo.com',
+					'header': 'show',
+					'ssl': true
+				};
+			s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+			s.onload = s.onreadystatechange = function() {
+				var rs = this.readyState;
+				if (rs)
+					if (rs != 'complete')
+						if (rs != 'loaded') return;
+				try {
+					m14mizzv1ra9rht = new WufooForm();
+					m14mizzv1ra9rht.initialize(options);
+					m14mizzv1ra9rht.display();
+				} catch (e) {}
+			};
+			var scr = d.getElementsByTagName(t)[0],
+				par = scr.parentNode;
+			par.insertBefore(s, scr);
+		})(document, 'script');
+	</script>
+
+</body>
+
+</html>
