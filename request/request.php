@@ -53,8 +53,8 @@
 
 
 	// File to attach
-	$my_file = "Brent_C_Dill_Resume.doc";
-	$my_path = '$_SERVER['DOCUMENT.ROOT']."downloads/Brent_C_Dill_Resume.pdf";' // $_SERVER['DOCUMENT_ROOT']."/your_path_here/";
+	$my_file = "Brent_C_Dill_Resume.pdf";
+	$my_path = '$_SERVER['DOCUMENT.ROOT']."/downloads/";' // $_SERVER['DOCUMENT_ROOT']."/your_path_here/";
 
 	// Who email is FROM
 	$my_name    = "Brent C Dill";
