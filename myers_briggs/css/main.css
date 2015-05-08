@@ -152,7 +152,7 @@ h4 {
     display: flex;
   }
   .flexbox {
-    width: 100%%;
+    width: 100%;
   }
   .mb_initials {
     width: 24%;
@@ -185,11 +185,8 @@ h4 {
   .content {
     margin: 65% 0 0 0;
   }
-  .types {
-    display: flex;
-  }
   .flexbox {
-    width: 100%%;
+    width: 100%;
   }
   .mb_initials {
     width: 15%}
