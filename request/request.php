@@ -40,7 +40,7 @@
 	}
 
 	// Only accept POSTs from authenticated source
-	if ($_POST['HandshakeKey'] != 'secret-handshake-key') {
+	if ($_POST['HandshakeKey'] != 'smallPotatoes') {
 	  echo "<h1>You are not who you say you are, mister man.</h1>";
 		die();
 	}
@@ -53,26 +53,25 @@
 
 
 	// File to attach
-	$my_file = "whitepaper.doc";
-	$my_path = ''; // $_SERVER['DOCUMENT_ROOT']."/your_path_here/";
+	$my_file = "Brent_C_Dill_Resume.doc";
+	$my_path = '$_SERVER['DOCUMENT.ROOT']."downloads/Brent_C_Dill_Resume.pdf";' // $_SERVER['DOCUMENT_ROOT']."/your_path_here/";
 
 	// Who email is FROM
-	$my_name    = "Your Name (or) Your Business";
-	$my_mail    = "youremail@yourbusiness.com";
-	$my_replyto = "youremail@yourbusiness.com";
+	$my_name    = "Brent C Dill";
+	$my_mail    = "brentcdill@gmail.com";
+	$my_replyto = "brentcdill@gmail.com";
 
 	// Whe email is going TO
-	$to_email   = $_POST['Field103']; // Comes from Wufoo WebHook
+	$to_email   = $_POST['Field1']; // Comes from Wufoo WebHook
 
 	// Subject line of email
-	$my_subject = "Your file has arrived!";
+	$my_subject = "Brent C Dill has sent you a file";
 
 	// Content of email message (Text only)
-	$requester   = $_POST['Field101'];  // Comes from Wufoo WebHook
-	$message     = "Hey $requester,
+	$requester   = $_POST['Field1'];  // Comes from Wufoo WebHook
+	$message     = "Hello,
 
-Your custom email message
-goes here";
+Thank you for requesting this file. Please see attached.";
 
 	// Call function to send email
 	mail_attachment($my_file, $my_path, $to_email, $my_mail, $my_name, $my_replyto, $my_subject, $message);
