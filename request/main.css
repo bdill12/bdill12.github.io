@@ -26,20 +26,23 @@ body {
   position: fixed;
   width: 100%;
   color: #FFF;
-  background-color: #000;
   z-index: 1000;
   margin: 0;
   top:0;
   left: 0;
   border-radius: 0;
-  height: 200px;
+  height: 210px;
   font-family:inherit;
   text-align:center;
   display:block;
 }
 
+.hide {
+  display: hidden;
+}
+
 .resume {
-  margin-top: 250px;
+  margin-top: 225px;
   background-color: #009688;
 }
 .references {
@@ -62,19 +65,6 @@ body {
 
 input {
   width: 30%;
-}
-
-.wufoo-form-container {
-  margin: auto;
-  background-color: #FFF;
-}
-
-input .btTxt {
-  background-color: #009688;
-}
-
-form li.buttons input{
-  background-color: #009688;
 }
 
 @media screen and (max-width: 480px) {

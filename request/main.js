@@ -1,6 +1,6 @@
 var mailDoc = function(chosen) {
 	console.log(document.getElementById("email").value);
-	var link = "mailto:?subject=Brent C Dill has sent you a document&body=Thank You. Please See Attachment&attachment=" + chosen;
+	var link = "mailto:"+ recipient + "?subject=A Document from Brent C Dill&body=Thank You. Please See Attachment&attachment=" + chosen;
 		window.location.href = link;
 	};
 
