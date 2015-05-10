@@ -174,7 +174,11 @@ h4 {
 @media screen and (max-width: 480px) {
   .content {
     margin: 60% 0 0 0;
+    }
+    .mb_initials {
+    display: inline-flex;
   }
+
 }
 @media screen and (max-width: 420px) {
   .content {
@@ -189,5 +193,5 @@ h4 {
     width: 100%;
   }
   .mb_initials {
-    width: 15%}
+    display: inline-flex;}
 }
