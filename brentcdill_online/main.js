@@ -117,7 +117,8 @@ ko.applyBindings(new ViewAppModel());
 
 /* If the screen is larger than 480px, then implement the scrolling and fixed menu */
 //scrolling
-if (screen.availWidth > 480) {
+$(function() {
+  if (screen.availWidth > 480) {
 $(window).scroll(function() {
     var social = $('.social1');
     var social2 = $('.social2');
@@ -150,19 +151,6 @@ $(window).scroll(function() {
         social2.addClass('hidden');
         picture.attr('src', 'http://bdill12.github.io/images/1.jpg');
     }
-  }
-);
+  });
 
-$(document).ready(function() {
-	$(window).scroll(function(){
-		if(document.body.scrollTop > 300)
-			$('#fixmenu').fadeIn( "slow", function() { });
-		else
-			$('#fixmenu').fadeOut( "slow", function() { });
-	});
-
-	$('a#srolltotop').click(function(){
-		$('html, body').animate({scrollTop:0}, 100);
-		return false;
-	});
-});}
+}});

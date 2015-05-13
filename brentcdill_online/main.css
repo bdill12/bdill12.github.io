@@ -231,7 +231,7 @@ button:hover {
 .menu-fixed a {
   font-size: 0.9em;
   color: #fff;
-  text-shadow: 1px 1px #5E8BC5;
+  text-shadow: 1px 1px #fff;
   padding: 0 0 0 10px;
 }
 /* Smartphones (portrait and landscape) ----------- */
