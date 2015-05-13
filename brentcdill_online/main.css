@@ -244,6 +244,9 @@ button:hover {
   h2 {
     font-size: 1em;
   }
+  .menu {
+    width: 100%;
+  }
   .serviceMenu {
     width: 100%;
   }
@@ -297,6 +300,9 @@ button:hover {
     display: none;
   }
   .menu-fixed {
+    display: none;
+  }
+  .middle {
     display: none;
   }
 }
