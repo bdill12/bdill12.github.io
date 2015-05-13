@@ -250,17 +250,12 @@ button:hover {
     width: 100%;
   }
   .menu li, .serviceMenu li {
-    border-radius: 0;
+    border-radius: 10px;
     padding: 1%;
-    margin: 5%;
+    margin: 5% 0;
     width: 100%;
     font-size: 1em;
     float: left;
-  }
-  ul {
-    display: flex;
-    justify-content: space-around;
-    align-content: space-around;
   }
   .hidden {
     display: none;
@@ -318,6 +313,15 @@ button:hover {
 .serviceMenu {
   width: 100%;
 }
+  #fixmenu {
+    display: none;
+  }
+  .menu-fixed {
+    display: none;
+  }
+  .middle {
+    display: none;
+  } 
 }
 
 
