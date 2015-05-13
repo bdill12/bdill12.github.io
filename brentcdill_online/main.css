@@ -255,6 +255,7 @@ button:hover {
     margin: 5%;
     width: 100%;
     font-size: 1em;
+    float: left;
   }
   ul {
     display: flex;
