@@ -171,7 +171,7 @@ button {
   background-color: #009688;
   border: 2px dashed #fff;
   box-shadow: 0 0 0 4px #009688, 0px -5px 15px 5px rgba(0, 0, 0, 0.5);
-  margin-top: 5%; 
+  margin-top: 5%;
 }
 button:hover {
   background-color: #3F51B5;
@@ -233,4 +233,66 @@ button:hover {
   color: #fff;
   text-shadow: 1px 1px #5E8BC5;
   padding: 0 0 0 10px;
+}
+@media screen and (max-height: 480px) {
+  .header {
+    position: static;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  .serviceMenu {
+    width: 100%;
+  }
+  .menu li, .serviceMenu li {
+    font-size: 100%;
+  }
+  ul {
+    display: block;
+  }
+  .hidden {
+    display: none;
+  }
+  .footer {
+    position: static;
+  }
+  .topWrapper {
+    display: block;
+  }
+  ul.share-buttons {
+    width: 100%;
+  }
+  .middle {
+    min-height: 500px;
+  }
+  .white {
+    position: static;
+    display: block;
+  }
+  .social {
+    color: #fff;
+    position: static;
+  }
+  .picture {
+    position: static;
+    width: 100%;
+  }
+  .dark {
+    font-size: 1em;
+  }
+  .spacer {
+    min-height: 250px;
+  }
+  .price {
+    font-size: 1em;
+  }
+  #fixmenu {
+    display: none;
+  }
+  .menu-fixed {
+    display: none;
+  }
 }
