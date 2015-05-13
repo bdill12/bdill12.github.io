@@ -9,8 +9,6 @@ function ViewAppModel() {
   self.webPrice = ko.observable();
   self.project = ko.observable();
   self.projDesc = ko.observable();
-  self.sample = ko.observable();
-  self.sampleDesc = ko.observable();
 
   self.email = "mailto:brentcdill@gmail.com";
   self.twitter = "http://www.twitter.com/bdill12";
@@ -37,10 +35,6 @@ function ViewAppModel() {
 
 
   self.showServices = function() {
-    $('a.force-reload').on('click', function(e) {
-    var url = $(this).attr('href');
-    $.mobile.changePage( url, { reloadPage: true} );
-});
     $('#subServices').removeClass('hidden');
 
     $('#contact').addClass('hidden');
@@ -49,10 +43,6 @@ function ViewAppModel() {
   };
 
   self.showContact = function() {
-    $('a.force-reload').on('click', function(e) {
-    var url = $(this).attr('href');
-    $.mobile.changePage( url, { reloadPage: true} );
-});
     $('#contact').removeClass('hidden');
 
     $('#subServices').addClass('hidden');
@@ -61,10 +51,6 @@ function ViewAppModel() {
   };
 
   self.showProjects = function() {
-    $('a.force-reload').on('click', function(e) {
-    var url = $(this).attr('href');
-    $.mobile.changePage( url, { reloadPage: true} );
-});
     $('#webProjects').removeClass('hidden');
 
     $('#subServices').addClass('hidden');
@@ -83,10 +69,6 @@ function ViewAppModel() {
   };
 
   self.showAbout = function() {
-    $('a.force-reload').on('click', function(e) {
-    var url = $(this).attr('href');
-    $.mobile.changePage( url, { reloadPage: true} );
-});
     $('#about').removeClass('hidden');
 
     $('#contact').addClass('hidden');
@@ -110,16 +92,19 @@ function ViewAppModel() {
     self.webDesc(this.webServices[number].webDesc);
     self.webPrice(this.webServices[number].price);
     };
-
+$(function(){
+  if ($(window).width() < 480) {
+    $('<button onclick="showServices()" type="submit">services</button><button onclick="showProjects()" type="submit">projects</button><button onclick="showContact()" type="submit">contact</button><button onclick="showAbout()" type="submit">about</button>').replaceAll('.response:first');
+    $('.response').addClass('hidden');
+  }
+  });
   }
 
 ko.applyBindings(new ViewAppModel());
 
 
-/* If the screen is larger than 480px, then implement the scrolling and fixed menu */
 //scrolling
 $(function() {
-  if (screen.availWidth > 480) {
 $(window).scroll(function() {
     var social = $('.social1');
     var social2 = $('.social2');
@@ -154,4 +139,4 @@ $(window).scroll(function() {
     }
   });
 
-}});
+});
