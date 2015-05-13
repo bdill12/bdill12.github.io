@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utc-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <!-- Google Fonts Raleway and Merriweather Sans -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Merriweather+Sans">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>brent c dill writing and web content services</title>
+</head>
+<body>
+		<div class="container-fluid">
+				<div class="header">
+						<h1>brent c dill</h1>
+						<h2>writing and web content</h2>
+				</div>
+				<div class="row topWrapper">
+						<div class="col-md-8 menu" id="menu">
+								<h3>
+          <ul>
+            <li data-bind="click: showServices">services</li>
+            <li data-bind="click: showContact">contact</li>
+            <li data-bind="click: showAbout">about</li>
+          </ul>
+        </h3>
+								<h4 id="contact" class="sub contact">
+									<ul data-bind="foreach: links">
+										<li><a data-bind="text: name, attr: { href: link}"></a></li>
+									</ul>
+							</h4>
+				<h4 id="subServices" class="sub hidden">
+          <ul>
+            <li data-bind="click: goWrite">writing</li>
+            <li data-bind="click: goWeb">web development</li>
+          </ul>
+        </h4>
+        <div id="about" class="sub hidden"><h3>About:</h3><h4>brent c dill doesn't waste words.<br>He writes clear, clean, concise copy, finding the meatballs in your spaghetti text.<br>Whether it is a cover letter, a blog post, or an about page, brent will help you find a way to differently say it.</h4><br><h3>What does it mean to differently say it?</h3><br><h4>Someone once claimed Joss Whedon would use this phrase to encourage writers to stop saying the same old thing the same old way.<br>Is this really Whedon wisdom? Who cares if it's true, as long as it's good.</h4></div>
+						</div>
+						<div class="col-md-4">
+								<img id="picture" class="picture" src="http://bdill12.github.io/images/1.jpg">
+						</div>
+				</div>
+				<div class="middle one"></div>
+
+				<div id="writingServices" class="row title">
+						<div class="col-md-12 serviceMenu">
+								<h2 class="dark">Writing Services</h2>
+								<ul>
+										<li data-bind="click: chooseService(0)">Web Content</li>
+										<li data-bind="click: chooseService(1)">Proofreading and Editing</li>
+										<li data-bind="click: chooseService(2)">R&eacute;sum&eacute;s and Cover Letters</li>
+										<li data-bind="click: chooseService(3)">Misc</li>
+								</ul>
+								<h3>
+          <div id="title" data-bind="text: service" class="title">Choose a Service to See a Description</div>
+        </h3>
+						</div>
+						<div class="col-md-9 desc">
+								<p id="desc" data-bind="text: writingDesc"></p>
+                <h2 class="price">$<span data-bind="text: price"></span></h2>
+								<button type="submit">Purchase Service</button>
+						</div>
+            <div class="spacer">.</div>
+				</div>
+				<div class="middle two"></div>
+
+				<div id="webServices" class="row webServices">
+						<div class="col-md-12 serviceMenu">
+								<h2 class="dark">Web Development</h2>
+								<ul>
+										<li data-bind="click: chooseWeb(0)">Troubleshoot Your Site</li>
+										<li data-bind="click: chooseWeb(1)">Make it Mobile Responsive</li>
+										<li data-bind="click: chooseWeb(2)">Build A Site from Scratch</li>
+										<li data-bind="click: chooseWeb(3)">Single Page Web Application</li>
+								</ul>
+								<h3>
+          <div class="webTitle" data-bind="text: webService">Name of the Service</div>
+        </h3>
+						</div>
+						<div class="col-md-9 desc">
+								<p class="desc" data-bind="text: webDesc">You and Me both</p>
+            <button type="submit">Purchase Service</button>
+						</div>
+            <div class="spacer">.</div>
+				</div>
+
+
+				<div class="footer" id="footer">
+						<h3><span data-bind="click: toTop(showServices)">services</span> | <span data-bind="click: toTop(showContact)">contact</span> | <span data-bind="click: toTop(showAbout)">about</span></h3>
+						<h4>Copyright &copy; 2015 | brent c dill</h4>
+				</div>
+				<div class="social1 hidden">
+						<ul class="white share-buttons">
+								<li>
+										<a href="https://www.facebook.com/sharer/sharer.php?u=&t=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fa fa-facebook-square fa-2x"></i> Share</a>
+								</li>
+								<li>
+										<a href="https://twitter.com/intent/tweet?source=&text=:%20&via=bdill12" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fa fa-twitter-square fa-2x"></i> Tweet</a>
+								</li>
+								<li><a href="mailto:?subject=&body=:%20" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fa fa-envelope-square fa-2x"></i> Email</a></li>
+								<li>
+										<a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><i class="fa fa-linkedin-square fa-2x"></i> Share</a>
+								</li>
+								<li><a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fa fa-google-plus-square fa-2x"></i> Share</a></li>
+								<li>
+										<a href="http://www.tumblr.com/share?v=3&u=&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;"><i class="fa fa-tumblr-square fa-2x"></i> Reblog</a>
+								</li>
+								<li>
+										<a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><i class="fa fa-pinterest-square fa-2x"></i> Pin it!</a>
+								</li>
+								<li>
+										<a href="http://www.reddit.com/submit?url=&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><i class="fa fa-reddit-square fa-2x"></i> Reddit it</a>
+								</li>
+						</ul>
+				</div>
+		</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+		<script src="main.js"></script>
+</body>
+
+</html>
