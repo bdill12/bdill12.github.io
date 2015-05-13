@@ -97,7 +97,7 @@ var ViewModel = function() {
         pros: ["Warmhearted", "Conscientious", "Cooperative", "Work Well with Others", "Dependable"],
         cons: ["Easily Wounded","Conflicted", "No Gray Areas", "Paranoid", "Easily Angered"],
         work: ["Clear Hierarchy", "Make Good Supervisors", "Low Conflict", "Oraganized", "Human Interaction"],
-        snippets: ["Other Types Coming Soon"],
+        snippets: ["If you want to hurt an ESFJ, just be indifferent."],
         names: ["Sally Field","Nancy Kerrigan", "Danny Glover","Mary Tyler Moore", "Don Knotts"]
       }, {
         letters: "ENFJ",
@@ -139,7 +139,6 @@ var ViewModel = function() {
         }
         $('.info').removeClass("hidden");
         $('#theChosenType').removeClass('hidden');
-        $('')
         self.chosenType(this.letters);
         self.chosenStrengths(this.pros);
         self.chosenWeaknesses(this.cons);
