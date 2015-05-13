@@ -272,9 +272,7 @@ button:hover {
     width: 100%;
   }
   .white {
-    display: flex;  
-    justify-content: space-around;
-    align-content: space-around;
+    display: none;
   }
   .social {
     display: none;
@@ -306,6 +304,9 @@ button:hover {
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 /* Styles */
+.white {
+    display: none;
+  }
   .menu {
   width: 100%;
   margin: 0;
