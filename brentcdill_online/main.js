@@ -7,6 +7,10 @@ function ViewAppModel() {
   self.webDesc = ko.observable();
   self.price = ko.observable();
   self.webPrice = ko.observable();
+  self.project = ko.observable();
+  self.projDesc = ko.observable();
+  self.sample = ko.observable();
+  self.sampleDesc = ko.observable();
 
   self.email = "mailto:brentcdill@gmail.com";
   self.twitter = "http://www.twitter.com/bdill12";
@@ -25,18 +29,36 @@ function ViewAppModel() {
   {webService: "Make it Mobile Responsive", price: "$50 per hour", webDesc: "I will convert your site to a mobile responsive design. It will great on your smart phone, which is where a growing number of searches are taking place."},
   {webService: "Build A Site From Scratch", price: "500", webDesc: "This is a big undertaking. What you'll get: Initial renderings of design as image or PDF files. You will make notes, and we will continue the process until we find something you are happy with. Then I will start building the site and adding all the features you need. Price will vary based on your hosting."},
   {webService: "Other", price: "0", webDesc:"You've got an idea, but no clue what the best way to get it out of your head is? Tell me and we'll see if you're just a crazy person or a crazy person with a good idea."}];
+  self.projects = [
+  {project: "This Bugs Me!", link: "http://bdill12.github.io/pages/froggor.html", projDesc: "Game similar to Froggor built with Javascript in which you guide children across a path to the water and avoid bugs."},
+  {project: "The Myers-Briggs Types", link: "http://bdill12.github.io/myers_briggs/index.html", projDesc: "Get to know the sixteen Myers-Briggs personality types."},
+  {project: "Commercials", link: "http://bdill12.github.io/images/Commercials.pdf", projDesc: "Series of three commercials featuring a very likable copy machine named Mark"},
+  {project: "Short Story Excerpt", link: "http://bdill12.github.io/images/What_happened_with_Jacob_sample.pdf", projDesc:"The opening to a short story which is to be published later in 2015"}];
+
 
   self.showServices = function() {
+    $('#subServices').removeClass('hidden');
+
     $('#contact').addClass('hidden');
     $('#about').addClass('hidden');
-    $('#subServices').removeClass('hidden');
+    $('#webProjects').addClass('hidden');
   };
 
   self.showContact = function() {
+    $('#contact').removeClass('hidden');
+
     $('#subServices').addClass('hidden');
     $('#about').addClass('hidden');
-    $('#contact').removeClass('hidden');
+    $('#webProjects').addClass('hidden');
   };
+
+  self.showProjects = function() {
+    $('#webProjects').removeClass('hidden');
+
+    $('#subServices').addClass('hidden');
+    $('#about').addClass('hidden');
+    $('#contact').addClass('hidden');
+  }
 
   self.goWrite = function() {
     $('html, body').animate(
@@ -49,10 +71,11 @@ function ViewAppModel() {
   };
 
   self.showAbout = function() {
-    $('#contact').addClass('hidden');
-    $('#subServices').addClass('hidden');
     $('#about').removeClass('hidden');
 
+    $('#contact').addClass('hidden');
+    $('#subServices').addClass('hidden');
+    $('#projects').addClass('hidden');
   };
 
   self.toTop = function(show) {
@@ -106,3 +129,16 @@ $(window).scroll(function() {
     }
 });
 
+$(document).ready(function() {
+	$(window).scroll(function(){
+		if(document.body.scrollTop > 300)
+			$('#fixmenu').fadeIn( "slow", function() { });
+		else
+			$('#fixmenu').fadeOut( "slow", function() { });
+	});
+
+	$('a#srolltotop').click(function(){
+		$('html, body').animate({scrollTop:0}, 100);
+		return false;
+	});
+});
