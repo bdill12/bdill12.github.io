@@ -37,6 +37,10 @@ function ViewAppModel() {
 
 
   self.showServices = function() {
+    $('a.force-reload').on('click', function(e) {
+    var url = $(this).attr('href');
+    $.mobile.changePage( url, { reloadPage: true} );
+});
     $('#subServices').removeClass('hidden');
 
     $('#contact').addClass('hidden');
@@ -45,6 +49,10 @@ function ViewAppModel() {
   };
 
   self.showContact = function() {
+    $('a.force-reload').on('click', function(e) {
+    var url = $(this).attr('href');
+    $.mobile.changePage( url, { reloadPage: true} );
+});
     $('#contact').removeClass('hidden');
 
     $('#subServices').addClass('hidden');
@@ -53,6 +61,10 @@ function ViewAppModel() {
   };
 
   self.showProjects = function() {
+    $('a.force-reload').on('click', function(e) {
+    var url = $(this).attr('href');
+    $.mobile.changePage( url, { reloadPage: true} );
+});
     $('#webProjects').removeClass('hidden');
 
     $('#subServices').addClass('hidden');
@@ -71,6 +83,10 @@ function ViewAppModel() {
   };
 
   self.showAbout = function() {
+    $('a.force-reload').on('click', function(e) {
+    var url = $(this).attr('href');
+    $.mobile.changePage( url, { reloadPage: true} );
+});
     $('#about').removeClass('hidden');
 
     $('#contact').addClass('hidden');
