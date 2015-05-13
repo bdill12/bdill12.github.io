@@ -102,6 +102,7 @@ ko.applyBindings(new ViewAppModel());
 //scrolling
 $(window).scroll(function() {
     var social = $('.social1');
+    var social2 = $('.social2');
     var picture = $('#picture');
     var header = $('.header');
     var footer = $('.footer');
@@ -110,23 +111,31 @@ $(window).scroll(function() {
     var aaa = $('.two').offset().top - 300;
     var x = $('.title').offset().top - 300;
     var web = $('.webServices').offset().top - 300;
-    var i = 0;
+    var b = screen.availWidth;
+    if ( b >= 480) {
+
     if (y >= z && y - x < -50) {
         social.removeClass('hidden');
         picture.attr("src", "http://bdill12.github.io/images/2.jpg");
     } else if (y - x > -50 && y < aaa) {
         picture.attr("src", "http://bdill12.github.io/images/3.jpg");
         social.addClass('hidden');
+        social2.addClass('hidden');
     } else if (y > aaa && y < web) {
-        social.removeClass('hidden');
+        social2.removeClass('hidden');
         picture.attr("src", "http://bdill12.github.io/images/4.jpg");
     } else if (y > web) {
+        social2.addClass('hidden');
         social.addClass('hidden');
         picture.attr('src', 'http://bdill12.github.io/images/1.jpg');
     } else {
         social.addClass('hidden');
+        social2.addClass('hidden');
         picture.attr('src', 'http://bdill12.github.io/images/1.jpg');
     }
+  } else {
+    picture.insertAfter('.myButton');
+  }
 });
 
 $(document).ready(function() {
