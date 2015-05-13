@@ -97,9 +97,9 @@ function ViewAppModel() {
 }
 ko.applyBindings(new ViewAppModel());
 
-
-
+/* If the screen is larger than 480px, then implement the scrolling and fixed menu */
 //scrolling
+if (screen.availWidth > 480) {
 $(window).scroll(function() {
     var social = $('.social1');
     var social2 = $('.social2');
@@ -147,4 +147,4 @@ $(document).ready(function() {
 		$('html, body').animate({scrollTop:0}, 100);
 		return false;
 	});
-});
+});}

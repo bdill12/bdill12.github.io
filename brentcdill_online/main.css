@@ -257,7 +257,9 @@ button:hover {
     font-size: 1em;
   }
   ul {
-    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
   }
   .hidden {
     display: none;
@@ -266,18 +268,20 @@ button:hover {
     position: static;
   }
   .topWrapper {
-    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
   }
   ul.share-buttons {
     width: 100%;
   }
   .white {
-    position: static;
-    display: block;
+    display: flex;  
+    justify-content: space-around;
+    align-content: space-around;
   }
   .social {
-    color: #fff;
-    position: static;
+    display: none;
   }
   .picture {
     position: static;
