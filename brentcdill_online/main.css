@@ -308,7 +308,7 @@ button:hover {
     display: none;
   }
   .picture{
-    display: static;
+    display: none;
   }
   .menu {
   width: 100%;
