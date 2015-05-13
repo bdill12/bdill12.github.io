@@ -70,7 +70,7 @@ li {
   display: inline;
 }
 h3 {
-  width: 100%
+  width: 100%;
 }
 .hidden {
   display: none;
@@ -139,7 +139,7 @@ ul.share-buttons li {
   padding: 1%;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 0 0 4px #fff, 0px -5px 15px 5px rgba(10, 10, 0, 0.5)
+  box-shadow: 0 0 0 4px #fff, 0px -5px 15px 5px rgba(10, 10, 0, 0.5);
 }
 .social, .social2 {
   color: #fff;
@@ -229,15 +229,14 @@ button:hover {
   display: inline;
 }
 .menu-fixed a {
-  ont-size: 0.9em;
+  font-size: 0.9em;
   color: #fff;
   text-shadow: 1px 1px #5E8BC5;
   padding: 0 0 0 10px;
 }
-@media only screen and (max-width: 480px) {
-  .header {
-    position: static;
-  }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
   h1 {
     font-size: 2em;
   }
@@ -253,8 +252,9 @@ button:hover {
   .menu li, .serviceMenu li {
     border-radius: 0;
     padding: 1%;
-    margin: 2%;
+    margin: 5%;
     width: 100%;
+    font-size: 1em;
   }
   ul {
     display: block;
@@ -270,9 +270,6 @@ button:hover {
   }
   ul.share-buttons {
     width: 100%;
-  }
-  .middle {
-    min-height: 500px;
   }
   .white {
     position: static;
@@ -303,5 +300,19 @@ button:hover {
   }
   .middle {
     display: none;
-  }
+  }  
 }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+  .menu {
+  width: 100%;
+  margin: 0;
+}
+.serviceMenu {
+  width: 100%;
+}
+}
+
+

@@ -58,7 +58,7 @@ function ViewAppModel() {
     $('#subServices').addClass('hidden');
     $('#about').addClass('hidden');
     $('#contact').addClass('hidden');
-  }
+  };
 
   self.goWrite = function() {
     $('html, body').animate(
@@ -112,8 +112,7 @@ $(window).scroll(function() {
     var x = $('.title').offset().top - 300;
     var web = $('.webServices').offset().top - 300;
     var b = screen.availWidth;
-    if ( b >= 480) {
-
+    
     if (y >= z && y - x < -50) {
         social.removeClass('hidden');
         picture.attr("src", "http://bdill12.github.io/images/2.jpg");
@@ -133,10 +132,8 @@ $(window).scroll(function() {
         social2.addClass('hidden');
         picture.attr('src', 'http://bdill12.github.io/images/1.jpg');
     }
-  } else {
-    picture.insertAfter('.myButton');
   }
-});
+);
 
 $(document).ready(function() {
 	$(window).scroll(function(){
