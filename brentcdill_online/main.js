@@ -93,24 +93,9 @@ function ViewAppModel() {
     self.webService(this.webServices[number].webService);
     self.webDesc(this.webServices[number].webDesc);
     self.webPrice(this.webServices[number].price);
+    };
 
-    $(".response").on("tap",function(e){
-      if (e.text == services) {
-        self.showServices();
-      } else if (e.text == "web projects") {
-        self.showProjects();
-      } else if (e.text == contact) {
-        self.showContact();
-      } else {
-        self.showAbout();
-      }
-      }
-    );
-
-
-  };
-
-}
+  }
 
 ko.applyBindings(new ViewAppModel());
 
