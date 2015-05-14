@@ -91,30 +91,3 @@ ul {
     top: 80px;
     width: 100%;
 }
-@media screen and (max-width: 950px) { 
-    .content { margin: 20% 0 0 0 }
-}
-@media screen and (max-width: 778px) { 
-    .types { display: flex; }
-    .flexbox { width: 100%; }
-    .mb_initials { width: 24%; }
-    .content { margin: 45% 0 0 0; }
-}
-@media screen and (max-width: 660px) { 
-    .content { margin: 50% 0 0 0; }
-}
-@media screen and (max-width: 570px) { 
-    .content { margin: 55% 0 0 0; }
-}
-@media screen and (max-width: 480px) { 
-    .content { margin: 60% 0 0 0; }
-    .mb_initials { display: inline-flex; }
-}
-@media screen and (max-width: 420px) { 
-    .content { margin: 75% 0 0 0; }
-}
-@media screen and (max-width: 400px) { 
-    .content { margin: 65% 0 0 0; }
-    .flexbox { width: 100%; }
-    .mb_initials { display: inline-flex; }
-}
