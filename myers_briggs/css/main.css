@@ -1,11 +1,11 @@
 html {
   overflow-x: hidden;
-  font-family: "Raleway", "Times New Roman", Serif;
+  font-family: "Raleway", serif;
   margin: 0;
 }
 body {
   overflow-x: hidden;
-  font-family: "Raleway", "Times New Roman", Serif;
+  font-family: "Raleway", serif;
   background: rgba(255, 255, 255, 0);
   background-image: url('images/wall.jpg');
   background-size: cover;
@@ -13,12 +13,9 @@ body {
   margin: 0;
 }
 
-.tag {
-	font-size: .5em;
-}
 ul {
   list-style: none;
-  font-family: "Raleway", "Times New Roman", Serif;
+  font-family: "Raleway", serif;
 }
 .back {
   padding: 3%;
