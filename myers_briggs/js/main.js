@@ -1,4 +1,5 @@
-var ViewModel = function() {
+$(function(){
+  var ViewModel = function() {
     // Data
     var self = this;
     self.types = [{
@@ -137,25 +138,15 @@ var ViewModel = function() {
       self.chosenFamous = ko.observable();
       self.chosenQuote = ko.observable();
       self.chosenHell = ko.observable();
-      var headerAway = false;
 
 
+      //behaviors
 
-      // Behaviors
-
-      self.removeHeader = function() {
-        $('#header').remove();
-        headerAway = true;
-        $('#theChosenType').prependTo('#topTypes').addClass('fixed');
-        $('#theTypes').prependTo('#topTypes').addClass('fixed1');
-
-      };
       self.chooseType = function() {
-        if (headerAway === false) {
-          self.removeHeader();
-        }
-        $('.info').removeClass("hidden");
-        $('#theChosenType').removeClass('hidden');
+        var id = "#" + this.letters;
+        $('li').removeClass('selected');
+        $('#mb_title').text(this.letters);
+        $(id).addClass('selected');
         self.chosenType(this.letters);
         self.chosenStrengths(this.pros);
         self.chosenWeaknesses(this.cons);
@@ -165,7 +156,41 @@ var ViewModel = function() {
         self.chosenHell(this.hell);
       };
 
-    };
-
+      self.goToTop = function() {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 'slow');
+        };
+        
+      };
 
     ko.applyBindings(new ViewModel());
+  });
+
+var makeItWork = function() {
+  $('.header').css('position', 'static');
+  $('#listOfTypes').css('position', 'static');
+  $('#featuredType').css('margin-top', '0');
+  $('#listOfTypes ul').css('display', 'block');
+  $('#listOfTypes li').css('display', 'block');
+  $('#listOfTypes li').css('width', '94%');
+  $('#listOfTypes li').css('margin', '1% auto');
+};
+$(window).load(function(){
+  if (window.innerWidth <= 768) {
+    makeItWork();
+  }
+});
+$(window).resize( function() {
+  if (window.innerWidth <= 768) {
+    makeItWork();
+  } else {
+  $('.header').css('position', 'fixed');
+  $('#listOfTypes').css('position', 'fixed');
+  $('#featuredType').css('margin-top', '30%');
+  $('#listOfTypes ul').css('display', 'flex');
+  $('#listOfTypes li').css('width', '10%');
+  $('#listOfTypes li').css('margin', '1% 1%');
+
+  }
+});
