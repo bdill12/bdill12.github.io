@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utc-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, , user-scalable=no">
+  <!-- Sanitize CSS, a reset to noramlize browser behavior -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Google Fonts Raleway and Merriweather Sans -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Merriweather+Sans">
+  <!-- Custom CSS-->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="toggleSearch show" data-bind="click: $root.toggleSearch, visible: $root.show">
+        <h2>Go to Search View</h2>
+  </div>
+  <div id="map-canvas"></div>
+  <div class="control" data-bind="visible: $root.search">
+    <div class="header">
+    <div class="toggleSearch" data-bind="click: $root.toggleSearch">
+        <h2 data-bind="visible: $root.hide">Go to Map View</h2>
+    </div>
+      <h3>Old Town Pasadena</h3>
+    </div>
+    <div id="search">
+      <input id="searchInput" data-bind="textInput: $root.searchQuery" type="text" placeholder="Search">
+    </div>
+    <div id="list">
+      <ul data-bind="foreach: myMarkers">
+        <li data-bind="click: $root.goToLocation"><img src="" alt="icon" data-bind="attr: {src: icon}"> <span data-bind="text: name"> </span></li>
+        </ul>
+    </div>
+  <!-- Google Maps JS -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places?key=AIzaSyACTYT5EELEwp_-2m5XuzSl2lAzPpJNQ5k"></script>
+  <!--oauth-1/0a/js for requesting from Yelp API-->
+  <!-- sha1 -->
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>
+  <!-- sha256 -->
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js"></script>
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+  <script src="js/libraries/oauth-1.0a.js"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- Knockout JS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+  <!-- Custom JS, including Map Initialization -->
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
