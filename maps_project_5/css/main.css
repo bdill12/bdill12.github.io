@@ -1,123 +1,513 @@
-    html, body, #map-canvas {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+html,
+body,
+#map-canvas {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+}
 
-    .control {
-      background-color: #6C7A89;
-      background-image: url(images/bricks.jpg);
-      background-size: cover;
-      font-family: 'Raleway', serif;
-      width: 100%;
-      height: 100%;
-      color: #fff;
-      position: fixed;
-      top: 0;
-      z-index: 10;
-      overflow-y: scroll;
-    }
+h1 {
+    display: none;
+}
 
-    #search {
-      margin: 0 5%; 
-      width: 90%;
-    }
+.header {
+    padding: 1%;
+    margin: 0 0 1% 0;
+    text-align: center;
+    color: #fff;
+    background-color: #2c3e50;
+    box-shadow: 0 5px 7px #000;
+}
 
-    #search input {
-      width: 100%;
-      padding: 1%;
-      border-radius: 10px;
-      background-repeat: no-repeat;
-      background-image: url(https://s3-media1.fl.yelpcdn.com/assets/2/www/img/1589098a542f/developers/Powered_By_Yelp_White.png);
-      background-position: 95%;
-      color: #000;
-    }
-    #search input:focus {
-      background-color: #fff;
-      background-image: none;
-    }
+h3 {
+    font-family: "Raleway", serif;
+    font-size: 2em;
+}
 
-    #list {
-      width: 80%;
-      height: 80%;
-      background-color: #96281B;
-      background-color: rgba(0, 0, 0, .6);
-      margin: 0 auto;
-      overflow-y: scroll;
+h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+.control {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: transparent;
+}
+
+h2 {
+    font-family: "Raleway", serif;
+    font-size: 1em;
+}
+
+.toggleSearch {
+    position: fixed;
+    top: 3%;
+    right: 1%;
+    z-index: 10;
+    padding: 1%;
+    text-align: center;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .7);
+}
+
+.search {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkitmozmso-align-items: flex-start;
+    align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    width: 80%;
+    margin: 1% 10%;
+    color: #2c3e50;
+}
+
+#searchInput {
+    width: 80%;
+    padding: 1%;
+    color: #2c3e50;
+    border-radius: 10px;
+    background-image: url(images/powered.png);
+    background-repeat: no-repeat;
+    background-position: 95%;
+}
+
+.button {
+    padding: 1%;
+    color: #2c3e50;
+    border: 2px outset #2c3e50;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#list {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2c3e50;
+    background-color: rgba(44, 62, 80, .7);
+    -webkit-overflow-scrolling: touch;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.marker {
+    padding: 1%;
+    margin: 1%;
+}
+
+.marker img {
+    margin: 0 1%;
+}
+
+.marker:hover {
+    cursor: pointer;
+    color: #2c3e50;
+    background-color: #fff;
+    background-color: rgba(250, 250, 250, .7);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.visit,
+.tip {
+    padding: 3%;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.visit {
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .7);
+}
+
+.toggleSearch:hover,
+.searchItem:hover,
+.visit:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    border-color: #fff;
+    background-color: #2c3e50;
+    background-color: rgba(44, 62, 80, .8);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, .26);
+}
+
+.fineprint {
+    padding: .25%;
+    margin: 1% 0 0 0;
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+    background-color: #2c3e50;
+}
+
+#infowindow,
+#helpWindow {
+    position: fixed;
+    top: 15%;
+    left: 15%;
+    z-index: 11;
+    width: 70%;
+    height: 70%;
+    overflow-y: scroll;
+    text-align: center;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background-color: #2c3e50;
+    background-color: rgba(44, 62, 80, .4);
+}
+
+.close,
+.help {
+    padding: 1%;
+    font-size: 1em;
+    border-radius: 10px;
+    background-color: #2c3e50;
+    background-color: rgba(44, 62, 80, .8);
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.help {
+    float: left;
+    margin: 10% 1% 0 0;
+}
+
+.close:hover,
+.help:hover {
+    cursor: pointer;
+}
+
+.infoHeader {
+    width: 100%;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+h4 {
+    font-family: "Raleway", sans-serif;
+    padding: 1% 0;
+    font-size: 3em;
+    border-radius: 10px;
+    background-color: #2c3e50;
+    background-color: rgba(44, 62, 80, .8);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.info {
+    width: 50%;
+    padding: 3%;
+    margin: 1%;
+    text-align: center;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.helpInfo {
+    z-index: 11;
+    width: 80%;
+    padding: 3%;
+    margin: 20% auto 0 auto;
+    text-align: center;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.helpInfo h2 {
+    width: 100%;
+    padding: 1% 0;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2c3e50;
+}
+
+.helpInfo ul {
+    margin: 0 0 0 3%;
+    list-style-type: disc;
+    text-align: left;
+}
+
+.container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkitmozmso-align-items: flex-start;
+    align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+}
+
+#infoTip {
+    width: 50%;
+    text-align: left;
+}
+
+h5 {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.tipImg {
+    border-radius: 10px;
+}
+
+#infoImg {
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0.5;
+    filter: alpha(opacity=40);
+}
+
+#infoContact {
+    width: 50%;
+}
+
+.tipContent {
+    font-size: 1.25em;
+}
+
+.tweet {
+    font-size: 1em;
+    text-align: center;
+}
+
+.search img {
+    width: auto;
+    height: 5em;
+}
+
+.searchFor img {
+    width: 5%;
+}
+
+.searchFor {
+    width: 100%;
+    color: #2c3e50;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .6);
+    justify-content: center;
+}
+
+@media screen and (max-width: 1028px) {
+    h4 {
+        font-size: 2em;
     }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
+    .close,
+    .help {
+        padding: 1%;
+        font-size: 1em;
+        border-radius: 10px;
+        background-color: #2c3e50;
+        background-color: rgba(44, 62, 80, .4);
     }
-
-    h3 {
-      text-align: center;
-      background-color: #96281B;
-      background-color: rgba(0, 0, 0, .6);
-      font-size: 2.5em;
-      margin:0;
-      padding: 2%;
-    }
-
-    li img {
-      margin: 0 1%;
-    }
-
-    li:hover {
-      background-color: rgba(250,250,250,.6);
-      color: #000;
-      cursor: pointer;
-    }
-    h2 {
-      font-family: "Raleway", serif;
-      font-size: 1em;
-    }
-    .toggleSearch{
-      z-index: 100;
-      position: fixed;
-      top: 1%;
-      right: 1%;
-      border: 2px solid #000;
-      border-radius: 10px;
-      padding: 1%;
-      background-color: #fff;
-      color: #000;
-      font-family: "Maerriweather Sans", serif;
-      font-size: 1em;
-      text-align: center;
-    }
-
-    .toggleSearch:hover {
-      background-color: rgba(0,0,0,.6);
-      color: #fff;
-      border-color: #fff;
-      cursor: pointer;
-
-    }
-
-    @media screen and (max-width: 480px){
-      .toggleSearch {
-        border: none;
-        position: static;
-        width:80%;
-        margin: 0 auto;
-      }
-
-      #search {
-        margin: 3% 10%; 
-        width: 78%;
-
-      }
-      #search input {
-        color: #000;
-        padding: 3% 0;
-      }
-      .show {
-        position: fixed;
+    .close {
+        position: absolute;
         top: 0;
-        right: 2%;
-      }
-
-
+        right: 0;
     }
+    .help {
+        float: left;
+        margin-left: 1%;
+    }
+    .close:hover,
+    .help:hover {
+        cursor: pointer;
+    }
+    .header {
+        padding: 0;
+        margin: 0;
+    }
+    .cover {
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, .5);
+    }
+    .info {
+        display: inline-block;
+        width: 45%;
+    }
+    .container {
+        margin-top: 10%;
+    }
+    .search img {
+        margin: 1% auto;
+    }
+    .tweet {
+        font-size: 1em;
+        text-align: center;
+        margin: 5% auto;
+    }
+    .button {
+        width: 100%;
+        padding: 2%;
+        margin: 0;
+        font-size: 2em;
+        text-align: left;
+        background-image: url(images/powered.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 50%;
+    }
+    #searchInput {
+        width: 100%;
+        padding: 3% 0;
+        margin: 0;
+        text-align: center;
+        background-color: #fff;
+        background-image: none;
+    }
+    .search img {
+        margin: 1% auto;
+    }
+    h3 {
+        font-family: "Raleway", serif;
+        font-size: 1.75em;
+    }
+    #infowindow {
+        position: fixed;
+        top: 10%;
+        left: 5%;
+        width: 90%;
+        height: 80%;
+        overflow-y: scroll;
+        text-align: center;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        background-color: #2c3e50;
+        background-color: rgba(44, 62, 80, .4);
+    }
+    .toggleSearch {
+        position: static;
+    }
+    #searchInput {
+        width: 100%;
+        padding: 5% 0;
+        margin: 0;
+        text-align: center;
+        background-color: #fff;
+        background-image: none;
+    }
+    .search input {
+        margin: 3% 0;
+    }
+    .searchFor {
+        margin: 0;
+        text-align: center;
+    }
+    .searchHolder img {
+        display: inline;
+        width: auto;
+        height: 5em;
+        margin: 1%;
+        border-radius: 10px;
+    }
+    .button {
+        width: 100%;
+        padding: 2%;
+        margin: 0;
+        font-size: 2em;
+        text-align: left;
+        background-image: url(images/powered.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 50%;
+    }
+    .infoHeader {
+        padding: 0;
+    }
+    #infoContact,
+    #infoTip {
+        width: 80%;
+        margin: 3% auto;
+    }
+    .search {
+        width: 80%;
+        margin: auto;
+    }
+    .more {
+        width: 50%;
+        margin: 1% 0 5% 0;
+    }
+    .more a {
+        font-size: .75em;
+        color: #2c3e50;
+    }
+    a:active {
+        color: #2c3e50;
+    }
+    a:visited {
+        color: #2c3e50;
+    }
+    .search input {
+        font-size: .75em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .helpInfo {
+        margin: 50% auto 5% auto;
+    }
+    h4 {
+        font-size: 1.5em;
+    }
+    .help {
+        position: absolute;
+        top: 5%;
+        left: 1%;
+    }
+}
