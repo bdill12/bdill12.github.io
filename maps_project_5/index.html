@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css">
     <!-- Google Fonts Raleway and Merriweather Sans -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Merriweather+Sans">
+    <link href='http://fonts.googleapis.com/css?family=Balthazar' rel='stylesheet' type='text/css'>
     <!-- Custom CSS-->
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -49,7 +50,7 @@
                     <span class="title" data-bind="text: title"></span>
                 </li>
             </ul>
-            <ul data-bind="visible: afterSearch">
+            <ul data-bind="visible: $root.afterSearch">
             <li class="marker title" data-bind="click: $root.clearSearch">Click here to go back to the original listings for Old Town</li>
             </ul>
             <ul data-bind="visible: needReset">
@@ -147,9 +148,6 @@
 
     <!-- jQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-    <!-- List JS -->
-    <script type="text/javascript" src="js/libraries/list.js"></script>
 
     <!-- Knockout JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>

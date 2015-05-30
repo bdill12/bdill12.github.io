@@ -7,7 +7,7 @@ body,
     margin: 0;
     overflow-x: hidden;
     color: #fff;
-    font-family: "Raleway", sans-serif;
+    font-family: "Balthazar", "Raleway", sans-serif;
 }
 
 h1 {
@@ -24,12 +24,12 @@ h1 {
 }
 
 h3 {
-    font-family: "Raleway", serif;
+    font-family: "Balthazar", "Raleway", serif;
     font-size: 2em;
 }
 
 h6 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Balthazar", "Raleway", sans-serif;
 }
 
 .control {
@@ -43,7 +43,7 @@ h6 {
 }
 
 h2 {
-    font-family: "Raleway", serif;
+    font-family: "Balthazar", "Raleway", serif;
     font-size: 1em;
 }
 
@@ -223,7 +223,7 @@ a:visited {
 }
 
 h4 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Balthazar", "Raleway", sans-serif;
     padding: 1% 0;
     font-size: 3em;
     border-radius: 10px;
@@ -297,7 +297,7 @@ h4 {
 }
 
 h5 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Balthazar", "Raleway", sans-serif;
     margin: 0;
     font-size: 1.5em;
     text-align: left;
@@ -415,7 +415,7 @@ h5 {
         margin: 1% auto;
     }
     h3 {
-        font-family: "Raleway", serif;
+        font-family: "Balthazar", "Raleway", serif;
         font-size: 1.75em;
     }
     #infowindow {
