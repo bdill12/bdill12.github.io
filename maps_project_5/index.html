@@ -49,6 +49,9 @@
                     <span class="title" data-bind="text: title"></span>
                 </li>
             </ul>
+            <ul data-bind="visible: afterSearch">
+            <li class="marker title" data-bind="click: $root.clearSearch">Click here to go back to the original listings for Old Town</li>
+            </ul>
             <ul data-bind="visible: needReset">
               <li class="marker title" data-bind="click: $root.clearSearch">Your search had no results.<br> Try again or click here to show the most popular results for Old Town</li>
             </ul>

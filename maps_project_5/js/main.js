@@ -94,6 +94,7 @@ $(function initialize() {
 		self.helpView = ko.observable(false);
 		self.infoView = ko.observable(false);
 		self.needReset = ko.observable(false);
+		self.afterSearch = ko.observable(false);
 
 		self.infoTitle = ko.observable();
 		self.infoId = ko.observable();
@@ -260,6 +261,7 @@ $(function initialize() {
 			self.searchQuery("");
 			self.foursquareSearch();
 			self.needReset(false);
+			self.afterSearch(false);
 		};
 
 		// Clear Markers from the Map
@@ -271,6 +273,11 @@ $(function initialize() {
 
 		// Search the Foursquare Venues database for results
 		self.foursquareSearch = function() {
+			if (self.searchQuery() === "") {
+				self.afterSearch(false);
+			} else {
+				self.afterSearch(true);
+			}
 			self.apology(false);
 			self.clearMarkers();
 			self.myMarkers([]);
