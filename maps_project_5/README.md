@@ -8,6 +8,7 @@ The following libraries and frameworks were used in developing this page:
 JS:
 Knockout JS: http://knockoutjs.com/index.html or https://github.com/knockout/knockout
 JQuery: https://jquery.com/
+Offline JS : https://github.com/HubSpot/offline
 
 CSS:
 Sanitize CSS: http://jonathantneal.github.io/sanitize.css/
@@ -20,6 +21,7 @@ and reference:
 
 Foursquare API:
 	https://developer.foursquare.com/
+
 
 Information came from:
 http://www.knockmeout.net/2011/04/utility-functions-in-knockoutjs.html

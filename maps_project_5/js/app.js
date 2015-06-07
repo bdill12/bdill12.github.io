@@ -184,7 +184,7 @@ function createMarkers() {
                 return self.myMarkers();
             } else {
                 return ko.utils.arrayFilter(self.myMarkers(), function(item) {
-                	if (item.search.toLowerCase().indexOf(filter) !== -1) {
+                    if (item.search.toLowerCase().indexOf(filter) !== -1) {
                         item.setMap(map);
                         return item;
                     } else {
@@ -250,9 +250,9 @@ function createMarkers() {
 
         // Remove Markers from Map
         self.removeMarkers = function() {
-        	for (var m = 0; m < self.myMarkers(); m++) {
-        		self.myMarkers()[m].map(null);
-        	}
+            for (var m = 0; m < self.myMarkers(); m++) {
+                self.myMarkers()[m].map(null);
+            }
         };
 
 
