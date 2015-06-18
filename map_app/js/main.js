@@ -1,5 +1,6 @@
+var mapCenter;
+var mapBounds;
 var bathIcon = 'images/icons/toilets.png';
-var parkIcon = '';
 var fireIcon = 'images/icons/firemen.png';
 var waterIcon = 'images/icons/drinkingfountain.png';
 var firstAid =  'images/icons/firstaid.png';
@@ -123,12 +124,6 @@ var markers = [{
             color: "#2ecc71"
         }]
     }, {
-        featureType: "poi.medical",
-        elementType: "geometry",
-        stylers: [{
-            color: "#c0392b"
-        }]
-    }, {
         featureType: "road",
         elementType: "geometry",
         stylers: [{
@@ -156,6 +151,8 @@ var markers = [{
             lng: -118.337912
         },
         zoom: 16,
+        maxZoom: 19,
+        minZoom: 16,
         styles: styleArray,
     };
     } else {
@@ -165,15 +162,15 @@ var markers = [{
             lng: -118.337912
         },
         zoom: 17,
+        maxZoom: 19,
+        minZoom: 16,
         styles: styleArray,
     };
     }
 
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
     var infowindow = new google.maps.InfoWindow();
-
     var myMarkers = [];
 
     var clearMap = function() {
@@ -182,6 +179,10 @@ var markers = [{
         }
         myMarkers = [];
     };
+
+    var centerMe = new google.maps.event.addListener(map, 'rightclick', function() {
+            map.fitBounds(mapBounds);
+    });
 
     var listener = function() {
         infowindow.close();
