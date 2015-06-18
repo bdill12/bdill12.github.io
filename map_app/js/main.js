@@ -1,73 +1,105 @@
+var bathIcon = 'images/icons/toilets.png';
+var parkIcon = '';
+var fireIcon = 'images/icons/firemen.png';
+var waterIcon = 'images/icons/drinkingfountain.png';
+var firstAid =  'images/icons/firstaid.png';
+var coffeeIcon = 'images/icons/coffee.png';
 var markers = [{
         "name": "Museum",
         "latitude": 34.150085,
         "longitude": -118.33877,
-        "search": "Water Restroom"
+        "search": "Water Restroom",
+        "icon": bathIcon
     }, {
         "name": "Stage 9",
         "latitude": 34.147704,
         "longitude": -118.340362,
-        "search": "Water Restroom"
+        "search": "Water Restroom",
+        "icon": bathIcon
     }, {
         "name": "Audience staging",
         "latitude": 34.147538,
         "longitude": -118.33566,
-        "search": "Restroom"
+        "search": "Restroom",
+        "icon": bathIcon
     }, {
         "name": "Mill Store",
         "latitude": 34.147026,
-        "longitude": -118.339147,
-        "search": "Water Restroom Soda Food"
+        "longitude": -118.339100,
+        "search": "Water Restroom Soda Food",
+        "icon": waterIcon
     }, {
         "name": "Stage 25",
         "latitude": 34.148641,
         "longitude": -118.337642,
-        "search": "Water Restroom Soda"
+        "search": "Water Restroom Soda",
+        "icon": waterIcon
     }, {
         "name": "Parking/ Costumes",
         "latitude": 34.147324,
         "longitude": -118.335448,
-        "search": "Water Restroom Soda (West Side)"
+        "search": "Water Restroom Soda (West Side)",
+        "icon": bathIcon
     }, {
         "name": "Commisary",
         "latitude": 34.149290,
         "longitude": -118.338918,
-        "search": "Water Restroom Soda Food"
+        "search": "Water Restroom Soda Food",
+        "icon": coffeeIcon
     }, {
         "name": "Avon Grill",
         "latitude": 34.148892,
         "longitude": -118.33565,
-        "search": "Water Restroom Soda Food"
+        "search": "Water Restroom Soda Food",
+        "icon": coffeeIcon
     }, {
         "name": "Tan building",
         "latitude": 34.149325,
         "longitude": -118.33433,
-        "search": "Restroom outside Jungle"
+        "search": "Restroom outside Jungle",
+        "icon": bathIcon
     }, {
-        "name": "Hennessey",
+        "name": "Hennesy",
         "latitude": 34.150042,
         "longitude": -118.337089,
-        "search": "Restroom"
+        "search": "Restroom",
+        "icon": bathIcon
     }, {
         "name": "Post-Production",
         "latitude": 34.150277,
-        "longitude": -118.33922,
-        "search": "Restroom"
+        "longitude": -118.33910,
+        "search": "Restroom",
+        "icon": bathIcon
     }, {
         "name": "Ellen's talent entrance",
         "latitude": 34.148367,
         "longitude": -118.341735,
-        "search": "Restroom (not for guests)"
+        "search": "Restroom (not for guests)",
+        "icon": bathIcon
     }, {
         "name": "Stage 21",
         "latitude": 34.147678,
         "longitude": -118.338487,
-        "search": "Restroom"
+        "search": "Restroom",
+        "icon": bathIcon
     }, {
         "name": "Bridge cafe",
         "latitude": 34.147937,
         "longitude": -118.33490,
-        "search": "Water Restroom Soda Food"
+        "search": "Water Restroom Soda Food",
+        "icon": coffeeIcon
+    }, {
+        "name": "First Aid",
+        "latitude": 34.147788,
+        "longitude": -118.339649,
+        "search": "First Aid",
+        "icon": firstAid
+    }, {
+        "name": "Fire Station",
+        "latitude": 34.148124,
+        "longitude": -118.340191,
+        "search": "Fire Station",
+        "icon": fireIcon
     }];
 
     //Style the Map
@@ -166,7 +198,9 @@ waterMarkers = function() {
                 position: myLatLngMark,
                 map: map,
                 title: markers[i].name,
-                search: markers[i].search
+                search: markers[i].search,
+                icon: markers[i].icon,
+                zIndex: 99999
             });
             new google.maps.event.addListener(marker, 'mouseup', listener);
             myMarkers.push(marker);
