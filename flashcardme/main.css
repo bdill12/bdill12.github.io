@@ -64,6 +64,8 @@ p {
     font-size: 3em;
     border: 1px solid #000;
     background-color: #F4DE71;
+    word-wrap: break-word;
+    height: auto;
 }
 
 .buttons {
@@ -94,7 +96,7 @@ button {
   box-shadow:         3px 3px 5px 6px #ccc;
 }
 
-@media and screen (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .card {
         width: 100%;
         margin: 0;
