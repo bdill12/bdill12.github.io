@@ -98,5 +98,12 @@ button {
     .card {
         width: 100%;
         margin: 0;
+        padding: 30%;
     }
+    button {
+        padding: 3%;
+        font-size: 2em;
+        margin-top: 5%;
+    }
+
 }
