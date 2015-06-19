@@ -35,3 +35,10 @@ button {
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow:         3px 3px 5px 6px #ccc;
 }
+
+@media and screen (max-width: 480px) {
+    .card {
+        width: 100%;
+        margin: 0;
+    }
+}
