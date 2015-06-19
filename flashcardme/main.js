@@ -408,6 +408,10 @@ $(function() {
             if (active >= 10) {
                 self.activeCard().usable = false;
             }
+            if (self.displayDef()) {
+            	self.displayDef(!self.displayDef());
+            	self.displayTerm(!self.displayTerm());
+            }
             self.drawCard();
 
         };
@@ -415,6 +419,10 @@ $(function() {
         self.incorrect = function() {
             self.activeCard().correct = self.activeCard().correct - 1;
             self.drawCard();
+             if (self.displayDef()) {
+            	self.displayDef(!self.displayDef());
+            	self.displayTerm(!self.displayTerm());
+            }
         };
         self.quizMe();
         self.drawCard();
