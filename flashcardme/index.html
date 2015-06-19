@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    	<meta charset="utc-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Flash Cards</title>
+    	<!-- jQuery -->
+    	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+    	<!--Knockout -->
+    	<script src="bower_components/knockout/dist/knockout.js"></script>
+    	<!-- Custom JS -->
+    	<script src="main.js"></script>
+    	<link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+    <div class="card shadow">
+    	<div class="term" data-bind="visible: displayTerm, text: $root.activeCard().term"></div>
+    	<div class="def" data-bind="visible: displayDef, text: $root.activeCard().def"></div>
+    	<div class="score" data-bind="text: $root.activeCard().correct"></div>
+    </div>
+    <div class="buttons">
+    	<button class="flip" data-bind="click: flipCard">Flip</button>
+    	<button class="correct" data-bind="click: correct">Correct</button>
+    	<button class="incorrect" data-bind="click: incorrect">Incorrect</button>
+    </div>
+
+    </body>
+</html>
