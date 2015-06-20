@@ -9,20 +9,24 @@
     	<!--Knockout -->
     	<script src="bower_components/knockout/dist/knockout.js"></script>
     	<!-- Custom JS -->
-    	<script src="main.js"></script>
+    	<script src="custom.js"></script>
     	<link rel="stylesheet" href="main.css">
     </head>
     <body>
     <div class="card shadow">
-    	<div class="term" data-bind="visible: displayTerm, text: $root.activeCard().term"></div>
-    	<div class="def" data-bind="visible: displayDef, text: $root.activeCard().def"></div>
-    	<div class="score" data-bind="text: $root.activeCard().correct"></div>
+    	<div class="term" data-bind="visible: $root.displayTerm, text: $root.term()"></div>
+    	<br>
+    	<div class="def" data-bind="visible: $root.displayDef, text: $root.definition()"></div>
+
+        <div class="buttons">
+        <button class="flip" data-bind="click: $root.flip">Flip</button>
+        <span class="score">Score: <span data-bind="text: $root.score()"></span></span><br>
+        <button class="flip" data-bind="click: $root.skip">Skip</button>
+        <button class="correct" data-bind="click: $root.correct">Correct</button>
+        <button class="incorrect" data-bind="click: $root.incorrect">Incorrect</button>
     </div>
-    <div class="buttons">
-    	<button class="flip" data-bind="click: flipCard">Flip</button>
-    	<button class="correct" data-bind="click: correct">Correct</button>
-    	<button class="incorrect" data-bind="click: incorrect">Incorrect</button>
     </div>
+
 
     </body>
 </html>
