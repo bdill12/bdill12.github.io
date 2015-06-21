@@ -1,0 +1,146 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+    height: 101%;
+    }
+
+body {
+    font-size: 62.5%;
+    line-height: 1;
+    font-family: Arial, Tahoma, sans-serif;
+    }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+
+ol, ul {
+    list-style: none;
+    }
+
+blockquote, q {
+    quotes: none;
+    }
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+    }
+
+strong {
+    font-weight: bold;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+img {
+    border: 0;
+    max-width: 100%;
+    }
+
+p {
+    font-size: 1.2em;
+    line-height: 1.0em;
+    color: #333;
+    }
+
+.name {
+  text-align: center;
+  font-size: 3em;
+  width: 50%;
+  margin: 2% 25%;
+}
+
+body {
+  background-color: rgb(250,250,250);
+}
+
+.built,.common,.lessCommon,.tech {
+  font-size: 2em;
+  margin: 1% 25%;
+  width: 50%;
+  border-radius: 10px;
+  border: 5px solid silver;
+  padding: 1%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.common {
+  color: #fff;
+  background-color: #000;
+}
+
+.lessCommon {
+  background-color: #791214;
+  color: #fff;
+}
+
+.tech {
+  background-color: red;
+
+}
+
+li {
+  margin: 1% 2%;
+  width: 100%;
+}
+
+.infoTainer {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.buttons {
+  width: 50%;
+  margin: 1% 25%;
+}
+
+input{
+  margin: 2%;
+  padding: 1%;
+  color: #fff;
+  background-color: black;
+  border: 5px solid silver;
+  cursor: pointer;
+}
+
+input:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.hide {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+}
+.buttonArea {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+@media screen and (max-width: 480px) {
+  input {
+    padding: 5%;
+  }
+}
