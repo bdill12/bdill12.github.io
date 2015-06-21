@@ -3,6 +3,26 @@ $(function() {
     model = {
         cards: [{
             score: 0,
+            term: "Batman's first appearance",
+            definition: "Detective Comics #27 in 1939",
+        }, {
+            score: 0,
+            term: "Oscar statue trivia",
+            definition: "Almost 600 Oscar statues were made as set dressing for the Oscar ceremonies in 2014 hosted by Ellen Degeneres",
+        }, {
+            score: 0,
+            term: "styrene",
+            definition: "Plastic thermoform sheets. High impact grey material frequently made from recycled plastic bottles. Used inside sound stages.",
+        }, {
+            score: 0,
+            term: "vacuform press",
+            definition: "a machine that heats a sheet of styrene or plastic for molding.",
+        }, {
+            score: 0,
+            term: "staff",
+            definition: "made of gypsum or plaster of paris, reinforced by hemp fibers and fiberglass. can be molded into any shape",
+        }, {
+            score: 0,
             term: "synthetic cotton batting (snow)",
             definition: "comesin large bales. add to ledges, buildings. can be placed on chicken wire to create snow banks",
         }, {
@@ -347,7 +367,10 @@ $(function() {
                 self.displayDef(!self.displayDef());
             }
             var locate = model.cards.indexOf(self.card());
-            model.cards[locate].score = model.cards[locate].score + 1;
+            console.log(model.cards[locate].score);
+
+            model.cards[locate].score++;
+            console.log(model.cards[locate].score);
 
             localStorage.setItem(self.term(), model.cards[locate].score);
 
