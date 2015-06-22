@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utc-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WB Tour Help</title>
+        <!-- jQuery -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/knockout/dist/knockout.js"></script>
+        <script src="main.js"></script>
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+    <a href="bdill12.github.io/wb_tours">Home</a>
+    <h1>Warner Bros. Studios Tour Information for Guides</h1>
+    <div class="buttonArea" data-bind="visible: $root.buttonArea">
+        <p>Choose an area of the lot to learn about.</p>
+    	<ul class="buttons" data-bind="foreach: model()">
+    		<input type="submit" data-bind="click: $root.chooseArea, attr: {id: $data.name}, value: $data.name"></input>
+    	</ul>
+    	</div>
+    	<input type="submit" class="hide" data-bind="click: $root.toggleButtons, value: $root.toggleMe()"></input>
+        <div data-bind="visible: infoWindow">
+    	<div class="name" data-bind="text: areaName"></div>
+
+    	<div class="built" data-bind="visible: areaBuilt">
+    	<span data-bind="text: areaBuilt"></span></div>
+    	<div class="infoTainer">
+    	<div class="common" data-bind="visible: areaBuilt">Common Titles:
+    	<ul data-bind="foreach: areaCommon">
+    		<li data-bind="text: $data"></li>
+    	</ul>
+    	</div>
+    	<div class="lessCommon" data-bind="visible: areaBuilt">Less Common Titles:
+    	<ul data-bind="foreach: areaLessCommon">
+    		<li data-bind="text: $data"></li>
+    	</ul>
+    	</div>
+    	<div class="tech" data-bind="visible: areaBuilt">Opportunities to talk about:
+    	<ul data-bind="foreach: areaTech">
+    		<li data-bind="text: $data"></li>
+    	</ul>
+    	</div>
+    	</div>
+        </div>
+
+
+    </body>
+</html>

@@ -26,18 +26,18 @@ $(function() {
         });
 
         describe('The menu', function() {
-            var body = document.getElementById('body');
+            var body = $('body');
             //  Test if menu is hidden by default
             it('should be hidden by default', function() {
-                expect(body.classList.contains("menu-hidden")).toBe(true);
+                expect(body.attr("class")).toBe("menu-hidden");
             });
             //Test if menu changes visibility on click
             it('should change visibility when the icon is clicked', function() {
                 var icon = document.getElementById('menuId');
                 icon.click();
-                expect(body.classList.contains('menu-hidden')).toBe(false);
+                expect(body.attr("class")).not.toBe("menu-hidden");
                 icon.click();
-                expect(body.classList.contains('menu-hidden')).toBe(true);
+                expect(body.attr("class")).toBe("menu-hidden");
             });
         });
     });
@@ -45,11 +45,9 @@ $(function() {
     describe('Initial Entries', function() {
         // Async Testing
         beforeEach(function(done) {
-            setTimeout(function() {
-                loadFeed(0, done);
-            }, 1000);
-
+            loadFeed(0, done);
         });
+
         // Confirm at least 1 entry
         it('have at least a feed', function(done) {
             var entry = $('.feed a').children('.entry');
@@ -58,25 +56,24 @@ $(function() {
         });
     });
     describe('New Feed Selection', function() {
-        var entry;
-        var entryAfterchange;
-        // Async Testing, save entry variable
+        var first, second;
+
+        // Call Loadfead
+
         beforeEach(function(done) {
-            setTimeout(function() {
-                entry = $('.entry')[0].innerText;
+
+            loadFeed(0, function() {
+                first = $('.feed').html();
                 loadFeed(1, done);
-            }, 1000);
+            });
         });
         // Confirm Change
-        it('the content changes when a new feed is loaded', function(done) {
-            // Saving after change, comparing
-            entryAfterchange = $('.entry')[0].innerText;
-            expect(entry).not.toBe(entryAfterchange);
-            done();
+        it('the content changes when a new feed is loaded', function() {
+            expect(first).not.toEqual(second);
         });
-
-        afterEach(function(done) {
-            loadFeed(0, done);
+        //reset to orginal feed
+        afterAll(function() {
+            loadFeed(0);
         });
     });
 });
