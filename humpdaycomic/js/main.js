@@ -1,6 +1,4 @@
-$(document).ready(function() {
-    $(".imgLiquidFill").imgLiquid();
-});
+
 
 var engine = function(global) {
     var doc = global.document,
@@ -39,20 +37,24 @@ var engine = function(global) {
     function render() {
         ctx.drawImage(Resources.get('images/snowman1.PNG'), 0, 0);
     }
-
+$(document).ready(function() {
     var theater = new TheaterJS();
 
     theater.describe("Olaf", .9, "#olaf").describe("Frosty", .9, "#frosty");
 
-    theater.write('Frosty: Ummm...', 500).write('Frosty: This might be a trick...', function() {
-        ctx.drawImage(Resources.get('images/snowman2.PNG'), 0, 0);
-    }).write("Olaf: AAAAAAAAAAAHHHHHHH!", function() {
-        ctx.drawImage(Resources.get('images/snowman3.PNG'), 0, 0);
-    }).write("Olaf: OHMYOHMY", function() {
-        ctx.drawImage(Resources.get('images/snowman4.PNG'), 0, 0);
-    }).write("Olaf: GASP!", function() {
-        ctx.drawImage(Resources.get('images/snowman5.PNG'), 0, 0);
-    }).write("Olaf: IT'S JUST LIKE I DREAMED IT!").write("Frosty: Ok, then.");
+    theater
+    .write('Frosty: Ummm...', 500)
+    .write('Frosty: This might be a trick...', function() {
+        ctx.drawImage(Resources.get('images/snowman2.PNG'), 0, 0);})
+    .write("Olaf: AAAAAAAAAAAHHHHHHH!", function() {
+        ctx.drawImage(Resources.get('images/snowman3.PNG'), 0, 0);})
+    .write("Olaf: OHMYOHMY", function() {
+        ctx.drawImage(Resources.get('images/snowman4.PNG'), 0, 0);})
+    .write("Olaf: GASP!", function() {
+        ctx.drawImage(Resources.get('images/snowman5.PNG'), 0, 0);})
+    .write("Olaf: IT'S JUST LIKE I DREAMED IT!").write("Frosty: Ok, then.");
+});
 };
+
 
 engine(this);
