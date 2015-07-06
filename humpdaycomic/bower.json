@@ -1,0 +1,23 @@
+{
+  "name": "humpdaycomic",
+  "version": "0.0.0",
+  "authors": [
+    "Brent Dill <bdill12@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "knockout": "~3.3.0",
+    "jquery-color": "~2.1.2",
+    "theaterjs": "~1.4.2",
+    "imgLiquid": "~0.9.944"
+  }
+}

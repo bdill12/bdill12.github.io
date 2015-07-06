@@ -161,7 +161,7 @@ $(function(){
           scrollTop: 0
         }, 'slow');
         };
-        
+
       };
 
     ko.applyBindings(new ViewModel());
@@ -193,4 +193,5 @@ $(window).resize( function() {
   $('#listOfTypes li').css('margin', '1% 1%');
 
   }
+$('#wrapper').tubular({videoId: 'e-ORhEE9VVg'});
 });

@@ -11,15 +11,19 @@
   <!-- jQuery UI -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> -->
   <!-- jQuery UI CSs -->
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"> 
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
   <!-- My stylesheet -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Merriweather+Sans">
+
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href='bower_components/tubular/dist/tubular-bundle.css'>
   <title>Get to Know the Myers-Briggs Types</title>
+          <script src="bower_components/tubular/dist/node-module.js"></script>
 </head>
 
 <body>
+<div id="wrapper">
   <div class="header">
     Get to Know
       <span id="mb_title"> the Myers-Briggs Personality Type</span>s
@@ -57,6 +61,8 @@
           <li data-bind="text: $data"></li>
         </ul>
         <div id="goToTop" data-bind="click: $root.goToTop">To The Top? Press Here</div>
+        </div>
+
 
 </body>
 
