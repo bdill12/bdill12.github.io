@@ -9,6 +9,7 @@ body {
 canvas {
 	width: 80%;
 	margin: 0 10%;
+	border: 5px solid #fff;
 }
 
 #frosty {
@@ -55,3 +56,13 @@ canvas {
 		right: 10%;
 	}
 }
+
+.hidden {
+	display: hidden;
+}
+
+.banner { position: relative; overflow: auto;
+	width: 100%;
+margin: 0 8%;}
+.banner li { list-style: none; }
+.banner ul li { float: left; }

@@ -40,7 +40,7 @@ var engine = function(global) {
 $(document).ready(function() {
     var theater = new TheaterJS();
 
-    theater.describe("Olaf", .9, "#olaf").describe("Frosty", .9, "#frosty");
+    theater.describe("Olaf", 0.9, "#olaf").describe("Frosty", 0.9, "#frosty");
 
     theater
     .write('Frosty: Ummm...', 500)
@@ -52,9 +52,12 @@ $(document).ready(function() {
         ctx.drawImage(Resources.get('images/snowman4.PNG'), 0, 0);})
     .write("Olaf: GASP!", function() {
         ctx.drawImage(Resources.get('images/snowman5.PNG'), 0, 0);})
-    .write("Olaf: IT'S JUST LIKE I DREAMED IT!").write("Frosty: Ok, then.");
+    .write("Olaf: IT'S JUST LIKE I DREAMED IT!").write("Frosty: Ok, then.").write("Olaf: ", function () {
+        ctx.drawImage(Resources.get('images/snowman1.PNG'), 0, 0);
+        theater.play(true);
+    });
+
+
 });
 };
-
-
 engine(this);
