@@ -1,0 +1,134 @@
+body, html {
+  width: 100%;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.loader img {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section {
+  width: 100%;
+  margin: auto;
+}
+
+
+#actionButtons li {
+  background-color: #791214;
+  border: 2px solid gray;
+  border-radius: 10px;
+  margin: 1% auto;
+  font-size: 2em;
+  padding: 1%;
+}
+
+#actionButtons li:hover {
+  background-color: #fff;
+  border: 2px solid #000;
+  color: #000;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.logo {
+  width: 40%;
+  margin: 1% 30%;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+
+
+#setTimeLetter:hover, #backTimeLetter:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: 5px dotted gray;
+}
+
+.time, .letter {
+  text-align: center;
+  font-size: 1.25em;
+  padding: 2%;
+}
+
+#clock, #clock2, #clock3 {
+  width: 100%;
+  font-size: 4em;
+  text-align: center;
+   /* WebKit (Safari/Chrome) Only */
+  -webkit-text-stroke: 1px #791214;
+
+  /* If we weren't using text-shadow, we'd set a fallback color
+     and use this to set color instead*/
+  -webkit-text-fill-color: #fff;
+
+  color: #fff;
+
+  text-shadow:
+    3px 3px 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+.editTour, .myTours, .stagesBacklots {
+  width: 100%;
+}
+
+.editTour li {
+  display: inline-block;
+  margin: 1%;
+  width:100%;
+}
+
+.viewTour li {
+  display: inline;
+  margin: 5%;
+  width: 100%;
+}
+
+label {
+  margin: 1%;
+}
+.inline {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 1%;
+}
+
+.inline li {
+  width: 100%;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.8);
+  color: #000;
+  border-radius: 10px;
+  padding: 1%;
+  margin: 1%;
+}

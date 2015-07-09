@@ -6,7 +6,7 @@ var engine = function(global) {
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d');
     canvas.width = 1024;
-    canvas.height = 768;
+    canvas.height = window.innerHeight;
     canvas.className = "canvas";
     doc.body.appendChild(canvas);
 
@@ -35,7 +35,7 @@ var engine = function(global) {
     global.ctx = ctx;
 
     function render() {
-        ctx.drawImage(Resources.get('images/snowman1.PNG'), 0, 0);
+        ctx.drawImage(Resources.get('images/snowman1.PNG'), 0, -110);
     }
 $(document).ready(function() {
     var theater = new TheaterJS();
@@ -45,18 +45,17 @@ $(document).ready(function() {
     theater
     .write('Frosty: Ummm...', 500)
     .write('Frosty: This might be a trick...', function() {
-        ctx.drawImage(Resources.get('images/snowman2.PNG'), 0, 0);})
+        ctx.drawImage(Resources.get('images/snowman2.PNG'), 0, -110);})
     .write("Olaf: AAAAAAAAAAAHHHHHHH!", function() {
-        ctx.drawImage(Resources.get('images/snowman3.PNG'), 0, 0);})
+        ctx.drawImage(Resources.get('images/snowman3.PNG'), 0, -110);})
     .write("Olaf: OHMYOHMY", function() {
-        ctx.drawImage(Resources.get('images/snowman4.PNG'), 0, 0);})
+        ctx.drawImage(Resources.get('images/snowman4.PNG'), 0, -110);})
     .write("Olaf: GASP!", function() {
-        ctx.drawImage(Resources.get('images/snowman5.PNG'), 0, 0);})
+        ctx.drawImage(Resources.get('images/snowman5.PNG'), 0, -110);})
     .write("Olaf: IT'S JUST LIKE I DREAMED IT!").write("Frosty: Ok, then.").write("Olaf: ", function () {
-        ctx.drawImage(Resources.get('images/snowman1.PNG'), 0, 0);
+        ctx.drawImage(Resources.get('images/snowman1.PNG'), 0, -110);
         theater.play(true);
     });
-
 
 });
 };
