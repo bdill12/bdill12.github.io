@@ -1,7 +1,4 @@
-
-$(".loader").fadeOut(2500);
-$("#mainMenu").fadeIn(5000);
-
+$(".loader").fadeOut(500);
 $(function() {
     'use strict';
     var model = {
@@ -14,6 +11,8 @@ $(function() {
     var ViewModel = function() {
         var self = this;
         self.today = new Date();
+
+        var selected = ko.observable();
 
         self.times = ko.observableArray(model.times);
         self.letters = ko.observableArray(model.letters);
@@ -63,7 +62,11 @@ $(function() {
         self.tourNotes3 = ko.observable();
 
         self.availableStages = ko.observableArray();
+        self.availableStages.subscribe(function(newValue) {
+       console.log(newValue);
+    });
         self.availableBacklots = ko.observableArray();
+
 
         self.closeAll = function() {
             self.stagesBacklots(false);
@@ -232,7 +235,9 @@ $(function() {
             Lockr.set("availableBacklots", self.availableBacklots());
         };
 
+
     };
 
     ko.applyBindings(new ViewModel());
 });
+

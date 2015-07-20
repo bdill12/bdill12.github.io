@@ -138,6 +138,7 @@ $(function(){
       self.chosenFamous = ko.observable();
       self.chosenQuote = ko.observable();
       self.chosenHell = ko.observable();
+      self.toggleTypes = ko.observable(true);
 
 
       //behaviors
@@ -154,9 +155,15 @@ $(function(){
         self.chosenFamous(this.names);
         self.chosenQuote(this.snippets);
         self.chosenHell(this.hell);
+        self.toggleThoseTypes();
+      };
+
+      self.toggleThoseTypes = function() {
+        self.toggleTypes(!self.toggleTypes());
       };
 
       self.goToTop = function() {
+        self.toggleThoseTypes();
         $('html, body').animate({
           scrollTop: 0
         }, 'slow');

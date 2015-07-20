@@ -8,6 +8,14 @@ $(function() {
 
     var model = {
         'jobs': [{
+            'employer': 'Warner Bros. Studios Tour Hollywood',
+            'title': 'Clerk/Floater (Tour Guide)',
+            'location': 'Burbank, CA',
+            'dates': 'June 2015 - Present',
+            'description': 'Guided guests around the 110-acre lot while highlighting facts from the 90+ year history of the studio and promoting current and past projects',
+            'url': 'http://www.wbstudiotour.com/'
+        },
+        {
             'employer': 'CouponPal',
             'title': 'Content Specialist',
             'location': 'Santa Monica, CA',
@@ -61,18 +69,11 @@ $(function() {
             'dates': '2006 - 2010',
             'url': 'http://www.acu.edu'
         }, {
-            'name': 'The Groundlings School',
-            'degree': 'Yes, And...',
-            'majors': 'Waiting for Others to Speak',
-            'location': 'Hollywood, California',
-            'dates': '2013 - 2014',
-            'url': 'http://www.groundlings.com/'
-        }, {
             'name': 'Udacity',
             'degree': 'Nanodegree',
             'majors': 'Front-End Development',
             'location': 'Pasadena, CA',
-            'dates': 'February 2015 - Present',
+            'dates': 'February 2015 - May 2015',
             'url': 'http://www.udacity.com'
         }],
         'onlineCourses': [{
@@ -179,11 +180,6 @@ $(function() {
         }
     };
 
-    //==============================Octopus===========================//
-    // The Octopus has two functions: init (the first function to run)
-    // and getInfo, which is passed an attribute to determine what info
-    // to retrieve from the model.
-
     var octopus = {
         init: function() {
             view.exp_render();
@@ -215,7 +211,7 @@ $(function() {
     //=============================View==============================//
     //The view contains render functions for each data section. Each
     //function declares a string variable, asks the Octopus to getInfo(),
-    //and fills the string variable with the necessary HTML for each 
+    //and fills the string variable with the necessary HTML for each
     //element added to the page.
 
     var view = {

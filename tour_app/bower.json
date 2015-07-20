@@ -1,0 +1,21 @@
+{
+  "name": "tour_app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bdill12/bdill12.github.io",
+  "authors": [
+    "Brent Dill <bdill12@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "durandal": "~2.1.0",
+    "fullcalendar": "~2.3.2",
+    "sweetalert": "~1.0.1"
+  }
+}

@@ -7,6 +7,7 @@
     <title>Daily Tour Records | Warner Bros. Studio Tour Hollywood</title>
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="bower_components/chosen/chosen.min.css">
 </head>
 
 <body>
@@ -218,12 +219,12 @@
                 <label>Cart: </label>
                 <input type="number" data-bind="value: tourCart3">
             </li>
+            <label>Stages: </label>
             <li data-bind="foreach: availableStages">
-                <label>Stages: </label>
                 <input type="checkbox" data-bind="checked: $root.visitedStages3, value: $data"><span data-bind="text: $data"></span>
             </li>
+            <label>Backlots: </label>
             <li data-bind="foreach: availableBacklots">
-                <label>Backlots: </label>
                 <input type="checkbox" data-bind="checked: $root.visitedBacklots3, value: $data"><span data-bind="text: $data"></span>
             </li>
         </ul>
@@ -236,28 +237,31 @@
 
     <div data-bind="visible: stagesBacklots">
         <h3>Select the open stages.</h3>
-        <ul class="inline" data-bind="foreach: stages">
-            <li>
-                <input type="checkbox" data-bind="value: $data, checked: $root.availableStages" checked><span data-bind="text: $data"></span>
-            </li>
-        </ul>
+        <select data-placeholder="Choose the open stages..."  multiple="true" data-bind="selectedOptions: $root.selected, chosen: {}, foreach: stages">
+            <option data-bind="value: $data, text: $data"></option>
+
+        </select>
         <h3>Select the open backlots.</h3>
-        <ul class="inline" data-bind="foreach: backlots">
-            <li>
-                <input type="checkbox" data-bind="value: $data, checked: $root.availableBacklots"><span data-bind="text: $data"></span>
-            </li>
-        </ul>
+        <select data-placeholder="Choose the open backlots..." multiple data-bind="foreach: backlots" class="chosen-select inline">
+                <option data-bind="value: $data, text: $data">
+            </option>
+            </select>
         <ul class="menu" id="actionButtons">
             <li class="save" data-bind="click: saveStagesBacklots">Save</li>
             <li class="save" data-bind="click: backToMain">Back</li>
         </ul>
     </div>
 
+
+
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/knockout/dist/knockout.js"></script>
     <script src="bower_components/lockr/lockr.min.js"></script>
+    <script src="bower_components/chosen/chosen.jquery.min.js"></script>
     <script src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
     <script src="js/app.js"></script>
+
+
 
 </body>
 
