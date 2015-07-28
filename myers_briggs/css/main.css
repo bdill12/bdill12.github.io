@@ -13,6 +13,10 @@ body {
   font-family: "Raleway", serif;
   width: 100%;
   color: #fff;
+  list-style-type: none;
+}
+ul {
+  list-style-type: none;
 }
 
 .header {

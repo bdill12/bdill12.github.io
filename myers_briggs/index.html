@@ -26,7 +26,7 @@
     Get to Know
       <span id="mb_title"> the Myers-Briggs Personality Type</span>s
   </div>
-    <ul id="listOfTypes"  data-bind="foreach: types">
+    <ul id="listOfTypes"  data-bind="foreach: types, visible: toggleTypes">
       <li data-bind="text: letters,
 				click: $root.chooseType, attr: {id: letters}"></li>
     </ul>
@@ -58,7 +58,7 @@
         <ul id="hell" data-bind="foreach: chosenHell">
           <li data-bind="text: $data"></li>
         </ul>
-        <div id="goToTop" data-bind="click: $root.goToTop">To The Top? Press Here</div>
+        <div id="goToTop" data-bind="click: $root.goToTop">Choose another Type. Press Here</div>
         </div>
 
 

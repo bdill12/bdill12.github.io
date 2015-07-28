@@ -1,6 +1,6 @@
 {
   "name": "myers_briggs",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "homepage": "https://github.com/bdill12/bdill12.github.io",
   "authors": [
     "Brent Dill <bdill12@gmail.com>"
@@ -15,5 +15,6 @@
   ],
   "dependencies": {
     "tubular": "~0.9.18"
-  }
+  },
+  "main": "index.html"
 }
