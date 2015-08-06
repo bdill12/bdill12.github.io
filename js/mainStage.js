@@ -1,7 +1,7 @@
 var fadeSlow = function() {
     	setTimeout(function() {
     		$('.loader').fadeOut("slow");
-    	}, 1500);
+    	}, 1000);
     };
     fadeSlow();
 var gayerthan = function() {
