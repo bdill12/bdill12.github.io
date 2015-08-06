@@ -18,6 +18,15 @@ img{
     width:100%;
      height: auto;
 }
+#pressEnter {
+    font-size: 1em;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    z-index: 1000;
+    color: #fff;
+    left: 40%;
+}
 
 h1 {
     color: #000 !important;
