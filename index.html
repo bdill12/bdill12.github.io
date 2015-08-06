@@ -32,14 +32,19 @@
             padding: 0;
             position: fixed;
             z-index: 9999;
-            font-size: 8em;
+            font-size: 3em;
             text-align: center;
+        }
+        #loader div {
+            margin-top: 20%;
         }
     </style>
 </head>
 
 <body>
-    <div id="loader" class="loader"></div>
+    <div id="loader" class="loader">
+        <div id="gay"></div>
+    </div>
     <div id="sb-site" class="sb-site">
         <div class="container-fluid">
             <div class="row">
@@ -56,7 +61,7 @@
                 <div class="col-md-12">
                     <div class="col-md-6">
                         <div class="col-md-12">
-                            <img alt="Brent Dill" src="images/1.jpg">
+                            <img class="heads" alt="Brent Dill" src="images/1.jpg">
                         </div>
                         <div class="col-md-12">
                             <a class="sb-toggle-left" href="#" style="cursor: w-resize;">
@@ -68,7 +73,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="col-md-12">
-                            <img alt="Brent Dill" src="images/2.jpg">
+                            <img class="heads" alt="Brent Dill" src="images/2.jpg">
                         </div>
                         <div class="col-md-12">
                             <a class="sb-toggle-right" href="#" style="cursor: e-resize;">
@@ -96,7 +101,7 @@
                             </a>
                         </div>
                         <div class="col-md-12">
-                            <img alt="Brent Dill" src="images/3.jpg">
+                            <img class= "heads" alt="Brent Dill" src="images/3.jpg">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -108,7 +113,7 @@
                             </a>
                         </div>
                         <div class="col-md-12">
-                            <img alt="Brent Dill" src="images/4.jpg">
+                            <img class="heads" alt="Brent Dill" src="images/4.jpg">
                         </div>
                     </div>
                 </div>
@@ -157,9 +162,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
     </script>
     <script src="bower_components/theaterjs/build/theater.min.js"></script>
+    <script src="js/egg.js"></script>
     <script src="js/mainStage.js"></script>
     <script src="js/builder2.js"></script>
     <script src="js/slidebars2.min.js"></script>
+
     <script>
         (function($) {
             $(document).ready(function() {
