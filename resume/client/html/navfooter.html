@@ -1,0 +1,28 @@
+
+<template name="footer">
+    <footer class="page-footer darker">
+            <div class="row">
+                <div class="col m8 offset-m2 s12 center socialCon">
+                    {{#each socials}}
+                        <a class="socialIcons" href="{{url}}"><i class="mdi mdi-{{icon}}"></i></a>
+                    {{/each}}
+                </div>
+                <ul class="col s5 m4 l3">
+                        <li><a href="{{emailurl}}"><i class="mdi mdi-gmail"></i>bdill12@gmail.com</a></li>
+                        <li><i class="mdi mdi-cellphone-iphone"></i>{{mobile}}</li>
+                        <li><i class="mdi mdi-map-marker"></i>{{location}}</li>
+                </ul>
+                <ul class="col s6 m5 l3 right text-right">
+                    <li><a href="{{pathFor route='resume'}}">R&eacute;sum&eacute;</a></li>
+                    <li><a href="{{pathFor route='services'}}">Services</a></li>
+                    <li><a href="{{pathFor route='writing'}}">Writing Samples</a></li>
+                    <li><a href="{{pathFor route='web'}}">Web Projects</a></li>
+                </ul>
+            </div>
+        <div class="footer-copyright row">
+            <span>Brent C Dill<i class="fa fa-copyright"></i>2016</span>
+        </div>
+    </footer>
+</template>
+
+

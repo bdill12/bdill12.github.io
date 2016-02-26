@@ -1,0 +1,72 @@
+<template name="jobs">
+    <li>
+        <div class="collapsible-header waves-effect waves-indigo">Experience<i class="fa fa-wrench"></i></div>
+        <div class="collapsible-body">
+            {{#each jobs}}
+            <div class="card-panel">
+                <a href="{{url}}" class="url title">{{employer}} - {{title}}</a>
+                <p><span>{{location}}</span><span>{{dates}}</span></p>
+                <div class="divider"></div><span>{{description}}</span>
+            </div>
+            {{/each}}
+        </div>
+    </li>
+</template>
+
+<template name="edu">
+    <li>
+        <div class="collapsible-header waves-effect waves-indigo">Education<i class="fa fa-graduation-cap"></i></div>
+        <div class="collapsible-body">
+            {{#each edu}}
+            <div class="card-panel reverse darker">
+                <div class="top">
+                    <a class="darker" href="{{url}}">
+                        <span class="eduName">{{name}}</span>
+                        <span class="degree"> {{degree}}</span>
+                    </a>
+                </div>
+                <div class="middle">
+                    <span class="eduLoc">{{location}}</span>
+                    <span class="eduDates"> {{dates}}</span>
+                </div>
+                <div class="bottom">
+                    <span class="majors">{{majors}}</span>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </li>
+</template>
+
+<template name="online">
+    <li>
+        <div class="collapsible-header waves-effect waves-indigo">Online Courses<i class="fa fa-code"></i></div>
+        <div class="collapsible-body">
+            {{#each online}}
+            <div class="card-panel">
+                <span class="top">
+            <a href="{{url}}">
+                <span class="onlineTitle">{{title}}</span>
+                <span class="school">{{school}}</span>
+                </a>
+                </span>
+                <span class="bottom">{{dates}}</span>
+            </div>
+            {{/each}}
+        </div>
+    </li>
+</template>
+
+<template name="projects">
+    <li>
+        <div class="collapsible-header waves-effect waves-indigo">Projects and Writing Samples<i class="fa fa-pencil"></i></div>
+        <div class="collapsible-body">
+            {{#each projects}}
+            <div class="card-panel reverse darker">
+                <a class="indigo darker title" href="{{url}}">{{title}} - {{dates}}</a>
+                <p class="desc">{{description}} <img class="right img-card" src="{{image}}" /></p>
+            </div>
+            {{/each}}
+        </div>
+    </li>
+</template>
