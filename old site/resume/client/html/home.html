@@ -1,0 +1,13 @@
+
+<template name="home">
+	<div class="resume">
+		{{> resume}}
+	</div>
+</template>
+
+<template name="resume">
+    {{> contact}}
+    <ul class="collapsible z-depth-2" data-collapsible="accordion">
+        {{> jobs}} {{> edu}} {{> online}} {{> projects}}
+    </ul>
+</template>

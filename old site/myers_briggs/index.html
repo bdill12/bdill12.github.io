@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/libs/knockout-3.2.0.js"></script>
+  <script src="js/main.js"></script>
+  <!-- jQuery UI -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> -->
+  <!-- jQuery UI CSs -->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Merriweather+Sans">
+
+  <link rel="stylesheet" href="css/main.css">
+  <title>Get to Know the Myers-Briggs Types</title>
+</head>
+
+<body>
+<div id="wrapper">
+  <div class="header" data-bind="visible: toggleTypes">
+    Get to Know
+      <span id="mb_title"> the Myers-Briggs Personality Type</span>s
+  </div>
+    <ul id="listOfTypes"  data-bind="foreach: types, visible: toggleTypes">
+      <li data-bind="text: letters,
+				click: $root.chooseType, attr: {id: letters}"></li>
+    </ul>
+  <div id="featuredType" data-bind="text: chosenType"></div>
+        <ul id="quote" data-bind="foreach: chosenQuote">
+          <li data-bind="text: $data"></li>
+        </ul>
+        <h3 class="headings">Strengths:</h3>
+        <ul id="pros" data-bind="foreach: chosenStrengths">
+          <li data-bind="text: $data"></li>
+        </ul>
+        <h3 class="headings">Weaknesses:</h3>
+        <ul id="cons" data-bind="foreach: chosenWeaknesses">
+          <li data-bind="text: $data"></li>
+        </ul>
+
+
+        <h3 class="headings">Best Work Environment:</h3>
+        <ul id="work" data-bind="foreach: chosenWork">
+          <li data-bind="text: $data"></li>
+        </ul>
+
+      <h3 class="headings">Famous
+          <span data-bind="text: chosenType"></span>s:</h3>
+        <ul id="famous" data-bind="foreach: chosenFamous">
+          <li data-bind="text: $data"></li>
+        </ul>
+        <h3 class="headings">Your Personal Hell</h3>
+        <ul id="hell" data-bind="foreach: chosenHell">
+          <li data-bind="text: $data"></li>
+        </ul>
+        <div id="goToTop" data-bind="click: $root.goToTop">Choose another Type. Press Here</div>
+        </div>
+
+
+</body>
+
+</html>

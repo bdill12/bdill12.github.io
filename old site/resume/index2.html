@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utc-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build a r&eacute;sum&eacute;</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Google Font -->
+  <link href='http://fonts.googleapis.com/css?family=Crimson+Text:600,400' rel='stylesheet' type='text/css'>
+
+<!--jQuery Mobile-->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+
+<!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+        <ul class="myInfo">
+          <li data-bind="text: name" class="name"></li>
+          <li data-bind="text: address1" class="address"></li>
+          <li data-bind="text: address2" class="address"></li>
+          <li data-bind="text: phone" class="phone"></li>
+          <li data-bind="text: email" class="email"></li>
+        </ul>
+          <h2>Experience</h2>
+          <h3 data-bind="text: employer1"></h3>
+          <ul class="employerInfo">
+            <li data-bind="text: employer1City"></li>
+            <li data-bind="text: employer1Position"></li>
+            <li><span data-bind="text: employer1From"></span> - <span data-bind="text: employer1To"></span></li>
+            <li data-bind="text: employer1desc"></li>
+          </ul>
+  <input type="text" data-bind="value: name" placeholder="Full Name">
+  <input type="text" data-bind="value: address1" placeholder="123 Street Address Road">
+  <input type="text" data-bind="value: phone" placeholder="City, State ZIP">
+  <input type="text" data-bind="value: email" placeholder="email@example.com">
+  <input type="text" class="employer" data-bind="value: employer1" placeholder="Employer">
+  <input type="text" class="employer" data-bind="value: employer1City" placeholder="City, State">
+  <input type="text" class="employer" data-bind="value: employer1Position" placeholder="Your Title">
+  <input type="text" class="employer" data-bind="value: employer1From" placeholder="Starting Date ex: October 2010">
+  <input type="text" class="employer" data-bind="value: employer1To" placeholder="End Date ex: Present">
+  <input type="text" class="employer" data-bind="value: employer1desc" placeholder="A short sentence about your work.">
+  <button type="submit" class="addEmployer" id="addEmployer" onclick="addEmployer(2)">Add Another Employer</button>
+
+
+
+
+<!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- jquery mobile js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--Knockout JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+<!-- Custom Js -->
+    <script src="js/main2.js"></script>
+</body>
+
+</html>
