@@ -1,0 +1,155 @@
+html {
+    overflow-x:hidden;
+    font-family: Raleway,Georgia,Times,'Times New Roman',serif;
+    background:transparent;
+}
+
+body{
+    overflow-x:hidden;
+    font-family: Raleway,Georgia,Times,'Times New Roman',serif;
+    min-height:100%;
+    height:auto;
+    position:relative;
+    width:100%;
+    color: #000;
+}
+
+img{
+    width:100%;
+     height: auto;
+}
+#pressEnter {
+    font-size: 1em;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    z-index: 1000;
+    color: #fff;
+    left: 40%;
+}
+
+h1 {
+    color: #000 !important;
+    text-align: center;
+    font-size: 4em;
+}
+
+a {
+    color:#8cb1ff;
+    font-family:Raleway,Georgia,Times,'Times New Roman',serif;
+}
+
+.arrow {
+    color: #000;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+.col-md-12 {
+    text-align: center;
+}
+
+.sb-site,.sb-site-container{
+    width:100%;
+     position:relative;
+     z-index:1;
+     background-color:#fff;
+}
+.sb-site, .sb-site-container, .sb-slidebar{
+    transition:-webkit-transform 400ms ease,left,right;
+     -webkit-transition:-webkit-transform 400ms ease,left,right;
+     -webkit-backface-visibility:hidden;
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+}
+
+.sb-site,.sb-site-container{
+    width:100%;
+     position:relative;
+     z-index:1;
+     background-color:#fff;
+}
+
+.sb-slide {
+    transition:-webkit-transform 400ms ease,left,right;
+     -webkit-transition:-webkit-transform 400ms ease,left,right;
+     -webkit-backface-visibility:hidden;
+}
+
+.sb-slidebar{
+    height:100%;
+     overflow-y:auto;
+     position:fixed;
+     top:0;
+     z-index:0;
+     display:none;
+     -webkit-transform:translate(0px);
+     background-color:#222;
+     width:20%;
+     color: #fff;
+}
+.sb-left{
+    left:0;
+}
+.sb-width-wide{
+    width:35%;
+}
+
+h2{
+    color: rgb(250,250,250);
+    text-align: center;
+}
+
+.education-entry > a, .writing-entry > a, .project-entry > a {
+    font-size: 1.7em;
+}
+
+.work-entry > a {
+    font-size: 1.4em;
+}
+
+.education-entry {
+    margin-top: 5%;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 0;
+}
+
+.darken, .center > a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.project-image{
+    border:1px solid #8cb1ff;
+     display:block;
+     width:50%;
+     margin-left:25%;
+}
+.sb-right{
+    right:0;
+}
+.online-entry{
+    font-family:'Merriweather Sans',Georgia,Times,'Times New Roman',serif;
+     color:#fff;
+}
+.sb-right2{
+    right:0;
+}
+
+.center {
+    text-align: center;
+}
+
+.neon {
+  color: #000;
+  font-size: 2em;
+}
