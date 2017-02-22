@@ -5,6 +5,7 @@
  * to load the same image multiple times.
  */
 (function() {
+    $("#gameInfo").show();
     var resourceCache = {};
     var loading = [];
     var readyCallbacks = [];

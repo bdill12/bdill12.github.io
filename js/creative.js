@@ -71,7 +71,7 @@ $(function() {
             'majors': ['English - Language and Literature'],
             "gpa": '<h5 class="w3-third">GPA : 3.6</h5>',
             'image': "acugrad",
-            'tag':'acuunder',
+            'tag': 'acuunder',
             'location': 'Abilene, TX',
             'dates': '2006-2010',
             'url': 'http://www.acu.edu',
@@ -82,21 +82,21 @@ $(function() {
             'degree': 'Nanodegree',
             'majors': 'Front-End Development',
             'gpa': '<h5 class="w3-third"><i class="fa fa-graduation-cap fa-3x fa-border"></i></h5>',
-            'image' : 'nano',
+            'image': 'nano',
             'tag': 'nano',
             'location': 'Online',
             'dates': 'February-May 2015',
             'url': 'http://www.udacity.com',
-            'awards': ['Completed degree in under four months and recieved tuition reimbursement', '<li><a target="_none" href="img/reviews/udacityCertificate.pdf">See Nanodegree Document</a></li>','<li><a target="_none" href="img/reviews/certificate.pdf">See Javascript Certificate</a></li>']
+            'awards': ['Completed degree in under four months and recieved tuition reimbursement', '<li><a target="_none" href="img/reviews/udacityCertificate.pdf">See Nanodegree Document</a></li>', '<li><a target="_none" href="img/reviews/certificate.pdf">See Javascript Certificate</a></li>']
         }],
         getAllSchools: function() {
             return model.schools;
         },
         'projects': [{
-            'title': 'This Bugs Me!',
-            'image': 'img/project_photos/froggorProj.JPG',
-            'type': 'Game',
-            'description': 'Game similar to Froggor built with Javascript in which you guide children across a path to the water and avoid bugs.',
+            'title': 'The Collector',
+            'image': 'img/project_photos/collector.png',
+            'type': 'Online Game made with HTML5 and Javascript',
+            'description': 'Be a ninja. Collect hearts, keys, stars, and gems. avoid bugs.',
             'url': 'html5game/index.html',
             'index': 1
         }, {
@@ -162,7 +162,7 @@ $(function() {
         }, {
             'title': 'Community Theater',
             'type': 'Award-winning story story',
-            'image': 'img/project_photos/elaine.PNG',
+            'image': 'img/project_photos/elaine.svg',
             'description': 'Elaine doesn\'t know how to act. . . on stage or off. After being lightly chastised by the amateur director of the community theater production she has joined, Elaine starts to examine how the people around her act. Her loneliness leads her to liquor, her couch, and Audrey Hepburn. Named first prize for fiction at the 2009 Conference on Christianity and Literature',
             'url': '',
             'index': 7,
@@ -202,8 +202,15 @@ $(function() {
                 view.showDivs(0);
                 view.addEvents();
                 view.scrolling_render();
+            } else {
+                view.exp_render();
+                view.edu_render();
+                view.writing_render();
+                view.project_render();
+                view.showDivs(0);
+                view.addEvents();
             }
-            
+
         },
         getInfo: function(info) {
             if (info == 'jobs') {
@@ -279,16 +286,11 @@ $(function() {
 
                 var openAction = "document.getElementById('modal-" + school.tag + "').style.display='block'";
 
-                htmlstr += '<div class="school-entry" onclick="' + openAction + '"><div class="w3-container w3-row w3-panel w3-border w3-round-large"><h5 class="w3-cell w3-cell-middle w3-half">' + school.degree + '</h5><h6 class="w3-cell w3-cell-middle w3-half w3-large w3-right-align">' + school.name + '</h6><div class="w3-row"><div class="w3-cell w3-cell-middle w3-half">' + school.majors + '</div><div class="w3-cell w3-cell-middle w3-right-align w3-half">' + school.location + '</div></div></div></div>';
-                modalstr += '<div id="modal-' + school.tag + '" class="w3-modal"><div class="w3-modal-content w3-round-xlarge"><header class="w3-container w3-padding purple  w3-round-xlarge"><div class="w3-right w3-closebtn" onclick="' + closeAction + '"><i class="material-icons">close</i></div><a href="' + school.url + '" rel="nofollow" class="w3-half"><img src="img/logos/' + school.image + '.png" class="w3-image schoolImage w3-round-large" alt="' + school.name + '"></a><h4 class="w3-half w3-right-align">' + school.degree + ' - ' + school.majors + '</h4></header><div class="w3-container w3-center"><h5 class="w3-third">'+ school.dates + '</h5><h5 class="w3-third">' + school.location + '</h5>'+school.gpa+'<h6>Activities and Awards</h6><ul class="w3-container w3-ul">';
+                htmlstr += '<div class="school-entry"><div class="w3-container w3-row w3-panel w3-border w3-round-large" onclick="' + openAction + '"><h5 class="w3-cell w3-cell-middle w3-half">' + school.degree + '</h5><h6 class="w3-cell w3-cell-middle w3-half w3-large w3-right-align">' + school.name + '</h6><div class="w3-row"><div class="w3-cell w3-cell-middle w3-half">' + school.majors + '</div><div class="w3-cell w3-cell-middle w3-right-align w3-half">' + school.location + '</div></div></div></div>';
+                modalstr += '<div id="modal-' + school.tag + '" class="w3-modal"><div class="w3-modal-content w3-round-xlarge"><header class="w3-container w3-padding purple  w3-round-xlarge"><div class="w3-right w3-closebtn" onclick="' + closeAction + '"><i class="material-icons">close</i></div><a href="' + school.url + '" rel="nofollow" class="w3-half"><img src="img/logos/' + school.image + '.png" class="w3-image schoolImage w3-round-large" alt="' + school.name + '"></a><h4 class="w3-half w3-right-align">' + school.degree + ' - ' + school.majors + '</h4></header><div class="w3-container w3-center"><h5 class="w3-third">' + school.dates + '</h5><h5 class="w3-third">' + school.location + '</h5>' + school.gpa + '<h6>Activities and Awards</h6><ul class="w3-container w3-ul">';
                 for (var i = 0; i < school.awards.length; i++) {
                     modalstr += '<li>' + school.awards[i] + '</li>';
                 }
-                modalstr += '</ul></div><footer class="w3-container"></footer></div></div>';
-               // h*/tmlstr += '<div class="school-entry" w3-container><h3><a target="_blank" href="' +
-                  //  school.url + '">' + school.name + '</a></h3><h4>' + school.degree +
-                //    '</h4><h5>' + school.majors + ' - (' + school.dates + ')</h5><div>' + school.location +
-                //    '</div></div>';
             });
             $('#education').prepend(htmlstr);
             $('#modalstore').append(modalstr);
@@ -297,7 +299,7 @@ $(function() {
             var htmlstr = '';
             var indicator = '';
             octopus.getInfo('writing').forEach(function(project) {
-                htmlstr += '<div class="w3-white w3-container w3-center w3-display-middle writing"><a target="_none" href="' + project.url + '"><h2>' + project.title + '</h2><img src="' + project.image + '" class="w3-image writeImage"><div>' + project.type + '</div></a></div>';
+                htmlstr += '<div class="writing"><header class="w3-center"><h2>' + project.title + '</h2></header><a class="w3-display-middle" target="_none" href="' + project.url + '"><img src="' + project.image + '"class="w3-image"></a><footer class="w3-center">' + project.description + '</footer></div>';
                 indicator += '<button class="w3-btn w3-round-large w3-margin w3-border w3-border-teal w3-hover-teal w3-cell writeSlide w3-white w3-text-teal" id="indicator' + project.index + '">' + project.index + '</button>';
             });
             $('#projects').prepend(htmlstr);
@@ -308,7 +310,7 @@ $(function() {
             var indicator = '';
 
             octopus.getInfo('project').forEach(function(project) {
-                htmlstr += '<div class="w3-white w3-center w3-display-middle dev"><a target="_none" href="' + project.url + '"><h4>' + project.title + '</h4><img src="' + project.image + '" class="w3-image w3-center devImage"><div class="w3-center">' + project.type + '</div></a></div>';
+                htmlstr += '<div class="dev w3-display-middle w3-center w3-margin-0 w3-mobile"><h2>' + project.title + '</h2><a target="_none" href="' + project.url + '"><img src="' + project.image + '" class="w3-image devImage"></a><footer class="w3-center">' + project.description + '</footer></div>';
                 indicator += '<button class="w3-btn w3-round-large w3-margin w3-border w3-border-green w3-hover-green w3-cell devSlide w3-white w3-text-green" id="devIndicator' + project.index + '">' + project.index + '</button>';
             });
             $('#devProjects').prepend(htmlstr);
@@ -378,35 +380,24 @@ $(function() {
             var slides = document.querySelectorAll('.section');
             var blockquotes = document.querySelectorAll("blockquote");
             var svgs = document.querySelectorAll("svg");
-            var stagger = TweenMax.staggerFromTo(work, 5, { x: "100%" }, { x: "0%" }, 5);
-            var stagger2 = TweenMax.staggerFromTo(schools, 5, { x: "100%" }, { x: "0%" }, 5);
+            var stagger = TweenMax.staggerFromTo(work, 0.5, { x: "100%" }, { x: "0%" }, 0.5);
+            var stagger2 = TweenMax.staggerFromTo(schools, 0.75, { x: "100%" }, { x: "0%" }, 0.5);
 
             var staggers = [stagger2, stagger];
-            //fade out and set visibility:hidden
-var brightenTween = TweenLite.to(svgs, 2, {autoAlpha:0});
-
 
             for (var i = 0; i < slides.length; i++) {
                 new ScrollMagic.Scene({
                         triggerElement: slides[i],
-                        duration: 200
+                        duration: 800
                     })
                     .setPin(slides[i])
                     .addTo(controller);
                 if (i < staggers.length) {
                     new ScrollMagic.Scene({
-                            triggerElement: blockquotes[i],
-                            duration: 2
+                            triggerElement: blockquotes[i]
                         })
                         .setTween(staggers[i])
                         .addTo(controller);
-                }
-                if (i < svgs.length) {
-                    new ScrollMagic.Scene({
-                        triggerElement: slides[i],
-                        duration: "100%"
-                    }).setTween(brightenTween)
-                    .addTo(controller);
                 }
 
             }

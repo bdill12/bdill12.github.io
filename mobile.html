@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Brent C Dill | Web Developer, Writer</title>
+    <!-- CSS -->
+    <!-- W3 -->
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i|Julius+Sans+One|Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link type="text/css" rel="stylesheet" href="css/creative.css">
+
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+</head>
+
+<body>
+    <div class="w3-content w3-container">
+        <div class="w3-display-container">
+            <header class="w3-container">
+               <div class="w3-left w3-closebtn" ><i class="material-icons">close</i></div>
+                <h5 id="mobileHeading">Experience</h5>
+            </header>
+            <div class="w3-display-middle">
+            <ul id="mobileCard" class="w3-ul">
+                <li id="{{tag}}" class="jobCard" w3-repeat="jobs">
+                <div class="w3-row">
+                    <h5 class="w3-half">{{title}}</h5>
+                    <h5 class="w3-half w3-right-align">{{employer}}</h5 >
+                     </div>
+                     <div class="w3-row">
+                         <span class="w3-half">{{dates}}</span>
+                    <span class="w3-half w3-right-align">{{location}}</span >
+                     </div>
+                      <ul class="w3-ul w3-container">{{description}}</ul>
+                     </li>
+
+            </ul> 
+        </div>           
+            <footer class="w3-container">
+                <a class="w3-btn w3-round-large w3-white w3-border w3-display-left w3-margin-left" id="mobileLeft"><i class="material-icons">navigate_before</i></a>
+                <a href="#">{{url}}</a>
+                <a class="w3-btn w3-round-large w3-white w3-border w3-display-right w3-margin-right" id="mobileRight"><i class="material-icons">navigate_next</i></a>
+            </footer>
+            </div>
+        </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="mobile.js"></script>
+
+    
+</body>
+
+</html>

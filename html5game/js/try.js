@@ -7,8 +7,18 @@ Enemy.prototype.update = function(dt) {
     // Regenerate bugs as they exit the game on the right
     if (this.x > 505) {
         this.x = 0;
+
         // Generate new y for bug
-        this.y = Math.floor(Math.random() * 3) * 83;
+        var newY = function(){
+            var attempt = Math.floor(Math.random()*6)*83;
+            if (attempt > 332) {
+               return attempt - 83;
+           } else {
+                return attempt;
+           }
+        };
+        this.y = newY();
+        console.log(this.y);
         // Generate new speed for bug
         this.speed = Math.floor(Math.random() * 1200);
     }

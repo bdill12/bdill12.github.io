@@ -25,10 +25,43 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
-    canvas.height = 606;
-    canvas.className = "canvas";
-    doc.body.appendChild(canvas);
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+    if (isMobile.any()) {
+        $('#notMobile').show();
+        $('#controls').show();
+        canvasHeight = 394;
+        canvasWidth = 361;
+        mobile = true;
+        canvas.className = "canvas game w3-border w3-border-white";
+        console.log('true ' + mobile);
+    } else {
+        canvas.className = "canvas game w3-border w3-border-white w3-blue-grey w3-round-large w3-padding";
+        console.log('false ' + mobile);
+
+    }
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+
+    $(canvas).insertAfter('#canvasline');
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -65,7 +98,6 @@ var Engine = (function(global) {
      * game loop.
      */
     function init() {
-        reset();
         lastTime = Date.now();
         main();
     }
@@ -108,24 +140,35 @@ var Engine = (function(global) {
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
-        var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
-            ],
-            numRows = 6,
-            numCols = 5,
-            row, col;
+         var rowImages;
+            numRows = 6;
+            numCols = 5;
+        if (mobile) {
+            rowImages = [
+                    'images/small/grass-block.png', // Top row is water
+                    'images/small/grass-block.png', // Row 1 of 3 of stone
+                    'images/small/stone-block.png', // Row 2 of 3 of stone
+                    'images/small/stone-block.png', // Row 3 of 3 of stone
+                    'images/small/stone-block.png', // Row 1 of 2 of grass
+                    'images/small/grass-block.png' // Row 2 of 2 of grass
+                ];
+        } else {
+            rowImages = [
+                    'images/grass-block.png', // Top row is water
+                    'images/grass-block.png', // Row 1 of 3 of stone
+                    'images/stone-block.png', // Row 2 of 3 of stone
+                    'images/stone-block.png', // Row 3 of 3 of stone
+                    'images/stone-block.png', // Row 1 of 2 of grass
+                    'images/grass-block.png' // Row 2 of 2 of grass
+                ];
+        }
 
         /* Loop through the number of rows and columns we've defined above
          * and, using the rowImages array, draw the correct image for that
          * portion of the "grid"
          */
-        for (row = 0; row < numRows; row++) {
-            for (col = 0; col < numCols; col++) {
+        for (var row = 0; row < numRows; row++) {
+            for (var col = 0; col < numCols; col++) {
                 /* The drawImage function of the canvas' context element
                  * requires 3 parameters: the image to draw, the x coordinate
                  * to start drawing and the y coordinate to start drawing.
@@ -133,7 +176,12 @@ var Engine = (function(global) {
                  * so that we get the benefits of caching these images, since
                  * we're using them over and over.
                  */
-                ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
+                if (mobile) {
+                    ctx.drawImage(Resources.get(rowImages[row]), col * 71, row * 61);
+
+                } else {
+                    ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
+                }
             }
         }
 
@@ -152,7 +200,7 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
-
+        gem.render();
         player.render();
     }
 
@@ -160,29 +208,110 @@ var Engine = (function(global) {
      * handle game reset states - maybe a new game menu or a game over screen
      * those sorts of things. It's only called once by the init() method.
      */
-    function reset() {
+    global.reset = function() {
         // noop
-    }
+        allEnemies = [enemy1, enemy2, enemy3];
+        player.lives = 5;
+        gem = new Gem();
+        document.getElementById('lives').innerHTML = player.lives;
+        for (var x = 0; x < gems.length; x++) {
+            gems[x].style.display = "none";
+        }
+        i = 0;
+        $('#empty').show();
+        $('.canvas').show();
+        $('.w3-modal').hide();
+        init();
+        active = true;
+    };
 
     /* Go ahead and load all of the images we know we're going to need to
      * draw our game level. Then set init as the callback method, so that when
      * all of these images are properly loaded our game will start.
      */
-    Resources.load([
-        'images/stone-block.png',
-        'images/water-block.png',
-        'images/grass-block.png',
-        'images/enemy-bug.png',
-        'images/char-boy.png',
-        'images/Heart.png',
-        'images/char-cat-girl.png',
-        'images/char-boy-blue.png',
-        'images/char-boy-sailor.png',
-        'images/char-boy-ninja.png',
-        'images/char-horn-girl.png',
-        'images/char-pink-girl.png',
-        'images/char-princess-girl.png'
-    ]);
+    if (mobile) {
+        Resources.load([
+            'images/small/stone-block.png',
+            'images/small/gem-blue.png',
+            'images/small/gem-orange.png',
+            'images/small/gem-green.png',
+            'images/small/heart.png',
+            'images/small/star.png',
+            'images/small/key.png',
+            'images/small/water-block.png',
+            'images/small/grass-block.png',
+            'images/small/enemy-bug.png',
+            'images/small/char-boy.png',
+            'images/small/heart.png',
+            'images/small/char-cat-girl.png',
+            'images/small/char-boy-blue.png',
+            'images/small/char-boy-sailor.png',
+            'images/small/char-boy-ninja.png',
+            'images/small/char-horn-girl.png',
+            'images/small/char-pink-girl.png',
+            'images/small/char-princess-girl.png',
+            'images/stone-block.png',
+            'images/gem-blue.png',
+            'images/gem-orange.png',
+            'images/gem-green.png',
+            'images/heart.png',
+            'images/star.png',
+            'images/key.png',
+            'images/water-block.png',
+            'images/grass-block.png',
+            'images/enemy-bug.png',
+            'images/char-boy.png',
+            'images/heart.png',
+            'images/char-cat-girl.png',
+            'images/char-boy-blue.png',
+            'images/char-boy-sailor.png',
+            'images/char-boy-ninja.png',
+            'images/char-horn-girl.png',
+            'images/char-pink-girl.png',
+            'images/char-princess-girl.png'
+        ]);
+    } else {
+        Resources.load([
+            'images/stone-block.png',
+            'images/gem-blue.png',
+            'images/gem-orange.png',
+            'images/gem-green.png',
+            'images/heart.png',
+            'images/star.png',
+            'images/key.png',
+            'images/water-block.png',
+            'images/grass-block.png',
+            'images/enemy-bug.png',
+            'images/char-boy.png',
+            'images/heart.png',
+            'images/char-cat-girl.png',
+            'images/char-boy-blue.png',
+            'images/char-boy-sailor.png',
+            'images/char-boy-ninja.png',
+            'images/char-horn-girl.png',
+            'images/char-pink-girl.png',
+            'images/char-princess-girl.png',
+            'images/small/stone-block.png',
+            'images/small/gem-blue.png',
+            'images/small/gem-orange.png',
+            'images/small/gem-green.png',
+            'images/small/heart.png',
+            'images/small/star.png',
+            'images/small/key.png',
+            'images/small/water-block.png',
+            'images/small/grass-block.png',
+            'images/small/enemy-bug.png',
+            'images/small/char-boy.png',
+            'images/small/heart.png',
+            'images/small/char-cat-girl.png',
+            'images/small/char-boy-blue.png',
+            'images/small/char-boy-sailor.png',
+            'images/small/char-boy-ninja.png',
+            'images/small/char-horn-girl.png',
+            'images/small/char-pink-girl.png',
+            'images/small/char-princess-girl.png',
+        ]);
+    }
     Resources.onReady(init);
 
     /* Assign the canvas' context object to the global variable (the window

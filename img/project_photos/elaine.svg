@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Bez 1.0.2u (15139) - http://www.juicybitssoftware.com/bez -->
+<svg width="250.0" height="250.0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Untitled (23)</title>
+  <desc>Created with Bez</desc>
+  <defs>
+    <clipPath id="ClipPath-1">
+      <path id="Rectangle-1" d="M25.0,26.0 L224.0,25.0 L225.0,225.0 L25.0,225.0 L25.0,26.0 Z"/>
+    </clipPath>
+  </defs>
+  <path id="Rectangle" fill="#969696" stroke="#000" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" d="M25.0,26.0 L224.0,25.0 L225.0,225.0 L25.0,225.0 L25.0,26.0 Z"/>
+  <g clip-path="url(#ClipPath-1)">
+    <defs>
+      <linearGradient id="Gradient-21" x1="68.0" y1="113.7" x2="147.6" y2="113.7" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#191919" offset="0.0%"/>
+        <stop stop-color="#646464" offset="10.7%"/>
+        <stop stop-color="#323232" offset="38.6%"/>
+        <stop stop-color="#1e1e1e" offset="54.1%"/>
+        <stop stop-color="#646464" offset="73.8%"/>
+        <stop stop-color="#323232" offset="100.0%"/>
+      </linearGradient>
+    </defs>
+    <g id="Group">
+      <path id="Rectangle-2" fill="#c8c8c8" stroke="#000" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" d="M86.5,135.5 C89.5,143.9 95.5,154.5 95.5,154.5 C95.5,154.5 94.4,159.9 92.0,163.5 C89.6,167.1 86.5,170.0 86.5,170.0 C86.5,170.0 88.4,176.0 93.5,180.5 C98.6,185.0 107.0,188.0 107.0,188.0 C107.0,188.0 128.2,188.9 144.0,185.5 C159.8,182.1 170.0,174.5 170.0,174.5 C170.0,174.5 163.1,169.1 157.0,165.0 C150.9,160.9 145.5,158.0 145.5,158.0 C145.5,158.0 143.1,154.9 143.0,147.5 C142.9,140.1 145.0,128.5 145.0,128.5 C145.0,128.5 151.9,124.6 155.0,120.0 C158.1,115.4 157.5,110.0 157.5,110.0 L152.0,101.5 L129.0,98.0 L81.0,105.0 L83.5,121.0 C83.5,121.0 83.5,127.1 86.5,135.5 Z"/>
+      <path id="Rectangle-3" fill="#c8c8c8" stroke="#000" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" d="M27.0,225.0 L60.0,225.0 C60.0,225.0 65.6,211.8 66.5,200.0 C67.4,188.2 63.5,178.0 63.5,178.0 C63.5,178.0 48.6,182.2 39.5,194.0 C30.4,205.8 27.0,225.0 27.0,225.0 Z"/>
+      <path id="Rectangle-4" fill="#c8c8c8" stroke="#000" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" d="M176.0,202.5 C173.0,213.0 177.0,225.0 177.0,225.0 L215.5,225.0 C215.5,225.0 216.1,207.6 209.5,197.5 C202.9,187.4 189.0,184.5 189.0,184.5 C189.0,184.5 179.0,192.0 176.0,202.5 Z"/>
+      <path id="Path" fill="none" stroke="#000" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" d="M95.5,154.5 C95.5,154.5 102.4,162.0 114.0,158.5 C123.1,155.8 132.0,145.5 132.0,145.5"/>
+    </g>
+    <path id="Rectangle-5" fill="#000" stroke="#000" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" d="M66.5,196.5 C66.2,208.6 60.0,225.0 60.0,225.0 L176.0,224.0 C176.0,224.0 174.3,211.5 176.0,201.5 C177.7,191.5 189.0,184.5 189.0,184.5 C189.0,184.5 184.9,179.9 180.8,177.5 C176.6,175.1 171.0,174.0 171.0,174.0 C170.4,176.8 158.2,186.1 124.0,188.5 C89.8,190.9 86.0,170.0 86.0,170.0 C86.0,170.0 75.9,170.0 69.5,172.5 C63.1,175.0 63.5,179.0 63.5,179.0 C63.5,179.0 66.8,184.4 66.5,196.5 Z"/>
+    <g id="Group-1">
+      <g id="Ellipse" fill="none" stroke="none">
+        <defs>
+          <path id="Path-1" d="M93.0,166.0 C93.0,167.4 91.9,168.5 90.5,168.5 C89.1,168.5 88.0,167.4 88.0,166.0 C88.0,164.6 89.1,163.5 90.5,163.5 C91.9,163.5 93.0,164.6 93.0,166.0 Z"/>
+          <radialGradient id="Gradient-1" cx="90.5" cy="166.0" r="2.5" fx="90.5" fy="166.0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-1"/>
+        <use fill="url(#Gradient-1)" xlink:href="#Path-1"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-1"/>
+      </g>
+      <g id="Ellipse-1" fill="none" stroke="none">
+        <defs>
+          <path id="Path-2" d="M93.5,170.5 C93.5,171.9 92.4,173.0 91.0,173.0 C89.6,173.0 88.5,171.9 88.5,170.5 C88.5,169.1 89.6,168.0 91.0,168.0 C92.4,168.0 93.5,169.1 93.5,170.5 Z"/>
+          <radialGradient id="Gradient-2" cx="91.0" cy="170.5" r="2.5" fx="91.0" fy="170.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-2"/>
+        <use fill="url(#Gradient-2)" xlink:href="#Path-2"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-2"/>
+      </g>
+      <g id="Ellipse-2" fill="none" stroke="none">
+        <defs>
+          <path id="Path-3" d="M93.5,174.5 C93.5,175.9 92.4,177.0 91.0,177.0 C89.6,177.0 88.5,175.9 88.5,174.5 C88.5,173.1 89.6,172.0 91.0,172.0 C92.4,172.0 93.5,173.1 93.5,174.5 Z"/>
+          <radialGradient id="Gradient-3" cx="91.0" cy="174.5" r="2.5" fx="91.0" fy="174.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-3"/>
+        <use fill="url(#Gradient-3)" xlink:href="#Path-3"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-3"/>
+      </g>
+      <g id="Ellipse-3" fill="none" stroke="none">
+        <defs>
+          <path id="Path-4" d="M94.0,179.5 C94.0,180.9 92.9,182.0 91.5,182.0 C90.1,182.0 89.0,180.9 89.0,179.5 C89.0,178.1 90.1,177.0 91.5,177.0 C92.9,177.0 94.0,178.1 94.0,179.5 Z"/>
+          <radialGradient id="Gradient-4" cx="91.5" cy="179.5" r="2.5" fx="91.5" fy="179.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-4"/>
+        <use fill="url(#Gradient-4)" xlink:href="#Path-4"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-4"/>
+      </g>
+      <g id="Ellipse-4" fill="none" stroke="none">
+        <defs>
+          <path id="Path-5" d="M95.5,183.2 C95.5,184.5 94.4,185.5 93.0,185.5 C91.6,185.5 90.5,184.5 90.5,183.2 C90.5,182.0 91.6,181.0 93.0,181.0 C94.4,181.0 95.5,182.0 95.5,183.2 Z"/>
+          <radialGradient id="Gradient-5" cx="93.0" cy="183.2" r="2.5" fx="93.0" fy="183.2" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-5"/>
+        <use fill="url(#Gradient-5)" xlink:href="#Path-5"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-5"/>
+      </g>
+      <g id="Ellipse-5" fill="none" stroke="none">
+        <defs>
+          <path id="Path-6" d="M99.0,186.8 C99.0,188.3 97.8,189.5 96.2,189.5 C94.7,189.5 93.5,188.3 93.5,186.8 C93.5,185.2 94.7,184.0 96.2,184.0 C97.8,184.0 99.0,185.2 99.0,186.8 Z"/>
+          <radialGradient id="Gradient-6" cx="96.2" cy="186.8" r="2.7" fx="96.2" fy="186.8" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-6"/>
+        <use fill="url(#Gradient-6)" xlink:href="#Path-6"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-6"/>
+      </g>
+      <g id="Ellipse-6" fill="none" stroke="none">
+        <defs>
+          <path id="Path-7" d="M103.5,189.9 C103.5,191.6 102.2,193.0 100.5,193.0 C98.8,193.0 97.5,191.6 97.5,189.9 C97.5,188.1 98.8,186.8 100.5,186.8 C102.2,186.8 103.5,188.1 103.5,189.9 Z"/>
+          <radialGradient id="Gradient-7" cx="100.5" cy="189.9" r="3.0" fx="100.5" fy="189.9" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-7"/>
+        <use fill="url(#Gradient-7)" xlink:href="#Path-7"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-7"/>
+      </g>
+      <g id="Ellipse-7" fill="none" stroke="none">
+        <defs>
+          <path id="Path-8" d="M106.5,192.4 C106.5,193.9 105.4,195.0 104.0,195.0 C102.6,195.0 101.5,193.9 101.5,192.4 C101.5,191.0 102.6,189.9 104.0,189.9 C105.4,189.9 106.5,191.0 106.5,192.4 Z"/>
+          <radialGradient id="Gradient-8" cx="104.0" cy="192.4" r="2.5" fx="104.0" fy="192.4" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-8"/>
+        <use fill="url(#Gradient-8)" xlink:href="#Path-8"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-8"/>
+      </g>
+      <g id="Ellipse-8" fill="none" stroke="none">
+        <defs>
+          <path id="Path-9" d="M111.5,194.3 C111.5,196.0 110.1,197.5 108.4,197.5 C106.7,197.5 105.3,196.0 105.3,194.3 C105.3,192.5 106.7,191.0 108.4,191.0 C110.1,191.0 111.5,192.5 111.5,194.3 Z"/>
+          <radialGradient id="Gradient-9" cx="108.4" cy="194.3" r="3.1" fx="108.4" fy="194.3" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-9"/>
+        <use fill="url(#Gradient-9)" xlink:href="#Path-9"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-9"/>
+      </g>
+      <g id="Ellipse-9" fill="none" stroke="none">
+        <defs>
+          <path id="Path-10" d="M116.0,195.0 C116.0,196.9 114.8,198.5 113.3,198.5 C111.8,198.5 110.6,196.9 110.6,195.0 C110.6,193.1 111.8,191.5 113.3,191.5 C114.8,191.5 116.0,193.1 116.0,195.0 Z"/>
+          <radialGradient id="Gradient-10" cx="113.3" cy="195.0" r="2.7" fx="113.3" fy="195.0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-10"/>
+        <use fill="url(#Gradient-10)" xlink:href="#Path-10"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-10"/>
+      </g>
+      <g id="Ellipse-10" fill="none" stroke="none">
+        <defs>
+          <path id="Path-11" d="M121.5,195.5 C121.5,197.4 120.2,199.0 118.7,199.0 C117.1,199.0 115.8,197.4 115.8,195.5 C115.8,193.6 117.1,192.0 118.7,192.0 C120.2,192.0 121.5,193.6 121.5,195.5 Z"/>
+          <radialGradient id="Gradient-11" cx="118.7" cy="195.5" r="2.8" fx="118.7" fy="195.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-11"/>
+        <use fill="url(#Gradient-11)" xlink:href="#Path-11"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-11"/>
+      </g>
+      <g id="Ellipse-11" fill="none" stroke="none">
+        <defs>
+          <path id="Path-12" d="M126.5,194.8 C126.5,196.5 125.2,198.0 123.5,198.0 C121.8,198.0 120.5,196.5 120.5,194.8 C120.5,193.0 121.8,191.5 123.5,191.5 C125.2,191.5 126.5,193.0 126.5,194.8 Z"/>
+          <radialGradient id="Gradient-12" cx="123.5" cy="194.8" r="3.0" fx="123.5" fy="194.8" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-12"/>
+        <use fill="url(#Gradient-12)" xlink:href="#Path-12"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-12"/>
+      </g>
+      <g id="Ellipse-12" fill="none" stroke="none">
+        <defs>
+          <path id="Path-13" d="M132.0,192.0 C132.0,193.9 130.5,195.5 128.8,195.5 C127.0,195.5 125.5,193.9 125.5,192.0 C125.5,190.1 127.0,188.5 128.8,188.5 C130.5,188.5 132.0,190.1 132.0,192.0 Z"/>
+          <radialGradient id="Gradient-13" cx="128.8" cy="192.0" r="3.2" fx="128.8" fy="192.0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-13"/>
+        <use fill="url(#Gradient-13)" xlink:href="#Path-13"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-13"/>
+      </g>
+      <g id="Ellipse-13" fill="none" stroke="none">
+        <defs>
+          <path id="Path-14" d="M136.5,188.7 C136.5,190.5 135.2,192.0 133.5,192.0 C131.8,192.0 130.5,190.5 130.5,188.7 C130.5,187.0 131.8,185.5 133.5,185.5 C135.2,185.5 136.5,187.0 136.5,188.7 Z"/>
+          <radialGradient id="Gradient-14" cx="133.5" cy="188.7" r="3.0" fx="133.5" fy="188.7" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-14"/>
+        <use fill="url(#Gradient-14)" xlink:href="#Path-14"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-14"/>
+      </g>
+      <g id="Ellipse-14" fill="none" stroke="none">
+        <defs>
+          <path id="Path-15" d="M140.5,184.8 C140.5,186.3 139.3,187.5 137.8,187.5 C136.2,187.5 135.0,186.3 135.0,184.8 C135.0,183.2 136.2,182.0 137.8,182.0 C139.3,182.0 140.5,183.2 140.5,184.8 Z"/>
+          <radialGradient id="Gradient-15" cx="137.8" cy="184.8" r="2.8" fx="137.8" fy="184.8" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-15"/>
+        <use fill="url(#Gradient-15)" xlink:href="#Path-15"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-15"/>
+      </g>
+      <g id="Ellipse-15" fill="none" stroke="none">
+        <defs>
+          <path id="Path-16" d="M145.0,181.0 C145.0,182.7 143.7,184.0 142.0,184.0 C140.3,184.0 139.0,182.7 139.0,181.0 C139.0,179.3 140.3,178.0 142.0,178.0 C143.7,178.0 145.0,179.3 145.0,181.0 Z"/>
+          <radialGradient id="Gradient-16" cx="142.0" cy="181.0" r="3.0" fx="142.0" fy="181.0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-16"/>
+        <use fill="url(#Gradient-16)" xlink:href="#Path-16"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-16"/>
+      </g>
+      <g id="Ellipse-16" fill="none" stroke="none">
+        <defs>
+          <path id="Path-17" d="M148.0,176.8 C148.0,178.3 146.8,179.5 145.3,179.5 C143.7,179.5 142.5,178.3 142.5,176.8 C142.5,175.2 143.7,174.0 145.3,174.0 C146.8,174.0 148.0,175.2 148.0,176.8 Z"/>
+          <radialGradient id="Gradient-17" cx="145.3" cy="176.8" r="2.8" fx="145.3" fy="176.8" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-17"/>
+        <use fill="url(#Gradient-17)" xlink:href="#Path-17"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-17"/>
+      </g>
+      <g id="Ellipse-17" fill="none" stroke="none">
+        <defs>
+          <path id="Path-18" d="M150.5,173.2 C150.5,174.8 149.3,176.0 147.8,176.0 C146.2,176.0 145.0,174.8 145.0,173.2 C145.0,171.7 146.2,170.5 147.8,170.5 C149.3,170.5 150.5,171.7 150.5,173.2 Z"/>
+          <radialGradient id="Gradient-18" cx="147.8" cy="173.2" r="2.8" fx="147.8" fy="173.2" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-18"/>
+        <use fill="url(#Gradient-18)" xlink:href="#Path-18"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-18"/>
+      </g>
+      <g id="Ellipse-18" fill="none" stroke="none">
+        <defs>
+          <path id="Path-19" d="M152.5,169.0 C152.5,170.4 151.5,171.5 150.3,171.5 C149.0,171.5 148.0,170.4 148.0,169.0 C148.0,167.6 149.0,166.5 150.3,166.5 C151.5,166.5 152.5,167.6 152.5,169.0 Z"/>
+          <radialGradient id="Gradient-19" cx="150.3" cy="169.0" r="2.2" fx="150.3" fy="169.0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-19"/>
+        <use fill="url(#Gradient-19)" xlink:href="#Path-19"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-19"/>
+      </g>
+      <g id="Ellipse-19" fill="none" stroke="none">
+        <defs>
+          <path id="Path-20" d="M155.5,164.7 C155.5,166.3 154.3,167.5 152.7,167.5 C151.2,167.5 150.0,166.3 150.0,164.7 C150.0,163.2 151.2,162.0 152.7,162.0 C154.3,162.0 155.5,163.2 155.5,164.7 Z"/>
+          <radialGradient id="Gradient-20" cx="152.7" cy="164.7" r="2.8" fx="152.7" fy="164.7" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" offset="60.9%"/>
+            <stop stop-color="#c8c8c8" offset="100.0%"/>
+          </radialGradient>
+        </defs>
+        <use fill="#fff" xlink:href="#Path-20"/>
+        <use fill="url(#Gradient-20)" xlink:href="#Path-20"/>
+        <use stroke="#000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" xlink:href="#Path-20"/>
+      </g>
+    </g>
+    <path id="Path-1" fill="url(#Gradient-21)" stroke="#000" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" d="M85.5,101.0 C76.2,101.4 68.0,101.5 68.0,101.5 C68.0,101.5 71.9,111.6 76.0,116.5 C80.1,121.4 95.5,129.8 102.0,113.5 C103.6,109.5 105.5,104.0 105.5,104.0 L106.5,104.0 C106.5,113.2 109.0,118.0 109.0,118.0 C111.8,124.5 123.4,128.8 130.5,125.0 C137.6,121.2 148.5,110.0 147.5,107.0 C141.5,101.5 106.0,101.5 106.0,101.5 C106.0,101.5 94.8,100.6 85.5,101.0 Z"/>
+    <g id="Group-2">
+      <path id="Rectangle-6" fill="#000" stroke="#000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" d="M108.3,32.5 C126.8,31.1 135.2,29.9 153.0,40.5 C170.8,51.1 164.0,68.5 164.0,68.5 C164.0,68.5 149.6,52.9 125.5,45.0 C101.4,37.1 80.0,47.5 80.0,47.5 C80.0,47.5 89.8,33.9 108.3,32.5 Z"/>
+      <path id="Rectangle-7" fill="#000" stroke="#000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" d="M41.5,96.5 C28.6,104.1 20.0,112.5 20.0,112.5 C20.0,112.5 51.7,96.7 108.3,100.9 C164.9,105.2 217.0,133.5 217.0,133.5 C217.0,133.5 210.4,125.1 202.0,119.0 C195.9,114.6 198.0,112.7 186.5,105.0 C174.9,97.3 164.7,93.5 159.5,89.0 C153.6,84.0 158.5,79.0 158.5,79.0 C158.5,79.0 150.6,80.4 138.0,78.5 C125.4,76.6 114.5,72.0 105.0,72.0 C95.5,72.0 87.9,75.9 72.0,82.0 C56.1,88.1 54.4,88.9 41.5,96.5 Z"/>
+      <path id="Rectangle-8" fill="#323232" stroke="#000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" d="M28.5,126.4 C14.9,121.1 20.0,112.5 20.0,112.5 C20.0,112.5 28.9,109.0 41.0,106.0 C53.1,103.0 67.5,101.5 67.5,101.5 C67.5,101.5 69.9,109.2 74.0,114.5 C78.1,119.8 84.0,122.5 84.0,122.5 L84.0,122.5 C84.3,123.9 84.9,128.1 85.5,131.9 L86.0,135.5 C86.0,135.5 67.2,139.1 28.5,126.4 Z"/>
+      <path id="Rectangle-9" fill="#323232" stroke="#000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" d="M154.0,121.0 C149.0,128.4 145.0,129.0 145.0,129.0 L144.5,141.0 C144.5,141.0 172.4,143.1 190.5,141.5 C208.6,139.9 217.0,133.5 217.0,133.5 C217.0,133.5 206.4,128.1 191.5,122.0 C176.6,115.9 157.5,110.0 157.5,110.0 C157.5,110.0 159.0,113.6 154.0,121.0 Z"/>
+      <path id="Rectangle-10" fill="#fff" stroke="#000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" d="M76.5,59.5 C76.0,67.5 78.0,79.0 78.0,79.0 C78.0,79.0 84.3,74.6 105.5,71.5 C113.8,70.3 129.8,77.3 138.5,78.0 C152.2,79.1 160.0,78.0 160.0,78.0 C160.0,78.0 156.2,81.9 157.0,85.0 C157.8,88.1 164.5,91.8 171.0,95.5 C177.5,99.2 181.5,101.5 189.0,105.5 C192.1,107.1 196.5,113.4 202.0,118.7 C210.0,126.4 216.9,132.4 217.0,133.5 C217.1,134.6 214.4,135.2 210.5,137.0 C206.6,138.8 201.5,140.5 201.5,140.5 L209.0,170.0 L225.0,207.0 L225.0,118.7 C225.0,118.7 217.8,110.5 211.5,106.0 C205.2,101.5 200.0,99.5 200.0,99.5 C200.0,99.5 183.1,87.6 181.5,84.5 C178.9,78.9 181.6,79.4 175.5,72.5 C169.4,65.6 164.0,69.0 164.0,69.0 C164.0,69.0 146.0,50.5 125.0,45.0 C104.0,39.5 80.0,47.0 80.0,47.0 C80.0,47.0 77.0,51.5 76.5,59.5 Z"/>
+    </g>
+  </g>
+</svg>
