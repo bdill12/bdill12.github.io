@@ -264,6 +264,10 @@ document.addEventListener('keyup', function(e) {
     }
 
 });
+document.addEventListener('keydown', function(e) {
+  e.preventDefault();
+
+});
 
 $('#up').on('vclick', function() {
     player.handleInput('up');
