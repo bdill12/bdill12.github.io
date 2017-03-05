@@ -27,3 +27,9 @@ h6 {
 .gems {
   display: none;
 }
+.wrapper {
+  min-height: 100vh;
+}
+#controls {
+	display: none;
+}

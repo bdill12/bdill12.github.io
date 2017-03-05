@@ -5,18 +5,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no" />
-    <title>Kenzie-Frog's Scattered Shoes</title>
+    <title>Effective JavaScript: Frogger</title>
     <!-- W3 -->
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i|Julius+Sans+One|Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.mobile.custom.js"></script>
 </head>
 
-<body class="w3-display-container w3-teal">
-<button class="w3-btn w3-right w3-cyan" onClick="window.close()">Close</button>
-    <div class="w3-xlarge w3-display-left w3-third w3-teal w3-margin">Lives: <span id="lives" class="w3-badge w3-cyan">5</span></div>
-    <div id="canvasline"></div>
+<body>
     <div class="w3-modal w3-teal" id="gameInfo">
         <div class="w3-modal-content w3-cyan w3-text-white">
             <h1 class="w3-xxxlarge w3-center">Kenzie-Frog's Scattered Shoes</h1>
@@ -33,15 +32,42 @@
             <hr />
             <div class="w3-container w3-center">
                 <div class="w3-bar">
-                    <img src="images/shoes/skates.png" class="w3-image w3-col s2" alt="blue gem">
-                    <img src='images/shoes/rain.png' class="w3-image w3-col s2" alt="heart">
-                    <img src='images/shoes/clown.png' class="w3-image w3-col s2" alt="green gem">
-                    <img src='images/shoes/oxfords.png' class="w3-image w3-col s2" alt="key">
-                    <img src='images/shoes/thighs.png' class="w3-image w3-col s2" alt="orange gem">
-                    <img src='images/shoes/rubyred.png' class="w3-image w3-col s2" alt="star">
+                    <img src="images/shoes/skates.png" class="w3-image w3-col s1" alt="blue gem">
+                    <img src='images/shoes/rain.png' class="w3-image w3-col s1" alt="heart">
+                    <img src='images/shoes/clown.png' class="w3-image w3-col s1" alt="green gem">
+                    <img src='images/shoes/oxfords.png' class="w3-image w3-col s1" alt="key">
+                    <img src='images/shoes/thighs.png' class="w3-image w3-col s1" alt="orange gem">
+                    <img src='images/shoes/rubyred.png' class="w3-image w3-col s1" alt="star">
                 </div>
-                <hr />
-                <button class="w3-xlarge w3-btn w3-teal w3-border w3-border-white w3-hover w3-hover-white w3-center" onclick="reset()">Play!</button>
+            </div>
+            <button class="w3-xlarge w3-btn w3-teal w3-border w3-border-white w3-hover w3-hover-white" onclick="reset()">Play!</button>
+        </div>
+    </div>
+    <div class="w3-content w3-container wrapper w3-cyan">
+        <div class="game w3-container w3-center w3-card-8 w3-margin w3-teal w3-text-white w3-round-large w3-border w3-border-white">
+            
+            <hr />
+            <footer class="scoreboard w3-grey w3-text-white">
+                <div class="w3-xlarge w3-margin">Lives: <span id="lives" class="w3-badge w3-teal">5</span></div>
+            </footer>
+            <hr id="canvasline" />
+            <h2 class="w3-xlarge">Your Collection</h2>
+            <div class="w3-small" id="empty">Your collection is empty!</div>
+                <img src="images/shoes/skates.png" class="w3-image w3-col m3 s1 gems" alt="skates">
+                <img src='images/shoes/rain.png' class="w3-image w3-col s1 m3 gems" alt="rain">
+                <img src='images/shoes/clown.png' class="w3-image w3-col  m3 s1 gems" alt="clown">
+                <img src='images/shoes/oxfords.png' class="w3-image w3-col gems s1 m3" alt="oxfords">
+                <img src='images/shoes/thighs.png' class="w3-image w3-col m3 s1 gems" alt="thighs">
+                <img src='images/shoes/rubyred.png' class="w3-image w3-col m3 s1 gems" alt="ruby reds">
+            <div id="controls" class="w3-container">
+                <div class="w3-row w3-center">
+                    <button id="up" class="w3-btn w3-col w3-center s4"><i class="material-icons">keyboard_arrow_up</i></button>
+                </div>
+                <div class="w3-row w3-center">
+                    <button id="left" class="w3-col w3-btn s4"><i class="material-icons">keyboard_arrow_left</i></button>
+                    <button id="down" class="w3-btn w3-col s4"><i class="material-icons">keyboard_arrow_down</i></button>
+                    <button id="right" class="w3-col w3-btn s4"><i class="material-icons">keyboard_arrow_right</i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -54,33 +80,17 @@
     <div class="w3-modal" id="oops">
         <div class="w3-modal-content w3-border-white w3-round-large w3-teal w3-center">
             <h2 class="w3-text-purple w3-jumbo">Oops!</h2>
-            <div class="w3-text-white w3-xlarge">A bug got you!</div>
-        </div>
-    </div>
-    <div class="w3-modal" id="collect">
-        <div class="w3-modal-content w3-border-white w3-round-large w3-teal w3-center">
-            <h2 class="w3-text-purple w3-jumbo">Got 'em!</h2>
-            <div class="w3-text-white w3-xlarge">You put the shoes away in Kenzie-Frog's closet!</div>
-            <div class="w3-container w3-center">
-                <div class="w3-bar">
-                    <img id="shoes0" src="images/shoes/skates.png" class="w3-image gems" alt="blue gem">
-                    <img id="shoes1" src='images/shoes/rain.png' class="w3-image gems " alt="heart">
-                    <img id="shoes2" src='images/shoes/clown.png' class="w3-image gems" alt="green gem">
-                    <img id="shoes3" src='images/shoes/oxfords.png' class="w3-image gems" alt="key">
-                    <img id="shoes4" src='images/shoes/thighs.png' class="w3-image gems" alt="orange gem">
-                    <img id="shoes5" src='images/shoes/rubyred.png' class="w3-image gems" alt="star">
-                </div>
-            </div>
+            <div class="w3-text-white">A bug got you!</div>
         </div>
     </div>
     <div class="w3-modal" id="win">
         <div class="w3-modal-content w3-border-white w3-round-large w3-teal w3-center w3-padding">
             <h2 class="w3-text-white w3-jumbo">You win!</h2>
-            <div class="w3-text-white w3-xlarge">You collected all the shoes!</div>
+            <div class="w3-text-white">You collected all the prizes!</div>
             <div class="w3-container w3-center">
                 <div class="w3-bar">
                     <img src="images/shoes/skates.png" class="w3-image w3-col s2" alt="blue gem">
-                    <img src='images/shoes/rain.png' class="w3-image w3-col s2" alt="heart">
+                    <img src='images/shoes/rain.png' class="w3-image w3-col s1" alt="heart">
                     <img src='images/shoes/clown.png' class="w3-image w3-col s2" alt="green gem">
                     <img src='images/shoes/oxfords.png' class="w3-image w3-col s2" alt="key">
                     <img src='images/shoes/thighs.png' class="w3-image w3-col s2" alt="orange gem">
@@ -92,11 +102,13 @@
     </div>
     <div id="notMobile" class="w3-modal w3-black">
         <div class="w3-modal-content w3-border-white w3-round-large w3-teal w3-center w3-padding">
-            <h2 class="w3-text-white">Not Ready for Mobile (yet)</h2>
-            <div class="w3-text-white">Sorry! Kenzie-Frog's Scattered Shoes isn't ready for mobile. Visit on your desktop or check back later to play!</div>
-            <button class='w3-btn w3-cyan w3-hover w3-hover-white w3-center w3-round-large' onclick="window.close()">Close</button>
+            <h2 class="w3-text-white">A little slow...</h2>
+            <div class="w3-text-white">While The Collector is technically playable in your mobile browser, it makes the game almost impossible because mobile browsers cannot handle the movements needed to avoid the bugs. If you choose to play anyway, you will see that the bugs in the mobile version are MUCH slower than on a desktop computer.</div>
+            <button class='w3-btn w3-cyan w3-hover w3-hover-white w3-center w3-round-large' onclick="reset()">Play anyway!</button>
+            <button class='w3-btn w3-cyan w3-hover w3-hover-white w3-center w3-round-large' onclick="window.close()">Thanks anyway.</button>
         </div>
     </div>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>

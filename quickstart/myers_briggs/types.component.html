@@ -1,7 +1,0 @@
-<h2>Myers-Briggs Personality Types</h2>
-<ul class="types">
-  <li *ngFor="let type of types" (click)="onSelect(type)"
-      [class.selected]="type === selectedType">
-      <h3>{{type.name}}</h3>
-  </li>
-</ul>
