@@ -4,26 +4,17 @@ var Enemy = function(x, y) {
     // we've provided one for you to get started
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-
-
-    if (mobile) {
-        this.sprite = 'images/small/enemy-bug.png';
-        // Generate random number up to 505 for x
-        this.x = Math.ceil(Math.random() * 375);
-        // Generate multiple of 83 for y
-        this.y = Math.floor(Math.random() * (4 - 2) + 2) * 61;
-        // Generate a random speed
-        this.speed = Math.floor(Math.random() * (400 - 100) + 100);
-
-    } else {
-        this.sprite = 'images/enemy-bug.png';
-        // Generate random number up to 505 for x
-        this.x = Math.ceil(Math.random() * 505);
-        // Generate multiple of 83 for y
-        this.y = Math.floor(Math.random() * (5 - 2) + 2) * 83;
-        // Generate a random speed
-        this.speed = Math.floor(Math.random() * (1000 - 300) + 300);
+    bug = bug + 1;
+    if (bug > 1) {
+        bug = 0;
     }
+    this.sprite = enemies[bug];
+    // Generate random number up to 505 for x
+    this.x = Math.ceil(Math.random() * 505);
+    // Generate multiple of 83 for y
+    this.y = Math.floor(Math.random() * (5 - 2) + 2) * 83;
+    // Generate a random speed
+    this.speed = Math.floor(Math.random() * (800 - 300) + 300);
 
 };
 
@@ -36,37 +27,24 @@ Enemy.prototype.update = function(dt) {
     // Update x with speed.
     this.x = this.x + (this.speed * dt);
     // Regenerate bugs as they exit the game on the right
-    if (this.x > 505 || this.x > 375 && mobile) {
+    if (this.x > 505) {
         this.x = 0;
-        if (mobile) {
-            // Generate multiple of 83 for y
-            this.y = Math.floor(Math.random() * (5 - 2) + 2) * 61;
-            // Generate a random speed
-            this.speed = Math.floor(Math.random() * (400 - 100) + 100);
-
-        } else {
-            // Generate multiple of 83 for y
-            this.y = Math.floor(Math.random() * (5 - 2) + 2) * 83;
-            // Generate a random speed
-            this.speed = Math.floor(Math.random() * (1000 - 300) + 300);
-        }
+        // Generate multiple of 83 for y
+        this.y = Math.floor(Math.random() * (5 - 2) + 2) * 83;
+        // Generate a random speed
+        this.speed = Math.floor(Math.random() * (1000 - 300) + 300);
     }
     // Check to see if there is a collision
     function collision(playx, bugx) {
-        if (mobile) {
-            if (bugx > playx - 25 && bugx < playx + 25) {
-                return true;
-            }
-        } else {
-            if (bugx > playx - 50 && bugx < playx + 50) {
-                return true;
-            }
+        if (bugx > playx - 50 && bugx < playx + 50) {
+            return true;
         }
     }
     // Check the y value with the collision function to show collision
     if (this.y === player.y && collision(player.x, this.x)) {
         active = false;
-        playerReset();
+        player.x = 200;
+        player.y = 415;
         player.lives = player.lives - 1;
         if (player.lives >= 1) {
             $('#oops').show();
@@ -77,6 +55,7 @@ Enemy.prototype.update = function(dt) {
         } else {
             $('.canvas').hide();
             $('#gameOver').show();
+            resetAllow = true;
         }
         document.getElementById('lives').innerHTML = player.lives;
     }
@@ -93,68 +72,60 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
 var Player = function() {
     // Use array in order to change the children as they are saved.
-    if (mobile) {
-        this.sprite = 'images/small/char-boy-ninja.png';
-        this.x = 142;
-        this.y = 305;
-    } else {
-        this.sprite = 'images/char-boy-ninja.png';
-        this.x = 200;
-        this.y = 415;
-    }
+    this.sprite = 'images/kenzie.png';
+    this.x = 200;
+    this.y = 415;
     this.lives = 5;
 
 };
 //Global variables i
-var prize = ['images/gem-blue.png', 'images/heart.png', 'images/gem-green.png', 'images/key.png', 'images/gem-orange.png', 'images/star.png'];
-
+var prize = ['images/shoes/skates.png',
+    'images/shoes/rain.png',
+    'images/shoes/clown.png',
+    'images/shoes/oxfords.png',
+    'images/shoes/thighs.png',
+    'images/shoes/rubyred.png'
+];
+var enemies = ['images/bug-green.png', 'images/bug-pink.png'];
 var i = 0;
+var bug = 0;
 var lives = 5;
-var gems = document.querySelectorAll('.gems');
 var active = true;
-var mobile = false;
-var canvasWidth = 505;
-var canvasHeight = 606;
-var prizeMobile = ['images/small/gem-blue.png', 'images/small/heart.png', 'images/small/gem-green.png', 'images/small/key.png', 'images/small/gem-orange.png', 'images/small/star.png'];
+var resetAllow = true;
 var playerReset = function() {
-    if (mobile) {
-        player.x = 142;
-        player.y = 305;
-    } else {
-        player.x = 200;
-        player.y = 415;
-    }
-
+    player.x = 200;
+    player.y = 415;
 };
+var gems = document.querySelector('.gems');
 
 
 Player.prototype.update = function(dt) {
     // If the player leaves the edges of the board, return it to original position
-    if (this.x < 0 || this.x >= canvasWidth || this.y > canvasHeight || this.y < 0) {
-        playerReset();
+    if (this.x < 0 || this.x >= 505 || this.y > 606 || this.y < 0) {
+        // Reset player
+        this.x = 200;
+        this.y = 415;
     }
     // If the player makes it to the gem, display alert
     if (this.y == gem.y && this.x == gem.x) {
         active = false;
-        // Reset player
-        playerReset();
-        //this.x = 200;
-        //this.y = 415;
-        $('#empty').hide();
-        gems[i].style.display = "block";
-        i = i + 1;
+        $('#shoes' + i).show();
+        $('#collect').show();
+         // Reset player
+        this.x = 200;
+        this.y = 415;
+        window.setTimeout(function() {
+                $('#collect').hide();
+                active = true;
+        }, 500);
+        i++;
         if (i == 6) {
             active = false;
             $('#win').show();
-            i = 0;
+            resetAllow = true;
         } else {
-            if (mobile) {
-                gem.sprite = prizeMobile[i];
-                gem.x = Math.floor(Math.random() * 5) * 71;
-            } else {
-                gem.sprite = prize[i];
-                gem.x = Math.floor(Math.random() * 5) * 100;
-            }
+            gem.sprite = prize[i];
+            gem.x = Math.floor(Math.random() * 5) * 100;
             active = true;
         }
     }
@@ -165,54 +136,23 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.handleInput = function(key) {
-    console.log(key + ', y: ' + this.y + ', x: ' + this.x);
-
     if (key === 'right') {
-        if (mobile) {
-            this.x = this.x + 71;
-        } else {
-            this.x = this.x + 100;
-        }
-        console.log(this.x);
+        this.x = this.x + 100;
     }
     if (key === 'left') {
-        if (mobile) {
-            this.x = this.x - 71;
-        } else {
-            this.x = this.x - 100;
-        }
-        console.log(this.x);
-
+        this.x = this.x - 100;
     }
     if (key === 'up') {
-        if (mobile) {
-            this.y = this.y - 61;
-        } else {
-            this.y = this.y - 83;
-        }
-        console.log(this.y);
-
+        this.y = this.y - 83;
     }
     if (key === 'down') {
-        if (mobile) {
-            this.y = this.y + 61;
-        } else {
-            this.y = this.y + 83;
-        }
-        console.log(this.y);
-
+        this.y = this.y + 83;
     }
 };
 
 var Gem = function() {
-    if (mobile) {
-        this.sprite = prizeMobile[0];
-        this.x = Math.floor(Math.random() * 5) * 71;
-
-    } else {
-        this.sprite = prize[0];
-        this.x = Math.floor(Math.random() * 5) * 100;
-    }
+    this.sprite = prize[i];
+    this.x = Math.floor(Math.random() * 5) * 100;
     this.y = 0;
 };
 
@@ -257,7 +197,8 @@ document.addEventListener('keyup', function(e) {
             40: 'down'
         };
         player.handleInput(allowedKeys[e.keyCode]);
-    } else {
+    }
+    if (resetAllow) {
         if (e.keyCode == 13) {
             reset();
         }
@@ -265,7 +206,7 @@ document.addEventListener('keyup', function(e) {
 
 });
 document.addEventListener('keydown', function(e) {
-  e.preventDefault();
+    e.preventDefault();
 
 });
 

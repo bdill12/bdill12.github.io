@@ -1,0 +1,30 @@
+<div class="purple w3-round-large w3-card-24 w3-margin w3-padding">
+    <h2>{{title}}</h2>
+    <div class="w3-large">{{heading}}
+    <div class="w3-right">{{subheading}}</div></div>
+</div>
+<hr />
+<!-- Education -->
+<ul class="purple w3-ul w3-margin w3-round-xlarge w3-card-8" id="edu">
+    
+
+    <!-- Iterate over schools -->
+    <li *ngFor="let school of schools" class="w3-card w3-padding-0">
+        <a href="{{school.url}}" class="w3-row" rel="nofollow" target="_none">
+        <img src="img/logos/{{school.tag}}seal-sqr.png" class="w3-col m2 w3-hide-small w3-margin w3-image w3-round-large" alt="{{school.name}}">
+        <!-- Link -->
+        <div class="w3-rest schools">
+            <h5>{{school.name}}</h5>
+            <h6>{{school.degree}} in {{school.majors}}</h6>
+            
+            <span>{{school.dates}} - </span>
+            <span>{{school.location}} - </span>
+            <span>{{school.gpa}}</span>
+            <ul class="w3-ul">
+                <li><a href="{{school.certificates[0].url}}">{{school.certificates[0].name}}</a></li>
+                <li><a href="{{school.certificates[1].url}}">{{school.certificates[1].name}}</a></li>
+            </ul>
+        </div>
+        </a>
+    </li>
+</ul>

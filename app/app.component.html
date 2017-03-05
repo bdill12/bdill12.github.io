@@ -1,0 +1,38 @@
+<nav class="w3-sidenav w3-collapse w3-animate-right" style="width:100px;right:0" id="nav">
+    <a class="w3-tooltip w3-center w3-hide-large w3-closenav" (click)="w3_close()">
+        <i class="material-icons">close</i>
+        <div *ngIf='notMobile' class="w3-text ">Close</div>
+    </a>
+    <a class="w3-tooltip w3-center" (click)="section(0, $event)" routerLinkActive="active" routerLink="/">
+        <i class="material-icons">home</i>
+        <div *ngIf='notMobile' class="w3-text w3-animate-opacity">Home</div>
+    </a>
+    <a class='hover-purple w3-tooltip w3-center' (click)="section(1, $event)" routerLinkActive="active" routerLink="/edu">
+        <i class="material-icons">school</i>
+        <div *ngIf='notMobile' class="w3-text">Education</div>
+    </a>
+    <a class='hover-green w3-tooltip w3-center' (click)="section(2, $event)" routerLinkActive="active" routerLink="/exp">
+        <i class="material-icons">work</i>
+        <div *ngIf='notMobile' class="w3-text">Experience</div>
+    </a>
+    <a class='hover-blue w3-tooltip w3-center' (click)="section(3, $event)" routerLinkActive="active" routerLink="/samples">
+        <i class="material-icons">edit</i>
+        <div *ngIf='notMobile' class="w3-text">Writing</div>
+    </a>
+    <a class='hover-red w3-tooltip w3-center' (click)="section(4, $event)" routerLinkActive="active" routerLink="/projects">
+        <i class="material-icons">code</i>
+        <div *ngIf='notMobile' class="w3-text">Coding</div>
+    </a>
+</nav>
+<div class="w3-main" style="margin-right:100px">
+    <span class="w3-opennav w3-hide-large w3-right" (click)="w3_open()">
+    <i class="material-icons">menu</i>
+    </span>
+    <div class="header">
+        <h1 class='w3-margin w3-xxlarge'>{{title}}</h1>
+        <h3 class='w3-margin'>{{heading}}</h3>
+    </div>
+    <div class="w3-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

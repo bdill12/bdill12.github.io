@@ -56,7 +56,7 @@ $(function() {
         },
         'schools': [{
             'name': 'Abilene Christian University',
-            'degree': 'Master of Arts',
+            'degree': 'Master description-key() Storagef Arts',
             'majors': ['English - Composition and Rhetoric'],
             'gpa': '<h5 class="w3-third">GPA : 4.0</h5>',
             'image': "acugrad",

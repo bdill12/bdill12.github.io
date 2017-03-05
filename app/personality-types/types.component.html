@@ -1,0 +1,7 @@
+<div class="w3-container">
+<h2 class="w3-indigo w3-padding w3-center w3-round-xxlarge w3-border w3-border-white">Myers-Briggs Personality Types</h2>
+<p class="w3-white w3-border w3-border-indigo w3-padding w3-round-xxlarge w3-large">There are sixteen Myers-Briggs personality types. Each type is designated by four letters. The letters correspond to eight personality traits:<br /> <span class="w3-badge w3-indigo">E</span>xtroverted or <span class="w3-badge w3-indigo">I</span>ntroverted, I<span class="w3-badge w3-black">N</span>tuitive or <span class="w3-badge w3-black">S</span>ensing, <span class="w3-badge w3-light-grey">F</span>eeling or <span class="w3-badge w3-light-grey">T</span>hinking, and <span class="w3-badge w3-grey">P</span>erceiving or <span class="w3-badge w3-grey">J</span>udging.</p>
+<div class="w3-container types w3-white w3-border w3-padding-24 w3-border-white w3-left">
+  <button *ngFor="let type of types" class="w3-button w3-col s3 w3-border w3-padding w3-indigo w3-border-black w3-hover-white" [class.selected]="type === selectedType" (click)="gotoType(type)">{{type.name}}</button>
+  </div>
+  </div>

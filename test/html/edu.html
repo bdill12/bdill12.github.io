@@ -1,0 +1,30 @@
+<div class="school-entry">
+	<div class="w3-container w3-row w3-panel w3-border w3-round-large" onclick="openAction">
+		<h5 class="w3-cell w3-cell-middle w3-half">{{degree}}</h5>
+		<h6 class="w3-cell w3-cell-middle w3-half w3-large w3-right-align">{{name}}</h6>
+		<div class="w3-row">
+			<div class="w3-cell w3-cell-middle w3-half">{{majors}}</div>
+			<div class="w3-cell w3-cell-middle w3-right-align w3-half">{{location}}</div>
+		</div>
+	</div>
+</div>'
+
+<div id="modal-{{tag}}" class="w3-modal">
+	<div class="w3-modal-content w3-round-xlarge">
+		<header class="w3-container w3-padding purple  w3-round-xlarge">
+			<div class="w3-right w3-closebtn" onclick="' + closeAction + '"><i class="material-icons">close</i></div>
+			<a href="{{url}}" rel="nofollow" class="w3-half">
+				<img src="img/logos/{{image}}.png" class="w3-image schoolImage w3-round-large" alt="{{name}}"></a>
+				<h4 class="w3-half w3-right-align">{{degree}} - {{majors}}</h4>
+		</header>
+		<div class="w3-container w3-center">
+			<h5 class="w3-third">{{dates}}</h5>
+			<h5 class="w3-third">{{location}}</h5>{{gpa}}
+			<h6>Activities and Awards</h6>
+				<ul class="w3-container w3-ul">
+					<li>{{awards}}</li>
+				</ul>
+		</div>
+		<footer class="w3-container"></footer>
+	</div>
+</div>';

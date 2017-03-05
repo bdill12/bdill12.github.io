@@ -1,0 +1,51 @@
+import { Writing } from './writings';
+export const WRITINGS: Writing[] = [{
+            title: '"What Happened with Jacob"',
+            type: 'Non-fiction short story in <i>Dammit, I Love You</i>',
+            image: 'img/project_photos/dammit.PNG',
+            description: 'Love can hurt. We all know that. Whether the love has been a parent, a child, a lover, a friend, we\'ve all walked into a situation with stars in our eyes and left with a black eye instead. The 15 courageous people in this book share those stories. They remind us of what it feels like to hurt, but they also remind us of the strength those scars can foster. Being torn apart can be the one thing that makes us whole.',
+            url: https://goo.gl/vlpUmY',
+            index: 1,
+        }, {
+            title: 'Product Blogs',
+            type: 'Keyword-researched blogs featuring CouponPal clients',
+            image: 'img/project_photos/blogs.PNG',
+            description: 'These blog posts promoted various online retailers. Each was researched for SEO optimization using Moz and Google Adwords.',
+            url: http://couponpal.com/blog/author/brent-dill',
+            index: 2,
+        }, {
+            title: 'TV Commercials',
+            image: 'img/project_photos/wacky.PNG',
+            type: 'Spec scripts for ad campaign pitch',
+            description: 'Series of three commercials featuring a very likable copy machine named Mark',
+            url: 'samples/Commercials.pdf',
+            index: 3,
+        }, {
+            title: 'Where\'s Eleven?',
+            type: 'Fiction short story on Kindle Direct',
+            image: 'img/project_photos/eleven.PNG',
+            description: 'Where\'s Eleven is the short story of how a troubled man, Reese, spends an evening looking for enemies in every person he encounters. You\'ll find enemies if you look for them, he learns, but the same isn\'t always true of your pet hamster. This dark comedy explores the relationship between addiction and mental illness and the consequences of hiding the truth.',
+            url: https://goo.gl/fkPd0m',
+            index: 4,
+        }, {
+            title: 'It All Started Three Hours from Now<',
+            type: 'Humor / travel essay',
+            image: 'img/project_photos/sydney.PNG',
+            description: '<i>It All Started Three Hours from Now</i> is the somewhat embarassing tale of my flight from Sydney, Australia, to Los Angeles, California. A lack of sleep, an abundance of awkward, and most of <i>Marley and Me</i> helped confuse me as we landed in Los Angeles three hours before our flight took off from Sydney.',
+            url: '',
+            index: 5,
+        }, {
+            title: 'Kenzie-Frog\'s Tender Toes',
+            type: 'Children\'s book, written and illustrated (available on iTunes)',
+            image: 'img/project_photos/kenziefrog2.PNG',
+            description: 'Kenzie-Frog wants to hop higher, but her feet hurt and she needs some shoes. Luckily, her Nana comes to the rescue to help her try on pair after pair to find the ones that will help Kenzie-Frog\'s tender toes.',
+            url: https://itunes.apple.com/us/book/kenzie-frogs-tender-toes/id932275276?mt=11',
+            index: 6,
+        }, {
+            title: 'Community Theater',
+            type: 'Award-winning story story',
+            image: 'img/project_photos/elaine.svg',
+            description: 'Elaine doesn\'t know how to act. . . on stage or off. After being lightly chastised by the amateur director of the community theater production she has joined, Elaine starts to examine how the people around her act. Her loneliness leads her to liquor, her couch, and Audrey Hepburn. Named first prize for fiction at the 2009 Conference on Christianity and Literature',
+            url: '',
+            index: 7,
+        }]

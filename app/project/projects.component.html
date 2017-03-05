@@ -1,0 +1,25 @@
+<!-- Development Projects -->
+<div class="red w3-round-large w3-card-24 w3-margin w3-padding">
+    <h2>{{title}}</h2>
+    <div class="w3-large">{{heading}}
+    <div class="w3-right">{{subheading}}</div></div>
+</div>
+<hr />
+<ul class="red w3-ul w3-margin w3-round-xlarge w3-card-8" id="projects">
+    <!-- Iterate over projects -->
+    <li *ngFor="let project of projects" class="w3-card w3-padding-0">
+        <a href="{{project.url}}" class="w3-row" target="_none">
+            <img src="{{project.image}}" class="w3-col m2 w3-hide-small w3-image w3-margin w3-round-large" alt="{{project.name}}">
+            <!-- Link -->
+            <div class="w3-rest projects">
+                <!--<a href="{{project.url}}" rel="nofollow">-->
+                <h5>{{project.title}}</h5>
+                <h6>{{project.type}}</h6>
+                <!-- </a> -->
+                <ul class="w3-ul">
+                    <li>{{project.description}}</li>
+                </ul>
+            </div>
+        </a>
+    </li>
+</ul>
