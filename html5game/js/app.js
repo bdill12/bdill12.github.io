@@ -15,7 +15,7 @@ var Enemy = function(x, y) {
         // Generate multiple of 83 for y
         this.y = Math.floor(Math.random() * (4 - 2) + 2) * 61;
         // Generate a random speed
-        this.speed = Math.floor(Math.random() * (400 - 100) + 100);
+        this.speed = Math.floor(Math.random() * (300 - 100) + 100);
 
     } else {
         bug = bug + 1;
