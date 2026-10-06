@@ -1,4 +1,4 @@
-const CACHE='clockin-v1';
+const CACHE='clockin-v2';
 const FILES=['./','./index.html','./style.css','./app.js','./calculations.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('clockin-')&&k!==CACHE).map(k=>caches.delete(k))))));
