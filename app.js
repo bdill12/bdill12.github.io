@@ -21,7 +21,7 @@ function update() {
  const m=new Date(date);m.setDate(m.getDate()-today);const f=new Date(m);f.setDate(f.getDate()+4);
  $('weekLabel').textContent=`${m.toLocaleDateString(undefined,{month:'short',day:'numeric'})} – ${f.toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'})} · Your 40-hour week`;
  $('todayLabel').textContent=date.toLocaleDateString(undefined,{weekday:'long',month:'short',day:'numeric'});
- let leave='—'; if(w.credited>=2400)leave='Goal reached ✓';else if(w.leave!==null){const t=new Date(date);t.setHours(0,w.leave,0,0);leave=t.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'});if(w.leave>=1440)leave+=` · ${t.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'})}`;}
+ let leave='—'; if(w.credited>=2400)leave='Goal reached ✓';else if(w.leave!==null){const t=new Date(date);t.setDate(t.getDate()+Math.floor(w.leave/1440));t.setHours(0,w.leave%1440,0,0);leave=t.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'});if(w.leave>=1440)leave+=` · ${t.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'})}`;}
  $('leave').textContent=leave; $('leaveNote').textContent=w.message; $('workedToday').textContent=duration(w.results[today]?.worked||0);
  for(const field of ['worked','pto','credited'])$(field).textContent=duration(w[field]);
  $('remainingLabel').textContent=w.over?'Over 40 hours':'To 40 hours';$('remaining').textContent=duration(w.over||w.remaining);$('progress').style.width=`${Math.min(100,w.credited/2400*100)}%`;
