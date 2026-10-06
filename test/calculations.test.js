@@ -1,0 +1,16 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {dayResult,weekResult,minutes} from '../calculations.js';
+const day=(x={})=>({in:'',out:'',lunchOut:'',lunchIn:'',pto:0,noLunch:false,...x});
+const full=()=>day({in:'09:00',out:'17:00',noLunch:true});
+test('subtract lunch',()=>assert.equal(dayResult(day({in:'08:00',out:'17:00',lunchOut:'12:00',lunchIn:'13:00'})).worked,480));
+test('no lunch ignores old lunch punches',()=>assert.equal(dayResult({...full(),lunchOut:'12:00',lunchIn:'13:00'}).worked,480));
+test('PTO counts separately toward weekly credit',()=>{const r=weekResult([full(),day({pto:8}),day(),day(),day()],2,600);assert.equal(r.worked,480);assert.equal(r.pto,480);assert.equal(r.credited,960);});
+test('final day leave time with lunch',()=>{const r=weekResult([full(),full(),full(),full(),day({in:'08:00',lunchOut:'12:00',lunchIn:'12:30'})],4,780);assert.equal(r.leave,990);});
+test('PTO advances leave time',()=>{const r=weekResult([full(),full(),full(),day({pto:8}),day({in:'08:00',noLunch:true})],4,600);assert.equal(r.leave,960);});
+test('exactly 40',()=>{const r=weekResult(Array.from({length:5},full),4,1020);assert.equal(r.credited,2400);assert.equal(r.remaining,0);assert.equal(r.over,0);assert.equal(r.leave,null);});
+test('overtime',()=>{const ds=Array.from({length:5},full);ds[4].out='18:30';assert.equal(weekResult(ds,4,1110).over,90);});
+test('ongoing lunch pauses worked time and exact estimate',()=>{const r=weekResult([day({in:'08:00',lunchOut:'12:00'}),day(),day(),day(),day()],0,780);assert.equal(r.worked,240);assert.equal(r.leave,null);});
+test('invalid order and partial lunch are errors',()=>{assert.ok(dayResult(day({in:'09:00',out:'08:00'})).error);assert.ok(dayResult(day({in:'08:00',out:'17:00',lunchOut:'12:00'})).error);});
+test('weekend has no current punches',()=>assert.equal(weekResult(Array.from({length:5},day),6,600).leave,null));
+test('invalid PTO and invalid times',()=>{assert.ok(dayResult(day({pto:-1})).error);assert.equal(minutes('25:00'),null);});
